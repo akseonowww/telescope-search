@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import parse from 'html-react-parser'
 import Result from '../Results/Results'
 import styles from './Search.module.scss'
 import iconX from '../../assets/image/icon-x.svg'
@@ -18,6 +19,23 @@ const Search = () => {
     const onSubmitHandler = () => {
         setValue('')
     }
+
+    let data = `<p>У Сергея Алексеича Дыбкина, любителя сценических искусств, болят зубы.</p>`
+
+    data = data.replaceAll(
+        value,
+        `<span class=${styles.search}>${value}</span>`,
+        'gi'
+    )
+
+    const searchElements = () => {
+        // 1. bookrmaks
+        // 2. authors
+        // 3. books
+        // 4. groups
+    }
+
+    searchElements()
 
     return (
         <div className={styles['Search-Content']}>
@@ -46,6 +64,7 @@ const Search = () => {
                 <div className={styles['Result-List']}>
                     <Result result={value} />
                 </div>
+                {parse(data)}
             </form>
         </div>
     )

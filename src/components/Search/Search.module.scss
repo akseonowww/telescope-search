@@ -7,11 +7,23 @@
     box-shadow: 0px 2px 36px transparent;
     border: 1px solid transparent;
 
+    .search {
+        color: #e33ef2;
+        font-weight: 700;
+    }
+
     .Result-List {
         display: none;
     }
 
+    p {
+        padding-left: 16px;
+    }
+
     &:focus-within {
+        
+        // For search in text
+        
         background-color: #f8f8f8;
         border-radius: 16px;
         box-shadow: 0px 2px 36px rgba(0, 0, 0, 0.1);
