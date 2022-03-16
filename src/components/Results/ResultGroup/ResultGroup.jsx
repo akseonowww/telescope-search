@@ -3,9 +3,6 @@ import styles from './ResultGropup.module.scss'
 
 const ResultGropup = ({ group }) => {
     const classComponent = 'Result-Gropup'
-    // const group = group
-
-    // const data = group.group
 
     return (
         <div>

@@ -43,8 +43,9 @@ const Search = () => {
                         </button>
                     </div>
                 </div>
-
-                <Result className={styles['Result-List']} result={value} />
+                <div className={styles['Result-List']}>
+                    <Result result={value} />
+                </div>
             </form>
         </div>
     )
