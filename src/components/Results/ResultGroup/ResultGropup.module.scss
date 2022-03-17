@@ -28,7 +28,6 @@
             right: 0;
             margin-top: 10px;
             height: 2px;
-            // width: 2px;
             -webkit-appearance: none;
         }
 
@@ -54,25 +53,26 @@
             }
         }
 
-        button {
-            background-color: #e7e7e7;
-            padding: 2px 8px;
-            border-radius: 6px;
-            position: relative;
-            border: none;
-            border: 1px solid transparent;
-            transform: .5s;
+        div {
+            button {
+                background-color: #e7e7e7;
+                padding: 2px 8px;
+                border-radius: 6px;
+                position: relative;
+                border: none;
+                border: 1px solid transparent;
+                transform: 0.5s;
 
-            &::after {
-                content: ',';
-                display: block;
-                position: absolute;
-                right: -4px;
-                bottom: 0;
-                color: rgb(95, 95, 95);
+                &::after {
+                    content: ',';
+                    display: block;
+                    position: absolute;
+                    right: -7px;
+                    bottom: 0;
+                    color: rgb(95, 95, 95);
+                }
             }
-
-            &:nth-last-child(1)::after {
+            &:nth-last-child(1) button::after {
                 content: '';
             }
         }
@@ -91,7 +91,6 @@
 
                     &:hover {
                         background-color: rgb(255, 255, 255);
-                        border: 1px solid rgb(175, 175, 175);
                     }
                 }
             }
