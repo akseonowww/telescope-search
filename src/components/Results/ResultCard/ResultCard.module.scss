@@ -1,20 +1,24 @@
-.Result-Bookmarks {
+.Result-Card {
     display: flex;
     width: 100%;
     text-align: left;
-    padding: 8px 0 8px 16px;
+    padding: 8px 16px 8px 0;
     cursor: pointer;
     text-decoration: none;
     color: #000;
     font-weight: 600;
+
+    &.active {
+        background: red;
+    }
 
     &__icon {
         margin-right: 8px;
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 40px;
-        width: 40px;
+        // height: 40px;
+        // width: 40px;
 
         &-container {
             display: flex;
@@ -22,9 +26,9 @@
             align-items: center;
             width: 100%;
             height: 100%;
-            // background-color: #e4e4e4;
-            border-radius: 8px;
+            // border-radius: 120px;
             margin: 8px 0;
+            overflow: hidden;
         }
 
         &-default {
@@ -35,7 +39,7 @@
         }
 
         &-img {
-            height: 90%;
+            width: 80px;
         }
     }
 
@@ -45,24 +49,12 @@
         justify-content: center;
         overflow: hidden;
 
-        span {
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
-        &-default {
-            display: flex;
-            align-items: center;
-            overflow: hidden;
-            width: inherit;
-            overflow: hidden;
-
-            span {
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
+        &-info {
+            // white-space: nowrap;
+            // overflow: hidden;
+            // text-overflow: ellipsis;
+            font-weight: normal;
+            color: #818c99;
         }
 
         &-link {
@@ -73,11 +65,58 @@
         }
     }
 
-    &:hover {
-        background-color: #e2e2e2;
+    &__option {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        margin-left: 12px;
 
-        &__icon-container {
-            background-color: #ffffff;
+        button {
+            font-size: 12px;
+            color: #76787a;
+            height: 22px;
+            background: transparent;
+            border-radius: 120px;
+        }
+
+        &-btn {
+            border: 1px solid #c6c6c6;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            padding: 0 10px;
+            font-size: 12px;
+            color: #76787a;
+            height: 22px;
+            background: transparent;
+            border-radius: 120px;
+
+            text-decoration: none;
+            font-weight: normal;
+
+            &:hover {
+                background: rgb(247, 247, 247);
+            }
+
+            &__img {
+                height: 12px;
+                
+                img {
+                    height: 100%;
+                }
+            }
+        }
+        
+        &-open {
+            border: 1px solid transparent;
+            padding: 0;
+            margin: 0;
+        }
+    }
+
+    &:hover {
+        .Result-Card__option-btn {
+            background: rgb(247, 247, 247);
         }
     }
 }
