@@ -5,44 +5,40 @@ import ResultDefault from './ResultDefault/ResultDefault'
 import ResultButtons from './ResultButtons/ResultButtons'
 import ResultGropup from './ResultGroup/ResultGroup'
 import ResultBookmarks from './ResultBookmarks/ResultBookmarks'
-import ResultCard from './ResultCard/ResultCard'
 
 const Results = ({ result }) => {
     const classComponent = 'Results'
     const { groups } = Data
-    const { authors } = Data
+
     const search = Data.searchEngine
 
     return (
         <div>
             <div className={styles[classComponent]}>
                 {result ? (
-                    <ul>
-                        <li className={styles[`${classComponent}-Header`]}>
+                    <div>
+                        <div className={styles[`${classComponent}-Header`]}>
                             <ResultButtons />
-                        </li>
-                        <li className={styles[`${classComponent}-Item`]}>
+                        </div>
+                        <div className={styles[`${classComponent}-Item`]}>
                             <ResultDefault value={result} />
-                        </li>
-                        <li className={styles[`${classComponent}-Item`]}>
+                        </div>
+                        <div className={styles[`${classComponent}-Item`]}>
                             <ResultBookmarks
                                 title={result}
                                 link={search[0].link + result.toString()}
                                 icon={search[0].icon}
                             />
-                        </li>
-                        <li className={styles[`${classComponent}-Item`]}>
-                            <ResultGropup group={groups[0]} />
-                        </li>
-                        <li className={styles[`${classComponent}-Item`]}>
-                            <ResultCard
-                                value={result}
-                                title={authors[0].name}
-                                icon={authors[0].img}
-                                info={authors[0].info}
-                            />
-                        </li>
-                    </ul>
+                        </div>
+                        {groups.map((el) => (
+                            <div
+                                className={styles[`${classComponent}-Item`]}
+                                key={el.id}
+                            >
+                                <ResultGropup group={el} />
+                            </div>
+                        ))}
+                    </div>
                 ) : (
                     ''
                 )}

@@ -6,6 +6,12 @@ const ResultGropup = ({
 }) => {
     const classComponent = 'Result-Gropup'
 
+    const handleClick = (el) => {
+        console.log(el.name)
+
+        console.log(el.group[0].group[0].group)
+    }
+
     return (
         <div>
             <div className={styles[classComponent]}>
@@ -17,10 +23,15 @@ const ResultGropup = ({
                 </button>
                 <span>:</span>
                 <div className={styles[`${classComponent}__list`]}>
-                    {group.group.map((element) => (
-                        <div key={group.group.indexOf(element)}>
-                            <button type="button">{element.name}</button>
-                        </div>
+                    {group.group.map((el) => (
+                        <button
+                            index={el.id}
+                            onClick={() => handleClick(el)}
+                            type="button"
+                            className={styles[`${classComponent}__list-item`]}
+                        >
+                            {el.name}
+                        </button>
                     ))}
                 </div>
             </div>
