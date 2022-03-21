@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Result from '../Results/Results'
+import Results from '../Results/Results'
 import styles from './Search.module.scss'
 import iconX from '../../assets/image/icon-x.svg'
 import Data from '../Data/Data'
@@ -15,7 +15,7 @@ const Search = () => {
         }
     }
 
-    const onSubmitHandler = () => {
+    const onbuttonHandler = () => {
         setValue('')
     }
 
@@ -31,11 +31,11 @@ const Search = () => {
                         value={value || ''}
                     />
                     <div className={styles['Search-Buttons']}>
-                        <button type="submit" onClick={onSubmitHandler}>
+                        <button type="button" onClick={onbuttonHandler}>
                             <img src={iconX} alt="icon delete" />
                         </button>
                         <span className={styles.line} />
-                        <button type="submit">
+                        <button type="button">
                             <img
                                 src={yandex.icon}
                                 alt="Search engine default"
@@ -44,7 +44,7 @@ const Search = () => {
                     </div>
                 </div>
                 <div className={styles['Result-List']}>
-                    <Result result={value} />
+                    <Results result={value} />
                 </div>
             </form>
         </div>
