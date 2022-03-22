@@ -18,6 +18,11 @@
         display: flex;
         justify-content: center;
 
+        @media screen and (min-width: 980px) {
+            // width: 600px;
+            margin-top: 2em;
+        }
+
         .logoTS {
             height: 32px;
             margin-right: 16px;
@@ -29,7 +34,7 @@ h1 {
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.4em;
-    font-family: 'Space Mono';
+    font-family: 'Space Mono', monospace;
     font-style: normal;
     font-weight: bold   ;
     font-size: 22px;

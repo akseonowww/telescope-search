@@ -1,14 +1,17 @@
 import React from 'react'
 import Data from '../Data/Data'
 import styles from './Results.module.scss'
-import ResultDefault from './ResultDefault/ResultDefault'
-import ResultButtons from './ResultButtons/ResultButtons'
-import ResultGropup from './ResultGroup/ResultGroup'
-import ResultBookmarks from './ResultBookmarks/ResultBookmarks'
+import Default from './Default/Default'
+import Buttons from './Buttons/Buttons'
+import Gropup from './Group/Group'
+import Bookmarks from './Bookmarks/Bookmarks'
+import Card from './Card/Card'
 
 const Results = ({ result }) => {
     const classComponent = 'Results'
     const { groups } = Data
+    const { bookmarks } = Data
+    const { cards } = Data
 
     const search = Data.searchEngine
 
@@ -18,24 +21,50 @@ const Results = ({ result }) => {
                 {result ? (
                     <div>
                         <div className={styles[`${classComponent}-Header`]}>
-                            <ResultButtons />
+                            <Buttons value={result} />
                         </div>
                         <div className={styles[`${classComponent}-Item`]}>
-                            <ResultDefault value={result} />
+                            <Default value={result} />
                         </div>
                         <div className={styles[`${classComponent}-Item`]}>
-                            <ResultBookmarks
+                            <Bookmarks
                                 title={result}
                                 link={search[0].link + result.toString()}
                                 icon={search[0].icon}
                             />
                         </div>
+                        {cards[0].card.map((el) => (
+                            <div
+                                key={cards[0].card.indexOf(el)}
+                                className={styles[`${classComponent}-Item`]}
+                            >
+                                <Card
+                                    value={result}
+                                    title={el.name}
+                                    info={el.info}
+                                    icon={el.img}
+                                />
+                            </div>
+                        ))}
                         {groups.map((el) => (
                             <div
+                                key={groups.indexOf(el)}
                                 className={styles[`${classComponent}-Item`]}
-                                key={el.id}
                             >
-                                <ResultGropup group={el} />
+                                <Gropup group={el} />
+                            </div>
+                        ))}
+                        {bookmarks.map((el) => (
+                            <div
+                                key={bookmarks.indexOf(el)}
+                                className={styles[`${classComponent}-Item`]}
+                            >
+                                <Bookmarks
+                                    value={result}
+                                    title={el.name}
+                                    link={el.link}
+                                    icon={el.icon}
+                                />
                             </div>
                         ))}
                     </div>

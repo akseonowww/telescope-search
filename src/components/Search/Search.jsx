@@ -25,7 +25,7 @@ const Search = () => {
                 <div className={styles.Search}>
                     <input
                         className={styles['Search-Input']}
-                        placeholder="Find your star!"
+                        placeholder="Найди свою звезду!"
                         onKeyPress={handleKeyPress}
                         onChange={(el) => setValue(el.target.value)}
                         value={value || ''}

@@ -8,7 +8,7 @@ const App = () => (
         <div className={styles.Windows}>
             <div className={styles.Header}>
                 <img className={styles.logoTS} src={logo} alt="logo" />
-                <h1>Telescope</h1>
+                <h1>Телескоп</h1>
             </div>
             <Search className={styles.Search} />
         </div>

@@ -1,0 +1,75 @@
+.Bookmarks {
+    display: flex;
+    width: 100%;
+    text-align: left;
+    padding: 8px 0;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+
+    &__icon {
+        margin-right: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+        width: 40px;
+
+        &-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            // background-color: #e4e4e4;
+            border-radius: 8px;
+            margin: 8px 0;
+        }
+
+        &-default {
+            height: 8px;
+            width: 8px;
+            background: #c6c6c6;
+            border-radius: 100px;
+        }
+
+        &-img {
+            height: 90%;
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow: hidden;
+
+        span {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        &-default {
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            width: inherit;
+            overflow: hidden;
+
+            span {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+
+        &-link {
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 19px;
+            color: #1ab91a;
+        }
+    }
+}

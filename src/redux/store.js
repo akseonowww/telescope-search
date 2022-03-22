@@ -22,7 +22,7 @@ const reducer = (state = defaultState, action = {}) => {
                 ...state, resultButtons: [...state.resultButtons,
                 {
                     name: action.payload,
-                    id: n + 1
+                    id: n
                 }]
             }
         case "DELETE_BTN":
