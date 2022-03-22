@@ -43,9 +43,8 @@
         overflow: hidden;
 
         span {
-            white-space: nowrap;
             overflow: hidden;
-            text-overflow: ellipsis;
+            // text-overflow: ellipsis;
         }
 
         &-default {
@@ -56,7 +55,6 @@
             overflow: hidden;
 
             span {
-                white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
             }

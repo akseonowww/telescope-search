@@ -14,21 +14,27 @@
     @media screen and (min-width: 980px) {
         width: 600px;
     }
-    
+
+    // Вернуть обратно!!!
+
+    // .Result-List {
+    //     display: none;
+    // }
+
     .Result-List {
-        display: none;
+        display: block;
     }
 
-    &:focus-within {
-        background-color: #f8f8f8;
-        border-radius: 16px;
-        box-shadow: 0px 2px 36px rgba(0, 0, 0, 0.1);
-        border: 1px solid #e3e3e3;
+    // &:focus-within {
+    //     background-color: #f8f8f8;
+    //     border-radius: 16px;
+    //     box-shadow: 0px 2px 36px rgba(0, 0, 0, 0.1);
+    //     border: 1px solid #e3e3e3;
 
-        .Result-List {
-            display: block;
-        }
-    }
+    //     .Result-List {
+    //         display: block;
+    //     }
+    // }
 }
 
 .Search-Content {
