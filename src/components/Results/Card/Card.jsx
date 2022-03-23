@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger */
 import React, { useState } from 'react'
 import styles from './Card.module.scss'
 import iconOpen from '../../../assets/image/icon-open-card.svg'
@@ -36,10 +37,11 @@ const Card = ({ value, title, info, icon }) => {
                     </div>
                 </div>
                 <div className={styles[`${classComponent}__text`]}>
-                    <span>{title}</span>
-                    <span className={styles[`${classComponent}__text-info`]}>
-                        {info}
-                    </span>
+                    <span dangerouslySetInnerHTML={{ __html: title }} />
+                    <span
+                        className={styles[`${classComponent}__text-info`]}
+                        dangerouslySetInnerHTML={{ __html: info }}
+                    />
                 </div>
             </a>
             <div className={styles[`${classComponent}__option`]}>

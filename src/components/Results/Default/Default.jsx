@@ -12,7 +12,12 @@ const Default = ({ value }) => (
                 <div className={styles['Default__icon-default']}> </div>
             </div>
             <div className={styles['Default__text-default']}>
-                <span>{value}</span>
+                {/* <strong>{value || 'Введите текст'}</strong> */}
+                {value ? (
+                    <strong>{value}</strong>
+                ) : (
+                    <span>Я слушаю вас...</span>
+                )}
             </div>
         </a>
     </div>

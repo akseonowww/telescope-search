@@ -7,6 +7,28 @@
     box-shadow: 0px 2px 36px transparent;
     border: 1px solid transparent;
 
+    // Удали
+    // background-color: #f8f8f8;
+    // border-radius: 16px;
+    // box-shadow: 0px 2px 36px rgba(0, 0, 0, 0.1);
+    // border: 1px solid #e3e3e3;
+
+    // Вернуть обратно!!!
+
+    .Result-List {
+        display: none;
+    }
+    &:focus-within {
+        background-color: #f8f8f8;
+        border-radius: 16px;
+        box-shadow: 0px 2px 36px rgba(0, 0, 0, 0.1);
+        border: 1px solid #e3e3e3;
+
+        .Result-List {
+            display: block;
+        }
+    }
+
     @media screen and (max-width: 450px) {
         width: 90%;
     }
@@ -14,27 +36,6 @@
     @media screen and (min-width: 980px) {
         width: 600px;
     }
-
-    // Вернуть обратно!!!
-
-    // .Result-List {
-    //     display: none;
-    // }
-
-    .Result-List {
-        display: block;
-    }
-
-    // &:focus-within {
-    //     background-color: #f8f8f8;
-    //     border-radius: 16px;
-    //     box-shadow: 0px 2px 36px rgba(0, 0, 0, 0.1);
-    //     border: 1px solid #e3e3e3;
-
-    //     .Result-List {
-    //         display: block;
-    //     }
-    // }
 }
 
 .Search-Content {
@@ -65,11 +66,13 @@
         background: #fff;
         color: #5813c9;
         font-weight: normal;
+        font-weight: 600;
 
         &:focus {
             text-align: left;
             padding-right: 78px;
             color: #000;
+            font-weight: normal;
         }
     }
 
@@ -125,4 +128,14 @@
             background-color: #e2e2e2;
         }
     }
+}
+
+mark {
+    background-color: transparent;
+    color: #5813c9;
+    font-family: Roboto, Arial, sans-serif;
+    background-color: #2aa5a0;
+    background-image: linear-gradient(to top, #5813c9, #e33ef2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }

@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger */
 import React from 'react'
 import styles from './Bookmarks.module.scss'
 
@@ -12,6 +13,8 @@ const Bookmarks = ({
             background: icon,
         },
     }
+
+    // const newTitle = `${title.replace(value, `<mark>${value}</mark>`)}` 
 
     const classComponent = 'Bookmarks'
 
@@ -31,7 +34,7 @@ const Bookmarks = ({
                     </div>
                 </div>
                 <div className={styles[`${classComponent}__text`]}>
-                    <span>{title}</span>
+                    <span dangerouslySetInnerHTML={{ __html: title }} />
                     <span className={styles[`${classComponent}__text-link`]}>
                         {link}
                     </span>

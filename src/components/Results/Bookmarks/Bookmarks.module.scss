@@ -1,3 +1,5 @@
+$iconHW: 50px;
+
 .Bookmarks {
     display: flex;
     width: 100%;
@@ -13,8 +15,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 40px;
-        width: 40px;
+        height: $iconHW;
+        width: $iconHW;
 
         &-container {
             display: flex;
@@ -65,7 +67,7 @@
 
         &-link {
             font-weight: normal;
-            font-size: 16px;
+            font-size: 15px;
             line-height: 19px;
             color: #1ab91a;
         }

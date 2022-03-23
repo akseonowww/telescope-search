@@ -1,3 +1,5 @@
+$iconHW: 50px;
+
 .Card {
     display: flex;
     width: 100%;
@@ -25,8 +27,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 40px;
-        min-width: 40px;
+        height: $iconHW;
+        min-width: $iconHW;
 
         &-container {
             display: flex;
@@ -69,7 +71,7 @@
             font-weight: normal;
             color: #818c99;
             font-size: 15px;
-            line-height: 110%;
+            line-height: 115%;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -164,10 +166,12 @@
 
             &-info {
                 margin-top: 2px;
-                height: 95px;
                 white-space: normal;
                 overflow: hidden;
                 text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 5;
+                -webkit-box-orient: vertical;
             }
         }
 
@@ -210,16 +214,5 @@
             }
         }
     }
-}
 
-.no_active {
-    .Card {
-        &__info {
-            white-space: nowrap;
-        }
-        // &__icon {
-        //     height: 40px;
-        //     width: 40px;
-        // }
-    }
 }

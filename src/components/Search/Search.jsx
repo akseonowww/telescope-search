@@ -5,7 +5,7 @@ import iconX from '../../assets/image/icon-x.svg'
 import Data from '../Data/Data'
 
 const Search = () => {
-    const [value, setValue] = useState('я молодец') // Удалить данные
+    const [value, setValue] = useState('н') // Удалить данные
     const yandex = Data.searchEngine[0]
     const defaultLink = `https://${yandex.link + value}`
 
@@ -44,7 +44,7 @@ const Search = () => {
                     </div>
                 </div>
                 <div className={styles['Result-List']}>
-                    <Results result={value} />
+                    <Results value={value} />
                 </div>
             </form>
         </div>
