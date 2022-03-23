@@ -6,7 +6,7 @@ import Data from '../Data/Data'
 import logo from '../../assets/image/logo.svg'
 
 const Search = () => {
-   const [value, setValue] = useState('н') // Удалить данные
+   const [value, setValue] = useState('Пушк') // Удалить данные
    const yandex = Data.searchEngine[0]
    const defaultLink = `https://${yandex.link + value}`
 
