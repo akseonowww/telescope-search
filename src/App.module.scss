@@ -1,63 +1,68 @@
 .App {
-    text-align: center;
-    background: #FAFAFA;
+   text-align: center;
+   background: #fafafa;
 }
 
 .Windows {
-    padding-top: 24px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
 
-    .logoTS {
-        height: 100px;
-    }
+   &:focus-visible {
+      background-color: #61dafb;
+   }
 
-    .Header {
-        display: flex;
-        justify-content: center;
+   .logoTS {
+      height: 100px;
+   }
 
-        @media screen and (min-width: 980px) {
+   .Header {
+      &_active {
+         display: flex;
+         justify-content: center;
+
+         @media screen and (min-width: 980px) {
             // width: 600px;
             margin-top: 2em;
-        }
+         }
 
-        .logoTS {
+         .logoTS {
             height: 32px;
             margin-right: 16px;
-        }
-    }
+         }
+      }
+   }
 }
 
 h1 {
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 0.4em;
-    font-family: 'Space Mono', monospace;
-    font-style: normal;
-    font-weight: bold   ;
-    font-size: 22px;
-    line-height: 27px;
-    margin: 4px 0 20px 0;
+   text-align: center;
+   text-transform: uppercase;
+   letter-spacing: 0.4em;
+   font-family: 'Space Mono', monospace;
+   font-style: normal;
+   font-weight: bold;
+   font-size: 22px;
+   line-height: 28px;
+   margin: 0;
 }
 
 .App-header {
-    background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+   background-color: #282c34;
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   font-size: calc(10px + 2vmin);
+   color: white;
 }
 
 .App-link {
-    color: #61dafb;
+   color: #61dafb;
 }
 
 button {
-    white-space: nowrap;
-    outline: none;
-    cursor: pointer;
+   white-space: nowrap;
+   outline: none;
+   cursor: pointer;
 }
