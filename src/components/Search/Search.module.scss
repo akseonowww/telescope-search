@@ -167,6 +167,7 @@
       background: #fff;
       color: #5813c9;
       font-weight: 400;
+      -webkit-tap-highlight-color: transparent;
 
       @media screen and (max-width: 450px) {
          padding: 16px 12px;
@@ -269,7 +270,8 @@ mark {
    color: #5813c9;
    font-family: Roboto, Arial, sans-serif;
    background-color: #2aa5a0;
-   background-image: linear-gradient(to top, #5813c9, #e33ef2);
+   background-image: linear-gradient(160deg, #5813c9 35%, #e33ef2 81%);
+   // background-image: linear-gradient(to top, #5813c9, #e33ef2);
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
 }
