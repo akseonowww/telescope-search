@@ -23,7 +23,7 @@ const Card = ({ value, title, info, icon }) => {
          }`}
       >
          <a
-            href={`https://${wiki.link + title}`}
+            href={`https://${wiki.link + titleNoHTML}`}
             className={`${styles[`${classComponent}__info`]}`}
          >
             <div className={styles[`${classComponent}__icon`]}>
