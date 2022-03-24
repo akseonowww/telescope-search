@@ -1,3 +1,4 @@
 ![logo](./src/assets/image/logo.svg)
 
-# Telescope Search / Телескоп Поиск
+# Телескоп Поиск
+Найди свою звезду!
