@@ -7,6 +7,7 @@
       margin: 0;
       padding: 0;
       padding-left: 16px;
+      transform: all 0.2s;
 
       cursor: pointer;
 
@@ -16,6 +17,10 @@
 
       &:hover {
          background-color: #e2e2e2;
+
+         @media screen and (max-width: 450px) {
+            background-color: #fff;
+         }
       }
    }
 
@@ -78,6 +83,7 @@
          font-size: 16px;
          padding: 16px 0 20px;
          gap: 12px;
+
          ul {
             padding: 0;
             margin: 0;
