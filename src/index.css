@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
 * {
     box-sizing: border-box;
 }
@@ -11,7 +12,9 @@ body {
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
     overflow-y: scroll;
-    background-color: #fafafa;
+    /* background-color: #773e3e; */
+    /* border: 1px solid #eee; */
+    /* min-height: 100vh; */
 }
 
 code {

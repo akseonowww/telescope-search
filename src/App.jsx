@@ -1,7 +1,6 @@
 import React from 'react'
 import styles from './App.module.scss'
 import Search from './components/Search/Search'
-import logo from './assets/image/logo.svg'
 
 const App = () => (
    <div className="App">

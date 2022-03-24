@@ -1,16 +1,14 @@
 .App {
    text-align: center;
-   background: #fafafa;
+   height: 100%;
+
 }
 
 .Windows {
    display: flex;
    justify-content: center;
    flex-direction: column;
-
-   &:focus-visible {
-      background-color: #61dafb;
-   }
+   height: 100%;
 
    .logoTS {
       height: 100px;
@@ -47,7 +45,7 @@ h1 {
 }
 
 .App-header {
-   background-color: #282c34;
+   // background-color: #282c34;
    min-height: 100vh;
    display: flex;
    flex-direction: column;

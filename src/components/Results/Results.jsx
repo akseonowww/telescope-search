@@ -1,14 +1,13 @@
 /* eslint-disable no-unused-expressions */
 /* eslint-disable react/no-array-index-key */
 /* eslint-disable consistent-return */
-import React, { useState } from 'react'
+import React from 'react'
 import Data from '../Data/Data'
 import styles from './Results.module.scss'
 import Default from './Default/Default'
 import Buttons from './Buttons/Buttons'
 import Bookmarks from './Bookmarks/Bookmarks'
 import Card from './Card/Card'
-// import Bookmarks from './Bookmarks/Bookmarks'
 
 const Results = ({ value }) => {
     const classComponent = 'Results'
