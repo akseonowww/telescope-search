@@ -6,7 +6,7 @@ import Data from '../Data/Data'
 import logo from '../../assets/image/logo.svg'
 
 const Search = () => {
-   const [value, setValue] = useState('Пушк') // Удалить данные
+   const [value, setValue] = useState('') // Удалить данные
    const yandex = Data.searchEngine[0]
    const defaultLink = `https://${yandex.link + value}`
 
@@ -41,7 +41,7 @@ const Search = () => {
                      <img src={iconX} alt="icon delete" />
                   </button>
                   <span className={styles.line} />
-                  <button type="button">
+                  <button type="button" className={styles.btnSearch}>
                      <img src={yandex.icon} alt="Search engine default" />
                   </button>
                </div>

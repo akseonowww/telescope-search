@@ -105,6 +105,13 @@
             height: 32px;
          }
       }
+
+      .Search {
+         &-Buttons {
+            display: flex; 
+         }
+      }
+
    }
 }
 
@@ -129,6 +136,10 @@
       background: #fff;
       color: #5813c9;
       font-weight: 400;
+      
+      @media screen and (max-width: 450px) {
+         padding: 16px 12px;
+      }
 
       &::placeholder {
          color: #5813c9;
@@ -162,6 +173,11 @@
          height: 24px;
          width: 24px;
          cursor: pointer;
+         display: none;
+
+         &.btnSearch {
+            display: block;
+         }
 
          img {
             height: 100%;
@@ -169,7 +185,8 @@
       }
 
       .line {
-         display: block;
+         // display: block;
+         display: none;
          width: 1.5px;
          height: 24px;
          margin: 0 8px 0 3px;
