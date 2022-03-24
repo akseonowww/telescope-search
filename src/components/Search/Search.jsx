@@ -18,7 +18,7 @@ const Search = () => {
 
    const onbuttonHandler = () => {
       setValue('')
-   }
+}
 
    return (
       <form className={styles['Search-Content']}>
