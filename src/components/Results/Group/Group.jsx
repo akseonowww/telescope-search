@@ -5,9 +5,9 @@ const Gropup = ({ group }) => {
    const classComponent = 'Gropup'
 
    const handleClick = (el) => {
-      console.log(el.name)
+      // console.log(el.name)
 
-      console.log(el.group[0].group[0].group)
+      // console.log(el.group[0].group[0].group)
    }
 
    return (

@@ -78,7 +78,7 @@ const Results = ({ value }) => {
       }
 
       // // USE ALL
-      console.log(allResults)
+      // console.log(allResults)
       const TSResult = () => [
          allResults.groups.map((el) => (
             <Group
