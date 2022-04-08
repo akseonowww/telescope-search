@@ -1,23 +1,34 @@
-/* eslint-disable no-unused-expressions */
-/* eslint-disable react/no-array-index-key */
-/* eslint-disable consistent-return */
 import React from 'react'
-import Data from '../Data/Data'
+import Data from '../../store/Data.json'
 import styles from './Results.module.scss'
 import Default from './Default/Default'
 import Buttons from './Buttons/Buttons'
 import Bookmarks from './Bookmarks/Bookmarks'
 import Card from './Card/Card'
+import Group from './Group/Group'
+import Article from '../Article/Article'
 
 const Results = ({ value }) => {
    const classComponent = 'Results'
    const search = Data.searchEngine
 
-   // eslint-disable-next-line react/no-unstable-nested-components
    const TSearch = (data = []) => {
       const allResults = {
          bookmarks: [],
          cards: [],
+         groups: [],
+      }
+
+      // Groups
+      const { groups } = data
+      for (let i = 0; i < groups.length; i += 1) {
+         const el = groups[i]
+         if (el.name.toLowerCase().includes(value.toLowerCase())) {
+            allResults.groups.push({
+               group: el,
+               id: Date.now(),
+            })
+         }
       }
 
       // Bookmarks
@@ -46,37 +57,37 @@ const Results = ({ value }) => {
          for (let i = 0; i < card.length; i += 1) {
             const el = card[i]
             if (el.name.toLowerCase().includes(value.toLowerCase())) {
-               const newTitle =
-                  // eslint-disable-next-line no-self-compare
+               let newTitle = el.name.replace(value, `<mark>${value}</mark>`)
+               newTitle =
                   el.name.replace(value, `<mark>${value}</mark>`) ===
-                  el.name.replace(value, `<mark>${value}</mark>`)
+                  el.name.replace(value, `<mark>${value.toUpperCase}</mark>`)
                      ? el.name.replace(value, `<mark>${value}</mark>`)
                      : el.name.replace(
                           value.toLowerCase(),
                           `<mark>${value}</mark>`
                        )
 
-               // console.log(el.name.replace(value, `<mark>${value}</mark>`))
-               // let newTitle = `${el.name.replace(
-               //     value,
-               //     `<mark>${value}</mark>`
-               // )}`
-               // newTitle = `${el.name.replace(
-               //     value.toLowerCase,
-               //     `<mark>${value}</mark>`
-               // )}`
-
                allResults.cards.push({
                   title: newTitle,
                   infoLink: el.info,
                   icon: el.img,
+                  id: Date.now(),
                })
             }
          }
       }
 
       // // USE ALL
+      console.log(allResults)
       const TSResult = () => [
+         allResults.groups.map((el) => (
+            <Group
+               key={`${el.id}`}
+               // value={value}
+               // name={el.title}
+               group={el.group}
+            />
+         )),
          allResults.bookmarks.map((el) => (
             <Bookmarks
                key={`${el.id}`}
@@ -116,14 +127,16 @@ const Results = ({ value }) => {
             {value ? (
                <div>
                   {data.map((el) =>
-                     el.map((elem, index) => {
+                     el.map((elem) => {
                         counterResults += 1
                         return (
                            <div
-                              key={`${index}`}
+                              key={`${elem.key}`}
                               className={styles[`${classComponent}-Item`]}
                            >
                               {elem}
+                              {/* {console.log(elem, elem.key)} */}
+                              {/* {console.log(data)} */}
                            </div>
                         )
                      })

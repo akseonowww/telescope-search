@@ -8,21 +8,14 @@
    border: 1px solid transparent;
    position: relative;
    z-index: 2;
-
-   // Удали
-   // background-color: #f8f8f8;
-   // border-radius: 16px;
-   // box-shadow: 0px 2px 36px rgba(0, 0, 0, 0.1);
-   // border: 1px solid #e3e3e3;
-
-   // Вернуть обратно!!!
+   transition: all .6s;
+   margin-bottom: 10vh;
 
    .Result-List {
       display: none;
    }
 
    &:focus-within {
-      // background-color: #fafafa;
       background-color: rgb(245, 245, 245);
       border-radius: 16px;
       box-shadow: 0px 2px 36px rgba(190, 130, 130, 0.1);
@@ -36,11 +29,6 @@
 
       .Result-List {
          display: block;
-      }
-
-      .logoTS {
-         height: 32px;
-         border: #000 2px solid;
       }
    }
 
@@ -64,26 +52,8 @@
    justify-content: center;
    align-items: center;
    padding-top: 15vh;
-   transition: all 0.6s;
-   // background-color: rgb(245, 245, 245);
    position: relative;
    z-index: 2;
-
-   * {
-      transition: all 0.8s;
-   }
-
-   // &::after {
-   //    content: '';
-   //    display: none;
-   //    position: absolute;
-   //    top: 0;
-   //    right: 0;
-   //    background-color: rgba(61, 61, 61, 0.733);
-   //    height: 100%;
-   //    width: 100%;
-   //    z-index: 1;
-   // }
 
    .Header {
       display: flex;
@@ -93,6 +63,7 @@
 
       .logoTS {
          height: 100px;
+         transition: all .6s;
       }
    }
 
@@ -103,7 +74,7 @@
       z-index: 100;
 
       @media screen and (max-width: 450px) {
-         background: #ebebeb;
+         background: #fff;
          border-radius: 0 0 16px 16px;
       }
 
@@ -230,10 +201,9 @@
 
       .line {
          display: none;
-         display: block;
          width: 1.5px;
          height: 24px;
-         margin: 0 4px 0 2px;
+         margin: 0 6px 0 2px;
          background: #e4e4e4;
       }
    }
@@ -258,6 +228,7 @@
       text-align: left;
       padding: 10px;
       cursor: pointer;
+      transition: all .6s;
 
       &:hover {
          background-color: #724040;
@@ -274,4 +245,81 @@ mark {
    // background-image: linear-gradient(to top, #5813c9, #e33ef2);
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
+}
+
+.Wo1rk {
+   padding-top: 22px;
+
+   .Header {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin-bottom: 16px;
+
+      h1 {
+         letter-spacing: 0.2em;
+      }
+
+      .logoTS {
+         margin-right: 16px;
+         height: 32px;
+      }
+   }
+
+   &:focus-within {
+      .Header {
+         position: relative;
+         z-index: 2;
+         display: flex;
+         flex-direction: row;
+         justify-content: center;
+         margin-bottom: 16px;
+
+         h1 {
+            letter-spacing: 0.2em;
+         }
+
+         .logoTS {
+            margin-right: 16px;
+            height: 32px;
+         }
+      }
+   }
+
+   .Form {
+      position: relative;
+      width: 80%;
+      overflow: hidden;
+      background-color: transparent;
+      border-radius: 12px;
+      box-shadow: 0px 2px 36px transparent;
+      border: 1px solid transparent;
+      position: relative;
+      z-index: 2;
+      width: 100%;
+
+      .Result-List {
+         display: block;
+      }
+
+      &:focus-within {
+         background-color: rgb(245, 245, 245);
+         border-radius: 16px;
+         box-shadow: 0px 2px 36px rgba(190, 130, 130, 0.1);
+         border: 1px solid #e3e3e3;
+
+         @media screen and (max-width: 450px) {
+            box-shadow: none;
+            background-color: #fff;
+            border: none;
+            width: 100%;
+         }
+
+         .Result-List {
+            display: block;
+         }
+      }
+   }
 }

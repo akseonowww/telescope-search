@@ -2,11 +2,11 @@ import React, { useState } from 'react'
 import Results from '../Results/Results'
 import styles from './Search.module.scss'
 import iconX from '../../assets/image/icon-x.svg'
-import Data from '../Data/Data'
+import Data from '../../store/Data.json'
 import logo from '../../assets/image/logo.svg'
 
 const Search = () => {
-   const [value, setValue] = useState('') // Удалить данные
+   const [value, setValue] = useState('') // Удалить данные!
    const yandex = Data.searchEngine[0]
    const defaultLink = `https://${yandex.link + value}`
 
@@ -18,10 +18,10 @@ const Search = () => {
 
    const onbuttonHandler = () => {
       setValue('')
-}
+   }
 
    return (
-      <form className={styles['Search-Content']}>
+      <form className={`${styles['Search-Content']} ${styles.Work}`}>
          {/* <div className="Header active"> */}
          <div className={styles.Header}>
             <img className={styles.logoTS} src={logo} alt="logo" />

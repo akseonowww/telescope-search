@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import styles from './Card.module.scss'
 import iconOpen from '../../../assets/image/icon-open-card.svg'
-import Data from '../../Data/Data'
+import Data from '../../../store/Data.json'
 
 const Card = ({ value, title, info, icon }) => {
    const classComponent = 'Card'

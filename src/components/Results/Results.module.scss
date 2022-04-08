@@ -7,7 +7,6 @@
       margin: 0;
       padding: 0;
       padding-left: 16px;
-      transform: all 0.2s;
 
       cursor: pointer;
 
@@ -45,8 +44,8 @@
                text-decoration: none;
                color: #828282;
                position: relative;
-               transform: all 0.5s;
-
+               transition: all .5s;
+               
                &:after {
                   content: '';
                   display: none;
@@ -58,13 +57,11 @@
                   padding: 2px 8px;
                   border-radius: 24px;
                   background-color: #14ade925;
-                  transform: all 0.5s;
                }
-
+               
                &:hover {
                   color: #0da2dd;
-                  transform: all 0.5s;
-
+                  
                   &:after {
                      display: block;
                      bottom: -2px;

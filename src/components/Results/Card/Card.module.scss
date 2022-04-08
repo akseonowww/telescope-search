@@ -9,33 +9,31 @@ $iconHW: 50px;
    font-weight: 600;
    justify-content: space-between;
    position: relative;
-
-   * {
-      transition: all 0.8s;
-   }
-
+   
    &__info {
       display: flex;
       width: 70%;
       text-decoration: none;
       color: #000;
-
+      
       @media screen and (max-width: 450px) {
          width: 75%;
       }
-
+      
       // white-space: nowrap;
    }
 
    &__icon {
+      transition: all .6s;
       margin-right: 8px;
       display: flex;
       justify-content: center;
       align-items: center;
       height: $iconHW;
       min-width: $iconHW;
-
+      
       &-container {
+         transition: all .6s;
          display: flex;
          justify-content: center;
          align-items: center;
@@ -56,6 +54,7 @@ $iconHW: 50px;
       }
 
       &-img {
+         transition: all .6s;
          width: 80px;
          position: absolute;
          z-index: 1;
@@ -224,10 +223,6 @@ $iconHW: 50px;
          height: 150px;
          min-width: 120px;
          margin-right: 12px;
-
-         // * {
-         //     transition: all .8s;
-         // }
 
          &-container {
             border-radius: 12px;

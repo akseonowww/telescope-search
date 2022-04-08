@@ -1,0 +1,61 @@
+.Article {
+   background: rgb(252, 243, 255);
+   margin-right: 16px;
+   padding: 12px;
+   border-radius: 12px;
+   border: 2px solid #5913c952;
+   
+   &-text {
+      font-family: Georgia, serif;
+      padding: 8px 0;
+   }
+
+   &-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 18px;
+      // padding-left: 12px;
+
+      &__open {
+         background-color: transparent;
+         border: none;
+         height: 100%;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
+      
+      &__icon {
+         background: linear-gradient(24deg, #e33ef2, #5813c9);
+         height: 32px;
+         min-width: 32px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         overflow: hidden;
+         border-radius: 16px;
+         display: flex;
+
+         svg {
+            $size: 18px;
+            color: #fff;
+            height: $size;
+            width: $size;
+         }
+      }
+
+      h3 {
+         margin: 0;
+         width: 100%;
+      }
+   }  
+   
+}
+
+.active {
+   .Article-text {
+      transition: all .5s;
+      display: none;
+   }
+}
