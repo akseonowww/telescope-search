@@ -1,7 +1,8 @@
 /* eslint-disable react/no-danger */
 import React, { useState } from 'react'
+import { BsChevronDoubleDown } from 'react-icons/bs'
+import { FaWikipediaW } from 'react-icons/fa'
 import styles from './Card.module.scss'
-import iconOpen from '../../../assets/image/icon-open-card.svg'
 import Data from '../../../store/Data.json'
 
 const Card = ({ value, title, info, icon }) => {
@@ -60,7 +61,7 @@ const Card = ({ value, title, info, icon }) => {
                href={`https://${wiki.link + titleNoHTML}`}
             >
                <div className={styles[`${classComponent}__option-btn__img`]}>
-                  <img src={wiki.icon} alt="icon wikipedia" />
+                  <FaWikipediaW />
                </div>
                <span className={styles[`${classComponent}__option-btn__text`]}>
                   Википедея
@@ -71,7 +72,8 @@ const Card = ({ value, title, info, icon }) => {
                type="button"
                onClick={() => openCard()}
             >
-               <img src={iconOpen} alt="icon open list" />
+               <BsChevronDoubleDown />
+               {/* <img src={iconOpen} alt="icon open list" /> */}
             </button>
          </div>
          {/* </a> */}

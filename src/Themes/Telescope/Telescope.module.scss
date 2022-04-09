@@ -1,0 +1,30 @@
+.Telescope {
+   padding: 0 0 100px 0;
+   height: 100%;
+
+   h1 {
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.4em;
+      font-family: 'Space Mono', monospace;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 22px;
+      line-height: 28px;
+      margin: 0;
+   }
+
+   // Search
+   .Header {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-bottom: 20px;
+
+      .logoTS {
+         height: 100px;
+         transition: all .6s;
+      }
+   }
+
+}

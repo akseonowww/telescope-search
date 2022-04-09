@@ -1,3 +1,6 @@
+$main: #017AFF;
+
+
 .Results {
    width: 100%;
    overflow: hidden;
@@ -5,8 +8,9 @@
 
    &-Item {
       margin: 0;
-      padding: 0;
-      padding-left: 16px;
+      padding: 4px;
+      // padding-left: 16px;
+      // padding-left: 4px;
 
       cursor: pointer;
 
@@ -15,10 +19,10 @@
       }
 
       &:hover {
-         background-color: #e2e2e2;
+         background-color: rgba($main, .08);
 
          @media screen and (max-width: 450px) {
-            background-color: #fff;
+            background-color: transparent;
          }
       }
    }
@@ -27,8 +31,8 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1.5em;
-      border-top: 1px solid #e1e1e1;
+      // padding: 1.5em;
+      // border-top: 1px solid #e1e1e1;
       color: #828282;
       font-size: 12px;
 

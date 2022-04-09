@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+* {
+   box-sizing: border-box;
+}
+
+body {
+   margin: 0;
+   font-family: 'Roboto', sans-serif;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   overflow-x: hidden;
+   overflow-y: scroll;
+   /* background-color: #773e3e; */
+   /* border: 1px solid #eee; */
+   min-height: 100vh; 
+}
+
+code {
+   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+}
+
+button {
+   width: max-content;
+   font-size: 16px;
+}
+
+.react-tabs {
+   &__tab {
+      margin: 4px;
+      background-color: rgb(227, 227, 227);
+      border-radius: 0;
+      padding: 0;
+      border: none;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      
+      img {
+         height: 20px;
+         margin-right: 6px;
+      }
+
+      &--selected {
+         background-color: rgb(255, 255, 255);
+         border: none;
+
+         &::after {
+            display: none;
+         }
+      }
+
+      &-list {
+         background-color: rgb(44, 44, 44);
+         border: none;
+         // padding: 4px 8px;
+         display: grid;
+         height: 3em;
+         grid-template-columns: 1fr 1fr 1fr 1fr;
+         grid-template-rows: 1fr;
+         margin: 0;
+      }
+      
+      @media screen and (max-width: 570px) {
+         span {
+            display: none;
+         }
+   
+         img {
+            height: 28px;
+         }
+      }
+   }
+   &__tab-panel--selected {
+      height: 100%;
+   }
+}
