@@ -11,7 +11,7 @@ body {
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
    overflow-x: hidden;
-   overflow-y: scroll;
+   // overflow-y: scroll;
    /* background-color: #773e3e; */
    /* border: 1px solid #eee; */
    min-height: 100vh; 
@@ -28,6 +28,16 @@ button {
 }
 
 .react-tabs {
+   display: flex;
+   flex-direction: column;  
+   height: 100vh;
+   overflow: hidden;
+   bottom: none;
+
+   @media screen and (max-width: 450px) {
+      flex-direction: column-reverse;  
+   }
+
    &__tab {
       margin: 4px;
       background-color: rgb(227, 227, 227);
@@ -56,7 +66,6 @@ button {
       }
 
       &-list {
-         background-color: rgb(44, 44, 44);
          border: none;
          // padding: 4px 8px;
          display: grid;
@@ -64,6 +73,9 @@ button {
          grid-template-columns: 1fr 1fr 1fr 1fr;
          grid-template-rows: 1fr;
          margin: 0;
+         @media screen and (max-width: 570px) {
+            height: 4em;
+         }
       }
       
       @media screen and (max-width: 570px) {
@@ -72,11 +84,16 @@ button {
          }
    
          img {
-            height: 28px;
+            height: 34px;
          }
       }
    }
-   &__tab-panel--selected {
+   &__tab-panel {
       height: 100%;
+      overflow-y: scroll;
+
+      &--selected {
+         height: 100%;
+      }
    }
 }

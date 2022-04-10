@@ -1,15 +1,16 @@
 import React, { useState } from 'react'
 import { BsX } from 'react-icons/bs'
 import Results from '../Results/Results'
-import styles from './Search.module.scss'
+import './Search.scss'
 import Data from '../../store/Data.json'
+// import Data from '../../store/Data.json'
 
 const Search = ({
    placeholder = 'Поиск...',
    searchEngines = false,
    searchActive = false,
    firstR = '',
-   counterResults = false
+   counterResults = false,
 }) => {
    const [value, setValue] = useState('н') // Удалить данные!
    const yandex = Data.searchEngine[0]
@@ -26,16 +27,16 @@ const Search = ({
    }
 
    return (
-      <form className={`${styles['Search-Content']} ${styles.Work}`}>
+      <form className="Search-Content Work">
          {/* <div className="Header active"> */}
          {/* <div className={styles.Header}>
             <img className={styles.logoTS} src={logo} alt="logo" />
             <h1>Телескоп</h1>
          </div> */}
-         <div className={styles.Form}>
-            <div className={styles.Search}>
+         <div className="Form">
+            <div className="Search">
                <input
-                  className={styles['Search-Input']}
+                  className="Search-Input"
                   placeholder={placeholder}
                   // placeholder="Найди свою звезду!"
                   onKeyPress={handleKeyPress}
@@ -43,24 +44,32 @@ const Search = ({
                   value={value || ''}
                />
                {searchActive ? (
-                  <div className={styles['Search-Buttons']}>
-                     <button className={styles['Search-Buttons__delete']} type="button" onClick={onbuttonHandler}>
+                  <div className="Search-Buttons">
+                     <button
+                        className="Search-Buttons__delete"
+                        type="button"
+                        onClick={onbuttonHandler}
+                     >
                         <BsX />
                      </button>
-                     <span className={styles.line} />
-                     <button type="button" className={styles.btnSearch}>
+                     <span className="line" />
+                     <button type="button" className="btnSearch">
                         <img src={yandex.icon} alt="Search engine default" />
                      </button>
                   </div>
                ) : (
-                  <div className={styles['Search-Buttons']}>
-                     <button className={styles['Search-Buttons__delete']} type="button" onClick={onbuttonHandler}>
+                  <div className='Search-Buttons'>
+                     <button
+                        className='Search-Buttons__delete'
+                        type="button"
+                        onClick={onbuttonHandler}
+                     >
                         <BsX />
                      </button>
                   </div>
                )}
             </div>
-            <div className={styles['Result-List']}>
+            <div className='Result-List'>
                <Results
                   value={value}
                   searchEngines={searchEngines}

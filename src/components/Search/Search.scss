@@ -119,18 +119,11 @@ $main: #017AFF;
 
 .Search {
    z-index: 2;
-   // border-radius: 12px;
    position: relative;
    z-index: 1;
    overflow: hidden;
    margin: 4px;
    border: 1px solid #1e1e1e;
-   // border: 1px solid rgb(145, 145, 145);
-   // border: 2.4px solid transparent;
-   // background: linear-gradient(#e2e2e2 0 0) padding-box
-   
-   // background: linear-gradient(#e2e2e2 0 0) padding-box,
-   //    linear-gradient(183deg, #5813c9 35%, #e33ef2 81%) border-box;
    
    &-Input {
       font-size: 18px;
@@ -149,7 +142,7 @@ $main: #017AFF;
       -webkit-tap-highlight-color: transparent;
       
       @media screen and (max-width: 450px) {
-         height: 3em;
+         height: 2.5em;
          // padding: 16px 12px;
       }
 
@@ -160,7 +153,8 @@ $main: #017AFF;
 
       &:focus {
          text-align: left;
-         padding-right: 78px;
+         padding-right: 38px;
+         // padding-right: 78px;
          color: #000;
          font-weight: normal;
 

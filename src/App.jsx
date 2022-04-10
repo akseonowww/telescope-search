@@ -1,4 +1,6 @@
-import React from 'react'
+/* eslint-disable react-hooks/rules-of-hooks */
+/* eslint-disable react/no-this-in-sfc */
+import React, { useState } from 'react'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
 import 'react-tabs/style/react-tabs.css'
 import styles from './App.module.scss'
@@ -6,27 +8,37 @@ import Search from './components/Search/Search'
 import Sdamgia from './Themes/Sdamgia/Sdamgia'
 import Telescope from './Themes/Telescope/Telescope'
 import Yandex from './Themes/Yandex/Yandex'
+// import dataTS from './store/data'
+// import data from './store/data'
 
 const App = () => {
-   const s = 1
+   const baseURL = 'https://jsonblob.com/api/jsonBlob/962331985410539520' // 30 days (9.04-...)
+   // const [urlData, setUrlData] = useState(baseURL)
+
+   // let baseData = 0
+
+   // setTimeout(() => {
+   //    baseData = dataTS(urlData)
+   //    console.log(777, baseData)
+   // }, 3000)
 
    return (
       <div className="App">
-         <Tabs forceRenderTabPanel defaultIndex={3}>
+         <Tabs forceRenderTabPanel defaultIndex={0}>
             <TabList>
-               <Tab>
-                  <img
-                     src="https://ege.sdamgia.ru/img/headers/logo.svg"
-                     alt="Лого"
-                  />
-                  <span>СДАМ.ГИА</span>
-               </Tab>
                <Tab className={styles.Tab}>
                   <img
                      src="https://telescope-search.vercel.app/static/media/logo.36c9d5d4d5e780cf00a7c3ef979205f8.svg"
                      alt="Лого"
                   />
                   <span>Телескоп</span>
+               </Tab>
+               <Tab>
+                  <img
+                     src="https://ege.sdamgia.ru/img/headers/logo.svg"
+                     alt="Лого"
+                  />
+                  <span>СДАМ.ГИА</span>
                </Tab>
                <Tab className={styles.Tab}>
                   <img
@@ -45,16 +57,28 @@ const App = () => {
             </TabList>
 
             <TabPanel>
-               <Sdamgia />
+               <Telescope />
             </TabPanel>
             <TabPanel>
-               <Telescope />
+               <Sdamgia />
             </TabPanel>
             <TabPanel>
                <Yandex />
             </TabPanel>
             <TabPanel>
                <Search />
+               {/* <div className={styles.data}>
+                  <h2>Ссылка на базу данных:</h2>
+                  <input
+                     styles="width: 100%"
+                     placeholder="Ссылка на базу данных"
+                     onChange={(el) => setUrlData(el.target.value)}
+                     value={urlData}
+                  />
+                  <div>
+                     {setTimeout(() => `${baseData}` || 'Данные...', 3000)}
+                  </div>
+               </div> */}
             </TabPanel>
          </Tabs>
       </div>

@@ -10,18 +10,15 @@ const TSearch = (data = [], value) => {
       groups: [],
    }
 
-
-
    // Groups
    const { groups } = data
    for (let i = 0; i < groups.length; i += 1) {
       const el = groups[i]
       if (el.name.toLowerCase().includes(value.toLowerCase())) {
-         el.name = `${el.name.replace(value, `<mark>${value}</mark>`)}`
-         console.log(el.name)
+         // const newTitle = `${el.name.replace(value, `<mark>${value}</mark>`)}`
+         // console.log(el.name)
          allResults.groups.push({
             group: el,
-            id: Date.now(),
          })
       }
    }
@@ -31,13 +28,13 @@ const TSearch = (data = [], value) => {
    for (let i = 0; i < bookmarks.length; i += 1) {
       const el = bookmarks[i]
       if (el.name.toLowerCase().includes(value.toLowerCase())) {
-         const newTitle = `${el.name.replace(value, `<mark>${value}</mark>`)}`
+         // const newTitle = `${el.name.replace(value, `<mark>${value}</mark>`)}`
 
          allResults.bookmarks.push({
-            title: newTitle,
+            title: el.name,
+            // title: newTitle,
             infoLink: el.link,
             icon: el.icon,
-            id: i,
          })
       }
    }
@@ -49,21 +46,21 @@ const TSearch = (data = [], value) => {
       for (let i = 0; i < card.length; i += 1) {
          const el = card[i]
          if (el.name.toLowerCase().includes(value.toLowerCase())) {
-            let newTitle = el.name.replace(value, `<mark>${value}</mark>`)
-            newTitle =
-               el.name.replace(value, `<mark>${value}</mark>`) ===
-               el.name.replace(value, `<mark>${value.toUpperCase}</mark>`)
-                  ? el.name.replace(value, `<mark>${value}</mark>`)
-                  : el.name.replace(
-                       value.toLowerCase(),
-                       `<mark>${value}</mark>`
-                    )
+            // let newTitle = el.name.replace(value, `<mark>${value}</mark>`)
+            // newTitle =
+            //    el.name.replace(value, `<mark>${value}</mark>`) ===
+            //    el.name.replace(value, `<mark>${value.toUpperCase}</mark>`)
+            //       ? el.name.replace(value, `<mark>${value}</mark>`)
+            //       : el.name.replace(
+            //            value.toLowerCase(),
+            //            `<mark>${value}</mark>`
+            //         )
 
             allResults.cards.push({
-               title: newTitle,
+               title: el.name,
                infoLink: el.info,
                icon: el.img,
-               id: Date.now(),
+               // id: Date.now(),
             })
          }
       }
@@ -74,7 +71,7 @@ const TSearch = (data = [], value) => {
    const TSResult = () => [
       allResults.groups.map((el) => (
          <Group
-            key={`${el.id}`}
+            key={`${Date.now()}-${el.name}`}
             // value={value}
             // name={el.title}
             group={el.group}
@@ -82,7 +79,7 @@ const TSearch = (data = [], value) => {
       )),
       allResults.cards.map((el) => (
          <Card
-            key={`${el.id}`}
+            key={`${Date.now()}-${el.infoLink}`}
             value={value}
             title={el.title}
             info={el.infoLink}
@@ -91,7 +88,7 @@ const TSearch = (data = [], value) => {
       )),
       allResults.bookmarks.map((el) => (
          <Bookmarks
-            key={`${el.id}`}
+            key={`${Date.now()}-${el.infoLink}`}
             value={value}
             title={el.title}
             link={el.infoLink}

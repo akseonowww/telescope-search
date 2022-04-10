@@ -1,19 +1,29 @@
+$main: #017AFF;
+
 .App {
    text-align: center;
    height: 100%;
 }
 
-// h1 {
-//    text-align: center;
-//    text-transform: uppercase;
-//    letter-spacing: 0.4em;
-//    font-family: 'Space Mono', monospace;
-//    font-style: normal;
-//    font-weight: bold;
-//    font-size: 22px;
-//    line-height: 28px;
-//    margin: 0;
-// }
+.data {
+   background: rgba($main, 0.1);
+   border-radius: 12px;
+   margin: 24px;
+   padding: 12px;
+
+   h2 {
+      margin: 0;
+   }
+   
+   input {
+      width: 100%;
+      font-size: 16px;
+      padding: 12px 10px;
+      border: 2px solid $main;
+      border-radius: 12px;
+      margin: 6px 0;
+   }
+}
 
 .App-header {
    min-height: 100vh;
