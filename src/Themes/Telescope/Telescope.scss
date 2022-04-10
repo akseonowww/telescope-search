@@ -6,7 +6,6 @@ $main: linear-gradient(#e2e2e2 0 0) padding-box,
    height: 100%;
    position: relative;
 
-
    h1 {
       text-align: center;
       text-transform: uppercase;
@@ -20,17 +19,24 @@ $main: linear-gradient(#e2e2e2 0 0) padding-box,
    }
 
    &:focus-within {
-      background: rgb(167, 167, 167);
+      background: rgba(167, 167, 167, 0.344);
       padding-top: 0;
+
+      @media screen and (max-width: 450px) {
+         background: rgb(167, 167, 167);
+      }
 
       // Search
       .Form {
-         box-shadow: 0px 2px 36px transparent;
+         background-color: rgb(245, 245, 245);
+         border-radius: 16px;
+         box-shadow: 0px 2px 36px rgba(190, 130, 130, 0.1);
          border: 1px solid #eee;
          // margin-bottom: 120px;
 
          @media screen and (max-width: 450px) {
-            // box-shadow: none;
+            background-color: #fff;
+            box-shadow: none;
             border: 1px solid transparent;
             // margin-bottom: 120px;
             width: 100%;
@@ -54,7 +60,7 @@ $main: linear-gradient(#e2e2e2 0 0) padding-box,
          flex-direction: row;
          justify-content: center;
          padding: 16px 0 12px;
-         
+
          position: absolute;
          top: 0;
          right: 50%;
@@ -76,14 +82,18 @@ $main: linear-gradient(#e2e2e2 0 0) padding-box,
 
    .Search-Content {
       // padding-top: 32px;
-      background: rgb(255, 255, 255);
-      padding: 0;
-      border-radius: 0 0 16px 16px;
+
+      @media screen and (max-width: 450px) {
+         background: #fff;
+         padding: 0;
+         border-radius: 0 0 16px 16px;
+      }
    }
 
    .Form {
       box-shadow: 0px 2px 36px transparent;
       border: 1px solid transparent;
+      border-radius: 16px;
 
       @media screen and (max-width: 450px) {
          width: 95%;
@@ -123,7 +133,12 @@ $main: linear-gradient(#e2e2e2 0 0) padding-box,
          }
 
          &-Buttons {
-            top: 10px;
+            top: 6px;
+            right: 9px;
+
+            @media screen and (max-width: 450px) {
+               top: 10px;
+            }
          }
       }
    }
@@ -160,8 +175,27 @@ $main: linear-gradient(#e2e2e2 0 0) padding-box,
       &-Item {
          padding: 0;
          padding: 4px 0 4px 16px;
+
          @media screen and (max-width: 450px) {
             padding: 4px 0 4px 12px;
+         }
+
+         &:hover {
+            background-color: rgba(#e33ef2, 0.08);
+
+            @media screen and (max-width: 450px) {
+               background-color: transparent;
+            }
+         }
+      }
+
+      &-footer {
+         padding: 1.5em;
+         border-top: 1px solid #e1e1e1;
+
+         @media screen and (max-width: 450px) {
+            padding: 1em;
+            border-top: none;
          }
       }
    }
@@ -186,13 +220,19 @@ $main: linear-gradient(#e2e2e2 0 0) padding-box,
          }
          &-btn {
             border-radius: 120px;
+
+            &__img {
+               $size: 1.8em;
+               height: $size;
+               width: $size;
+            }
          }
       }
 
       &.active {
          .Card__icon {
-            height: 150px;
-            min-width: 120px;
+            // height: 150px;
+            // min-width: 120px;
 
             &-container {
                border-radius: 12px;
@@ -202,7 +242,7 @@ $main: linear-gradient(#e2e2e2 0 0) padding-box,
    }
    // Groups
    .Gropup {
-      padding: 8px 0;
+      // padding: 8px 0;
 
       &__name {
          border-radius: 8px;
@@ -224,4 +264,6 @@ $main: linear-gradient(#e2e2e2 0 0) padding-box,
    }
 
    // Article
+
+   // Work
 }

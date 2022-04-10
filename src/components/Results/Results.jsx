@@ -41,8 +41,6 @@ const Results = ({ value, searchEngines, firstR, counterResults }) => {
                               className={`${classComponent}-Item`}
                            >
                               {elem}
-                              {/* {console.log(elem, elem.key)} */}
-                              {/* {console.log(data)} */}
                            </div>
                         )
                      })

@@ -1,6 +1,6 @@
 /* eslint-disable react/no-danger */
 import React, { useState } from 'react'
-import { BsChevronDoubleDown } from 'react-icons/bs'
+import { BsChevronDoubleDown, BsBook } from 'react-icons/bs'
 import { FaWikipediaW } from 'react-icons/fa'
 import './Card.scss'
 import Data from '../../../store/Data.json'
@@ -19,10 +19,7 @@ const Card = ({ value, title, info, icon }) => {
 
    return (
       <div className={`${classComponent} ${isActive ? 'active' : 'no_active'}`}>
-         <a
-            href={`https://${wiki.link + titleNoHTML}`}
-            className={`${`${classComponent}__info`}`}
-         >
+         <div className={`${`${classComponent}__info`}`}>
             <div className={`${classComponent}__icon`}>
                <div className={`${classComponent}__icon-container`}>
                   <img
@@ -39,7 +36,7 @@ const Card = ({ value, title, info, icon }) => {
                   dangerouslySetInnerHTML={{ __html: info }}
                />
             </div>
-         </a>
+         </div>
          <div className={`${classComponent}__option`}>
             <div className={`${classComponent}__option-btn_hidden`}>
                <a
@@ -47,9 +44,9 @@ const Card = ({ value, title, info, icon }) => {
                   href={`https://${wiki.link + title}`}
                >
                   <div className={`${classComponent}__option-btn__img`}>
-                     {/* <img src={wiki.icon} alt="icon wikipedia" /> */}
+                     <BsBook />
                   </div>
-                  Произведения (25)
+                  <span>Произведения (25)</span>
                </a>
             </div>
             <a
@@ -69,7 +66,6 @@ const Card = ({ value, title, info, icon }) => {
                onClick={() => openCard()}
             >
                <BsChevronDoubleDown />
-               {/* <img src={iconOpen} alt="icon open list" /> */}
             </button>
          </div>
          {/* </a> */}
