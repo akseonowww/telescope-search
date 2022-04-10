@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
 import { BsX } from 'react-icons/bs'
 import Results from '../Results/Results'
-import Data from '../../store/Data.json'
+import Data from '../../store/data'
 import './Search.scss'
-// import Data from '../../store/Data.json'
 
 const Search = ({
    placeholder = 'Поиск...',
@@ -58,9 +57,9 @@ const Search = ({
                      </button>
                   </div>
                ) : (
-                  <div className='Search-Buttons'>
+                  <div className="Search-Buttons">
                      <button
-                        className='Search-Buttons__delete'
+                        className="Search-Buttons__delete"
                         type="button"
                         onClick={onbuttonHandler}
                      >
@@ -69,7 +68,7 @@ const Search = ({
                   </div>
                )}
             </div>
-            <div className='Result-List'>
+            <div className="Result-List">
                <Results
                   value={value}
                   searchEngines={searchEngines}

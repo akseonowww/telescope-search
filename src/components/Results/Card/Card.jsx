@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { BsChevronDoubleDown, BsBook } from 'react-icons/bs'
 import { FaWikipediaW } from 'react-icons/fa'
 import './Card.scss'
-import Data from '../../../store/Data.json'
+import Data from '../../../store/data'
 
 const Card = ({ value, title, info, icon }) => {
    const classComponent = 'Card'

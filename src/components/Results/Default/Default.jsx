@@ -1,5 +1,5 @@
 import React from 'react'
-import Data from '../../../store/Data.json'
+import Data from '../../../store/data'
 import './Default.scss'
 
 const Default = ({ value }) => (

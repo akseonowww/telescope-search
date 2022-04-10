@@ -1,9 +1,11 @@
+
+
 {
    "searchEngine": [
       {
          "name": "Яндекс",
          "link": "yandex.ru/search/?text=",
-         "icon": "https://1.downloader.disk.yandex.ru/preview/8886fc7f88f000d0718de95f64ff7b60a0d6855a942b809ba53be953a2adf4aa/inf/JmKmigdIneDBxNj5cuwkKNMdBx1ctZU4wwrfgd_REf1UiXb39tjY6rtvqSCZ9Wf_aQtCoSOLfk8Vmxc9fQptgA%3D%3D?uid=1473078644\u0026filename=icon-yandex.png\u0026disposition=inline\u0026hash=\u0026limit=0\u0026content_type=image%2Fpng\u0026owner_uid=1473078644\u0026tknv=v2\u0026size=1838x947"
+         "icon": "/src/assets/image/bookmarks/icon-yandex.svg"
       },
       {
          "name": "Google",
@@ -45,7 +47,8 @@
       {
          "name": "Яндекс",
          "link": "yandex.ru",
-         "icon": "https://1.downloader.disk.yandex.ru/preview/8886fc7f88f000d0718de95f64ff7b60a0d6855a942b809ba53be953a2adf4aa/inf/JmKmigdIneDBxNj5cuwkKNMdBx1ctZU4wwrfgd_REf1UiXb39tjY6rtvqSCZ9Wf_aQtCoSOLfk8Vmxc9fQptgA%3D%3D?uid=1473078644\u0026filename=icon-yandex.png\u0026disposition=inline\u0026hash=\u0026limit=0\u0026content_type=image%2Fpng\u0026owner_uid=1473078644\u0026tknv=v2\u0026size=1838x947"
+         "icon": "src/assets/image/bookmarks/icon-yandex.svg"
+
       }
    ],
    "cards": [
