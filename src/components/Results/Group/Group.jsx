@@ -1,6 +1,6 @@
 /* eslint-disable react/no-danger */
 import React from 'react'
-import styles from './Gropup.module.scss'
+import './Gropup.scss'
 
 const Gropup = ({ group }) => {
    const classComponent = 'Gropup'
@@ -12,23 +12,23 @@ const Gropup = ({ group }) => {
 
    return (
       <div>
-         <div className={styles[classComponent]}>
+         <div className={classComponent}>
             <button
                type="button"
-               className={styles[`${classComponent}__name`]}
+               className={`${classComponent}__name`}
                dangerouslySetInnerHTML={{ __html: group.name }}
-               label='34'
+               label="34"
             />
             {/* {group.name} */}
             {/* </button> */}
             <span>:</span>
-            <div className={styles[`${classComponent}__list`]}>
+            <div className={`${classComponent}__list`}>
                {group.group.map((el) => (
                   <div key={group.group.indexOf(el)}>
                      <button
                         onClick={() => handleClick(el)}
                         type="button"
-                        className={styles[`${classComponent}__list-item`]}
+                        className={`${classComponent}__list-item`}
                      >
                         {el.name}
                         {/* <span dangerouslySetInnerHTML={{ __html: title }} /> */}

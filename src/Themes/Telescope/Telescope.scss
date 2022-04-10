@@ -4,6 +4,8 @@ $main: linear-gradient(#e2e2e2 0 0) padding-box,
 .Telescope {
    padding: 100px 0;
    height: 100%;
+   position: relative;
+
 
    h1 {
       text-align: center;
@@ -18,21 +20,46 @@ $main: linear-gradient(#e2e2e2 0 0) padding-box,
    }
 
    &:focus-within {
+      background: rgb(167, 167, 167);
       padding-top: 0;
 
       // Search
+      .Form {
+         box-shadow: 0px 2px 36px transparent;
+         border: 1px solid #eee;
+         // margin-bottom: 120px;
+
+         @media screen and (max-width: 450px) {
+            // box-shadow: none;
+            border: 1px solid transparent;
+            // margin-bottom: 120px;
+            width: 100%;
+         }
+      }
+
+      .Search-Content {
+         padding-top: 55px;
+      }
+
       .Search {
          &-Input {
             text-align: left;
          }
       }
+
       .Header {
          position: relative;
          z-index: 2;
          display: flex;
          flex-direction: row;
          justify-content: center;
-         margin: 16px 0;
+         padding: 16px 0 12px;
+         
+         position: absolute;
+         top: 0;
+         right: 50%;
+         margin-right: -90px;
+         z-index: 1100;
 
          h1 {
             letter-spacing: 0.2em;
@@ -47,31 +74,20 @@ $main: linear-gradient(#e2e2e2 0 0) padding-box,
 
    // Search
 
-   .Search {
-      &-Input {
-         padding: 12px;
-         color: #5813c9;
-      }
-   }
-
-   .Header {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      margin-bottom: 20px;
-
-      .logoTS {
-         height: 100px;
-         transition: all 0.6s;
-      }
+   .Search-Content {
+      // padding-top: 32px;
+      background: rgb(255, 255, 255);
+      padding: 0;
+      border-radius: 0 0 16px 16px;
    }
 
    .Form {
-      border-radius: 12px;
       box-shadow: 0px 2px 36px transparent;
       border: 1px solid transparent;
-      border: 1px solid #eee;
-      margin-bottom: 120px;
+
+      @media screen and (max-width: 450px) {
+         width: 95%;
+      }
 
       .Search {
          border-radius: 12px;
@@ -85,26 +101,70 @@ $main: linear-gradient(#e2e2e2 0 0) padding-box,
             text-align: center;
             padding: 12px;
             color: #5813c9;
-         }
-      }
 
-      &:focus-within {
-         background-color: rgb(245, 245, 245);
-         border-radius: 16px;
-         box-shadow: 0px 2px 36px rgba(190, 130, 130, 0.1);
-         border: 1px solid #e3e3e3;
+            @media screen and (max-width: 450px) {
+               height: auto;
+               padding: 16px 12px;
+            }
+
+            &::placeholder {
+               color: #5813c9;
+            }
+
+            &:focus-within {
+               padding-right: 78px;
+               &::placeholder {
+                  color: #747474;
+               }
+
+               text-align: left;
+               color: #000;
+            }
+         }
+
+         &-Buttons {
+            top: 10px;
+         }
       }
    }
 
+   .Header {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0;
+      padding-bottom: 20px;
+
+      .logoTS {
+         height: 100px;
+         transition: all 0.6s;
+      }
+   }
    // Buttons
    .Buttons {
       &__item {
          border-radius: 120px;
          padding: 4px 12px;
          background: $main;
+         background-origin: border-box;
+         background-clip: content-box, border-box;
+      }
+
+      &__add {
+         background: linear-gradient(31deg, #e33ef2, #5813c9);
+         border-radius: 120px;
       }
    }
    // Results
+   .Results {
+      &-Item {
+         padding: 0;
+         padding: 4px 0 4px 16px;
+         @media screen and (max-width: 450px) {
+            padding: 4px 0 4px 12px;
+         }
+      }
+   }
    // Bookmarks
    // Cards
    .Card {
@@ -139,7 +199,29 @@ $main: linear-gradient(#e2e2e2 0 0) padding-box,
             }
          }
       }
-      // Groups
-      // Article
    }
+   // Groups
+   .Gropup {
+      padding: 8px 0;
+
+      &__name {
+         border-radius: 8px;
+         background-color: #e5c3fd;
+         color: #8313c9;
+      }
+
+      &__list {
+         &::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+         }
+
+         div {
+            button {
+               border-radius: 8px;
+            }
+         }
+      }
+   }
+
+   // Article
 }

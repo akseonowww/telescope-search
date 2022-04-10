@@ -1,8 +1,8 @@
 import React from 'react'
 import Data from '../../store/Data.json'
-import styles from './Results.module.scss'
 import Default from './Default/Default'
 import Buttons from './Buttons/Buttons'
+import './Results.scss'
 // import Bookmarks from './Bookmarks/Bookmarks'
 // import Card from './Card/Card'
 // import Group from './Group/Group'
@@ -13,20 +13,18 @@ const Results = ({ value, searchEngines, firstR, counterResults }) => {
    const classComponent = 'Results'
    const search = Data.searchEngine
 
-   
-
    const data = TSearch(Data, value)
 
    let counterRes = firstR ? 1 : 0
 
    return (
       <div>
-         <div className={styles[classComponent]}>
-            <div className={styles[`${classComponent}-Header`]}>
+         <div className={classComponent}>
+            <div className={`${classComponent}-Header`}>
                <Buttons value={value} />
             </div>
             {firstR ? (
-               <div className={styles[`${classComponent}-Item`]}>
+               <div className={`${classComponent}-Item`}>
                   <Default value={value} />
                </div>
             ) : (
@@ -40,7 +38,7 @@ const Results = ({ value, searchEngines, firstR, counterResults }) => {
                         return (
                            <div
                               key={`${elem.key}`}
-                              className={styles[`${classComponent}-Item`]}
+                              className={`${classComponent}-Item`}
                            >
                               {elem}
                               {/* {console.log(elem, elem.key)} */}
@@ -53,7 +51,7 @@ const Results = ({ value, searchEngines, firstR, counterResults }) => {
             ) : (
                ''
             )}
-            <div className={styles['Results-footer']}>
+            <div className="Results-footer">
                {counterResults ? <span>Результаты: {counterRes}</span> : ''}
                {searchEngines ? (
                   <ul>

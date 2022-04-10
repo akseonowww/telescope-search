@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { BsX } from 'react-icons/bs'
 import Results from '../Results/Results'
-import './Search.scss'
 import Data from '../../store/Data.json'
+import './Search.scss'
 // import Data from '../../store/Data.json'
 
 const Search = ({

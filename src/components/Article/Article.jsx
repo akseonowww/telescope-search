@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { BsJournalRichtext, BsChevronDown } from 'react-icons/bs'
 import Latex from 'react-latex-next'
-import styles from './Article.module.scss'
+import './Article.scss'
 // import 'katex/dist/katex.min.css'
 
 const Article = ({
@@ -22,23 +22,21 @@ const Article = ({
    }
 
    return (
-      <div className={`${styles[`${classComponent}`]} ${
-         isActive ? styles.active : styles.no_active
-      }`}>
-         <div className={styles[`${classComponent}-header`]}>
-            <div className={styles[`${classComponent}-header__icon`]}>
+      <div className={`${classComponent} ${isActive ? 'active' : ''}`}>
+         <div className={`${classComponent}-header`}>
+            <div className={`${classComponent}-header__icon`}>
                <BsJournalRichtext />
             </div>
             <h3>{heading}</h3>
             <button
-               className={styles[`${classComponent}-header__open`]}
+               className={`${classComponent}-header__open`}
                type="button"
                onClick={() => openCard()}
             >
                <BsChevronDown />
             </button>
          </div>
-         <div className={styles[`${classComponent}-text`]}>
+         <div className={`${classComponent}-text`}>
             <Latex>{text}</Latex>
          </div>
       </div>

@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import styles from './Buttons.module.scss'
+import './Buttons.scss'
 
 const Buttons = ({ value }) => {
    const classComponent = 'Buttons'
@@ -20,12 +20,12 @@ const Buttons = ({ value }) => {
 
    return (
       <div>
-         <div className={styles[classComponent]}>
-            <div className={styles[`${classComponent}__list`]}>
+         <div className={classComponent}>
+            <div className={`${classComponent}__list`}>
                <button
                   onClick={() => createBtn(value)}
                   type="button"
-                  className={[styles[`${classComponent}__add`]]}
+                  className={`${classComponent}__add`}
                >
                   +
                </button>
@@ -36,7 +36,7 @@ const Buttons = ({ value }) => {
                      // onClick={() => deleteBtn(buttons[el.id])}
                      onClick={() => console.log(buttons[el.id], buttons)}
                      type="button"
-                     className={styles[`${classComponent}__item`]}
+                     className={`${classComponent}__item`}
                   >
                      {el.name}
                   </button>
