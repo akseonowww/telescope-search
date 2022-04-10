@@ -2,7 +2,7 @@ $main: linear-gradient(#e2e2e2 0 0) padding-box,
    linear-gradient(183deg, #5813c9 35%, #e33ef2 81%) border-box;
 
 .Telescope {
-   padding: 100px 0;
+   padding: 100px 0 500px;
    height: 100%;
    position: relative;
 
@@ -21,6 +21,7 @@ $main: linear-gradient(#e2e2e2 0 0) padding-box,
    &:focus-within {
       background: rgba(167, 167, 167, 0.344);
       padding-top: 0;
+      height: auto;
 
       @media screen and (max-width: 450px) {
          background: rgb(167, 167, 167);
@@ -231,12 +232,18 @@ $main: linear-gradient(#e2e2e2 0 0) padding-box,
       }
 
       &.active {
-         .Card__icon {
-            // height: 150px;
-            // min-width: 120px;
+         .Card {
+            &__text-info {
+               word-wrap: break-word;
+            }
+            
+            &__icon {
+               // height: 150px;
+               // min-width: 120px;
 
-            &-container {
-               border-radius: 12px;
+               &-container {
+                  border-radius: 12px;
+               }
             }
          }
       }

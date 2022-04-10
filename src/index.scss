@@ -35,7 +35,7 @@ button {
    bottom: none;
 
    * {
-      transition: all .6s;
+      transition: all 0.6s;
    }
 
    @media screen and (max-width: 450px) {
@@ -55,8 +55,9 @@ button {
       text-align: center;
       position: relative;
       bottom: 0;
-      
-      .icon-tab, img {
+
+      .icon-tab svg,
+      img {
          height: 20px;
          margin-right: 6px;
       }
@@ -78,7 +79,7 @@ button {
          grid-template-columns: 1fr 1fr 1fr 1fr;
          grid-template-rows: 1fr;
          margin: 0;
-         
+
          @media screen and (max-width: 570px) {
             position: fixed;
             z-index: 1000;
@@ -95,7 +96,15 @@ button {
             display: none;
          }
 
-         .icon-tab, img {
+         .icon-tab svg {
+            $size: 28px;
+            margin: 0;
+            height: $size;
+            width: $size;
+         }
+         
+         img {
+            margin: 0;
             height: 34px;
          }
       }

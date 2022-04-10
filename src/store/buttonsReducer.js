@@ -18,11 +18,11 @@ export const buttonsReducer = (state = defaultState, action = {}) => {
    switch (action.type) {
       case "CREATE_BTN":
          return {
-            ...state, resultButtons: [...state.resultButtons,
-            {
-               name: action.payload.name,
-               id: state.buttonsCollections.length
-            }]
+            ...state, resultButtons: [...state.resultButtons, action
+               // {
+               //    name: action.payload.name,
+               //    id: state.buttonsCollections.length   }
+            ]
          }
       case "DELETE_BTN":
          return {

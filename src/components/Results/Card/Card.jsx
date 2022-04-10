@@ -46,7 +46,7 @@ const Card = ({ value, title, info, icon }) => {
                   <div className={`${classComponent}__option-btn__img`}>
                      <BsBook />
                   </div>
-                  <span>Произведения (25)</span>
+                  <span>Произведения</span>
                </a>
             </div>
             <a
