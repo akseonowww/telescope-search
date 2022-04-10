@@ -159,7 +159,8 @@ $main: linear-gradient(#e2e2e2 0 0) padding-box,
    .Buttons {
       &__item {
          border-radius: 120px;
-         padding: 4px 12px;
+         padding: 0 12px;
+         // padding: 4px 12px;
          background: $main;
          background-origin: border-box;
          background-clip: content-box, border-box;

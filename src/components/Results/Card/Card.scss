@@ -249,7 +249,7 @@ $iconHW: 50px;
       }
 
       &__text {
-         margin-top: 8px;
+         margin-top: 6px;
          justify-content: start;
          span {
             white-space: wrap;
@@ -260,7 +260,7 @@ $iconHW: 50px;
             overflow: hidden;
             text-overflow: ellipsis;
             display: -webkit-box;
-            -webkit-line-clamp: unset;
+            -webkit-line-clamp: 5;
             -webkit-box-orient: vertical;
 
             @media screen and (max-width: 450px) {
@@ -300,7 +300,7 @@ $iconHW: 50px;
       &__option {
          right: auto;
          top: auto;
-         bottom: 8px;
+         bottom: 6px;
          left: 119px;
 
          @media screen and (max-width: 450px) {
