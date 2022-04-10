@@ -56,7 +56,7 @@ button {
       position: relative;
       bottom: 0;
       
-      img {
+      .icon-tab, img {
          height: 20px;
          margin-right: 6px;
       }
@@ -95,7 +95,7 @@ button {
             display: none;
          }
 
-         img {
+         .icon-tab, img {
             height: 34px;
          }
       }

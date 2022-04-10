@@ -4,12 +4,14 @@ import React, { useState } from 'react'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
 import 'react-tabs/style/react-tabs.css'
 import './App.scss'
+import { BsSearch } from 'react-icons/bs'
 import Search from './components/Search/Search'
 import Data from './store/data'
 import Sdamgia from './Themes/Sdamgia/Sdamgia'
 import Telescope from './Themes/Telescope/Telescope'
 import logoTS from './assets/image/logo.svg'
 import Yandex from './Themes/Yandex/Yandex'
+
 // import dataTS from './store/data'
 // import data from './store/data'
 
@@ -38,17 +40,13 @@ const App = () => {
                   <span>СДАМ.ГИА</span>
                </Tab>
                <Tab>
-                  <img
-                     src={bookmarks[4].icon}
-                     alt="Лого"
-                  />
+                  <img src={bookmarks[4].icon} alt="Лого" />
                   <span>Яндекс</span>
                </Tab>
                <Tab>
-                  <img
-                     src="https://mikroklimat.su/catalog/view/theme/mikroklimat/mobile/search.png"
-                     alt="Лого"
-                  />
+                  <div className="icon-tab">
+                     <BsSearch />
+                  </div>
                   <span>Дефолтный</span>
                </Tab>
             </TabList>
