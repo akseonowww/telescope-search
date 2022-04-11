@@ -1,4 +1,4 @@
-$main: #017AFF;
+$main: #017aff;
 
 .Form {
    position: relative;
@@ -29,7 +29,7 @@ $main: #017AFF;
          box-shadow: none;
          border: none;
       }
-      
+
       .Result-List {
          display: block;
       }
@@ -92,11 +92,11 @@ $main: #017AFF;
          flex-direction: row;
          justify-content: center;
          margin-bottom: 16px;
-
+         
          h1 {
             letter-spacing: 0.2em;
          }
-
+         
          .logoTS {
             margin-right: 16px;
             height: 32px;
@@ -105,6 +105,9 @@ $main: #017AFF;
 
       .Search {
          &-Buttons {
+            &__delete svg {
+               display: block;
+            }
             @media screen and (max-width: 450px) {
                // right: 51px;
             }
@@ -124,7 +127,7 @@ $main: #017AFF;
    overflow: hidden;
    margin: 4px;
    border: 1px solid #1e1e1e;
-   
+
    &-Input {
       font-size: 18px;
       position: relative;
@@ -140,7 +143,7 @@ $main: #017AFF;
       // color: #5813c9;
       font-weight: 400;
       -webkit-tap-highlight-color: transparent;
-      
+
       @media screen and (max-width: 450px) {
          height: 2.5em;
          // padding: 16px 12px;
@@ -172,13 +175,14 @@ $main: #017AFF;
       z-index: 10;
       background: #fff;
       height: 32px;
-      
+
       &__delete svg {
          $size: 1.5em;
          height: $size;
          width: $size;
-      } 
-      
+         display: none;
+      }
+
       @media screen and (max-width: 450px) {
          top: 5px;
          right: 6px;
@@ -187,7 +191,7 @@ $main: #017AFF;
             $size: 2em;
             height: $size;
             width: $size;
-         } 
+         }
       }
 
       button {
@@ -203,7 +207,7 @@ $main: #017AFF;
          display: flex;
          justify-content: center;
          align-items: center;
-         
+
          @media screen and (max-width: 450px) {
             height: 32px;
             width: 32px;
@@ -219,7 +223,7 @@ $main: #017AFF;
       }
 
       .line {
-         // display: none;
+         display: none;
          width: 2px;
          height: 24px;
          margin: 0 7px 0 0px;
@@ -258,7 +262,6 @@ $main: #017AFF;
 mark {
    // Не рааботает, если размер разный (П != п)
 
-
    // ВЫКЛ
 
    background-color: transparent;
@@ -266,7 +269,7 @@ mark {
    color: $main;
    font-family: Roboto, Arial, sans-serif;
    // text-decoration:underline;
-// background-color: rgba($main, 0.15);
+   // background-color: rgba($main, 0.15);
 
    // border-radius: 2px;
    // border: 1px solid $main;
