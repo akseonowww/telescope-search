@@ -1,19 +1,15 @@
 import React from 'react'
-import Data from '../../store/data'
+// import dataBase from '../../store/data'
 import Default from './Default/Default'
 import Buttons from './Buttons/Buttons'
 import './Results.scss'
-// import Bookmarks from './Bookmarks/Bookmarks'
-// import Card from './Card/Card'
-// import Group from './Group/Group'
-// import Article from '../Article/Article'
 import TSearch from './TSearch'
 
-const Results = ({ value, searchEngines, firstR, counterResults }) => {
+const Results = ({ value, searchEngines, firstR, counterResults, dataBase }) => {
    const classComponent = 'Results'
-   const search = Data.searchEngine
+   const search = dataBase.searchEngine
 
-   const data = TSearch(Data, value)
+   const data = TSearch(dataBase, value)
 
    let counterRes = firstR ? 1 : 0
 

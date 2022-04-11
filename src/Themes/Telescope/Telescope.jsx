@@ -2,6 +2,7 @@ import React from 'react'
 import Search from '../../components/Search/Search'
 import logo from '../../assets/image/logo.svg'
 import './Telescope.scss'
+import Data from './Data'
 
 const Telescope = () => {
    const f = 5
@@ -18,6 +19,7 @@ const Telescope = () => {
             searchEngines
             searchActive
             counterResults
+            data={Data}
          />
       </div>
    )

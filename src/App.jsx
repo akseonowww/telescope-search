@@ -29,7 +29,7 @@ const App = () => {
 
    return (
       <div className="App">
-         <Tabs forceRenderTabPanel defaultIndex={0}>
+         <Tabs forceRenderTabPanel defaultIndex={1}>
             <TabList>
                <Tab>
                   <img src={logoTS} alt="Лого" />
@@ -39,10 +39,10 @@ const App = () => {
                   <img src={bookmarks[5].icon} alt="Лого" />
                   <span>СДАМ.ГИА</span>
                </Tab>
-               <Tab>
+               {/* <Tab>
                   <img src={bookmarks[4].icon} alt="Лого" />
                   <span>Яндекс</span>
-               </Tab>
+               </Tab> */}
                <Tab>
                   <div className="icon-tab">
                      <BsSearch />
@@ -57,9 +57,9 @@ const App = () => {
             <TabPanel>
                <Sdamgia />
             </TabPanel>
-            <TabPanel>
+            {/* <TabPanel>
                <Yandex />
-            </TabPanel>
+            </TabPanel> */}
             <TabPanel>
                <Search />
                {/* <div className="data">

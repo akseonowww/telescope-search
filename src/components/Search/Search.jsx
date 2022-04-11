@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { BsX } from 'react-icons/bs'
 import Results from '../Results/Results'
-import Data from '../../store/data'
+import baseData from '../../store/data'
 import './Search.scss'
 
 const Search = ({
@@ -10,9 +10,10 @@ const Search = ({
    searchActive = false,
    firstR = '',
    counterResults = false,
+   data = baseData
 }) => {
    const [value, setValue] = useState('н') // Удалить данные!
-   const yandex = Data.searchEngine[0]
+   const yandex = data.searchEngine[0]
    const defaultLink = `https://${yandex.link + value}`
 
    const handleKeyPress = (target) => {
@@ -32,7 +33,6 @@ const Search = ({
                <input
                   className="Search-Input"
                   placeholder={placeholder}
-                  // placeholder="Найди свою звезду!"
                   onKeyPress={handleKeyPress}
                   onChange={(el) => setValue(el.target.value)}
                   value={value || ''}
@@ -70,6 +70,7 @@ const Search = ({
                   firstR={firstR}
                   searchActive={searchActive}
                   counterResults={counterResults}
+                  dataBase={data}
                />
             </div>
          </div>

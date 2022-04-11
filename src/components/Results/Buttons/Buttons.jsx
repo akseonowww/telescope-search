@@ -1,9 +1,11 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import Data from '../../../store/data'
 import './Buttons.scss'
 
-const Buttons = ({ value }) => {
+const Buttons = ({ value, data = Data }) => {
    const classComponent = 'Buttons'
+   console.log(data)
 
    const dispatch = useDispatch()
    const buttons = useSelector((state) => state.buttons.buttonsCollections)
@@ -18,6 +20,10 @@ const Buttons = ({ value }) => {
       console.log(button)
       dispatch({ type: 'DELETE_BTN', payload: button.id })
    }
+
+   // for (let i = 0; i < data.resultButtons.length; i+=1) {
+      // createBtn(data.resultButtons[i].name)
+   // }
 
    return (
       <div>
