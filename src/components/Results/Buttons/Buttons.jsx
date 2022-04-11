@@ -15,7 +15,8 @@ const Buttons = ({ value }) => {
       })
    }
    const deleteBtn = (button) => {
-      dispatch({ type: 'DELETE_BTN', payload: button })
+      console.log(button)
+      dispatch({ type: 'DELETE_BTN', payload: button.id })
    }
 
    return (
@@ -33,8 +34,8 @@ const Buttons = ({ value }) => {
                   <button
                      // eslint-disable-next-line react/no-array-index-key
                      key={index}
-                     // onClick={() => deleteBtn(buttons[el.id])}
-                     onClick={() => console.log(buttons[el.id], buttons)}
+                     onClick={() => deleteBtn(el)}
+                     // onClick={() => console.log(el.id, buttons)}
                      type="button"
                      className={`${classComponent}__item`}
                   >

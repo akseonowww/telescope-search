@@ -27,11 +27,6 @@ const Search = ({
 
    return (
       <form className="Search-Content Work">
-         {/* <div className="Header active"> */}
-         {/* <div className={styles.Header}>
-            <img className={styles.logoTS} src={logo} alt="logo" />
-            <h1>Телескоп</h1>
-         </div> */}
          <div className="Form">
             <div className="Search">
                <input
