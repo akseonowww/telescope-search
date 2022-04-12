@@ -27,94 +27,94 @@ button {
    font-size: 16px;
 }
 
-.react-tabs {
-   display: flex;
-   flex-direction: column;
-   height: 100vh;
-   overflow: hidden;
-   bottom: none;
-
-   * {
-      transition: all 0.6s;
-   }
-
-   @media screen and (max-width: 450px) {
-      flex-direction: column-reverse;
-   }
-
-   &__tab {
-      margin: 4px;
-      background-color: rgb(234, 234, 234);
-      border-radius: 0;
-      padding: 0;
-      border: none;
-      margin: 0;
+   .react-tabs {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      position: relative;
-      bottom: 0;
+      flex-direction: column;
+      height: 100vh;
+      overflow: hidden;
+      bottom: none;
 
-      .icon-tab svg,
-      img {
-         height: 20px;
-         margin-right: 6px;
+      * {
+         transition: all 0.6s;
       }
 
-      &--selected {
-         background-color: rgb(255, 255, 255);
-         border: none;
-
-         &::after {
-            display: none;
-         }
+      @media screen and (max-width: 450px) {
+         flex-direction: column-reverse;
       }
 
-      &-list {
+      &__tab {
+         margin: 4px;
+         background-color: rgb(234, 234, 234);
+         border-radius: 0;
+         padding: 0;
          border: none;
-         // padding: 4px 8px;
-         display: grid;
-         height: 3em;
-         grid-template-columns: repeat(3, 1fr);
-         grid-template-rows: 1fr;
          margin: 0;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         text-align: center;
+         position: relative;
+         bottom: 0;
+
+         .icon-tab svg,
+         img {
+            height: 20px;
+            margin-right: 6px;
+         }
+
+         &--selected {
+            background-color: rgb(255, 255, 255);
+            border: none;
+
+            &::after {
+               display: none;
+            }
+         }
+
+         &-list {
+            border: none;
+            // padding: 4px 8px;
+            display: grid;
+            height: 3em;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 1fr;
+            margin: 0;
+
+            @media screen and (max-width: 570px) {
+               position: fixed;
+               z-index: 1000;
+               bottom: 0;
+               left: 0;
+               width: 100%;
+               height: 3.5em;
+               box-shadow: -1px 8px 20px 0px #2a2a2ab5;
+            }
+         }
 
          @media screen and (max-width: 570px) {
-            position: fixed;
-            z-index: 1000;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 3.5em;
-            box-shadow: -1px 8px 20px 0px #2a2a2ab5;
+            span {
+               display: none;
+            }
+
+            .icon-tab svg {
+               $size: 28px;
+               margin: 0;
+               height: $size;
+               width: $size;
+            }
+
+            img {
+               margin: 0;
+               height: 34px;
+            }
          }
       }
-
-      @media screen and (max-width: 570px) {
-         span {
-            display: none;
-         }
-
-         .icon-tab svg {
-            $size: 28px;
-            margin: 0;
-            height: $size;
-            width: $size;
-         }
-         
-         img {
-            margin: 0;
-            height: 34px;
-         }
-      }
-   }
-   &__tab-panel {
-      height: 100%;
-      overflow-y: scroll;
-
-      &--selected {
+      &__tab-panel {
          height: 100%;
+         overflow-y: scroll;
+
+         &--selected {
+            height: 100%;
+         }
       }
    }
-}

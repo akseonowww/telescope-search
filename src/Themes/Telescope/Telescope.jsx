@@ -19,6 +19,8 @@ const Telescope = () => {
             searchEngines
             searchActive
             counterResults
+            work
+            firstR="Я слушаю вас..."
             data={Data}
          />
       </div>

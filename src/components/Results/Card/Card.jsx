@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable react/no-danger */
 import React, { useState } from 'react'
 import { BsChevronDoubleDown, BsBook } from 'react-icons/bs'
@@ -18,7 +20,10 @@ const Card = ({ value, title, info, icon }) => {
    const wiki = Data.searchEngine[3]
 
    return (
-      <div className={`${classComponent} ${isActive ? 'active' : 'no_active'}`}>
+      <div
+         className={`${classComponent} ${isActive ? 'active' : 'no_active'}`}
+         onClick={() => openCard()}
+      >
          <div className={`${`${classComponent}__info`}`}>
             <div className={`${classComponent}__icon`}>
                <div className={`${classComponent}__icon-container`}>

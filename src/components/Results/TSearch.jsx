@@ -74,7 +74,7 @@ const TSearch = (data = [], value) => {
             key={`${Date.now()}-${el.name}`}
             // value={value}
             // name={el.title}
-            group={el.group}
+            groups={el.group}
          />
       )),
       allResults.cards.map((el) => (

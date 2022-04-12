@@ -5,7 +5,7 @@ import './Buttons.scss'
 
 const Buttons = ({ value, data = Data }) => {
    const classComponent = 'Buttons'
-   console.log(data)
+   // console.log(data)
 
    const dispatch = useDispatch()
    const buttons = useSelector((state) => state.buttons.buttonsCollections)

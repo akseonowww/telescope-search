@@ -3,6 +3,7 @@ import { BsX } from 'react-icons/bs'
 import Results from '../Results/Results'
 import baseData from '../../store/data'
 import './Search.scss'
+import SearchEngine from './SearchEngine/SearchEngine'
 
 const Search = ({
    placeholder = 'Поиск...',
@@ -10,9 +11,10 @@ const Search = ({
    searchActive = false,
    firstR = '',
    counterResults = false,
-   data = baseData
+   data = baseData,
+   work = false,
 }) => {
-   const [value, setValue] = useState('н') // Удалить данные!
+   const [value, setValue] = useState('форм') // Удалить данные!
    const yandex = data.searchEngine[0]
    const defaultLink = `https://${yandex.link + value}`
 
@@ -27,7 +29,7 @@ const Search = ({
    }
 
    return (
-      <form className="Search-Content Work">
+      <form className={`Search-Content ${work ? 'Work' : ''}`}>
          <div className="Form">
             <div className="Search">
                <input
@@ -47,9 +49,7 @@ const Search = ({
                         <BsX />
                      </button>
                      <span className="line" />
-                     <button type="button" className="btnSearch">
-                        <img src={yandex.icon} alt="Search engine default" />
-                     </button>
+                     <SearchEngine data={data}/>
                   </div>
                ) : (
                   <div className="Search-Buttons">

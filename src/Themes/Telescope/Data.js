@@ -147,24 +147,23 @@ const Data = {
          group: [
             {
                name: "Математика",
-               group: [
-                  {
-                     name: "Алгебра",
-                     group: [
-                        {
-                           name: "Прогрессия",
-                           group: "Арифметическая прогрессия: an=an−1+d an=a1+(n−1)⋅d Sn=(a1+an)⋅n2 Геометрическая прогрессия: bn=bn−1⋅q bn=bn−1⋅q bn=bn−1⋅q"
-                        }
-                     ]
-                  }
-               ]
-            },
-            { name: "Физика", url: "/" },
-            {
-               name: "Химия", url: "/"
+               content: "Арифметическая прогрессия: an=an−1+d an=a1+(n−1)⋅d Sn=(a1+an)⋅n2 Геометрическая прогрессия: bn=bn−1⋅q bn=bn−1⋅q bn=bn−1⋅q",
+               id: 0
             },
             {
-               name: "Информатика", url: "/"
+               name: "Физика",
+               content: '',
+               id: 1
+            },
+            {
+               name: "Химия",
+               content: '',
+               id: 3
+            },
+            {
+               name: "Информатика",
+               content: '',
+               id: 4
             }
 
          ]

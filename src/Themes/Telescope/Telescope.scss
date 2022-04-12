@@ -249,16 +249,20 @@ $main: linear-gradient(#e2e2e2 0 0) padding-box,
       }
    }
    // Groups
-   .Gropup {
+   .Group {
       // padding: 8px 0;
 
-      &__name {
+      &__Name {
          border-radius: 8px;
          background-color: #e5c3fd;
          color: #8313c9;
       }
 
-      &__list {
+      &-Menu {
+         gap: 4px;
+      }
+
+      &__List {
          &::-webkit-scrollbar-thumb {
             border-radius: 10px;
          }

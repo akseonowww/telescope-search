@@ -29,7 +29,7 @@ const App = () => {
 
    return (
       <div className="App">
-         <Tabs forceRenderTabPanel defaultIndex={1}>
+         <Tabs forceRenderTabPanel defaultIndex={0}>
             <TabList>
                <Tab>
                   <img src={logoTS} alt="Лого" />

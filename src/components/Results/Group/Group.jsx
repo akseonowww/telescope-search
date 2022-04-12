@@ -1,42 +1,43 @@
 /* eslint-disable react/no-danger */
 import React from 'react'
-import './Gropup.scss'
+import { Tab, TabPanel, TabList, Tabs } from 'react-tabs'
+import 'react-tabs/style/react-tabs.css'
+import Data from '../../../store/data'
 
-const Gropup = ({ group }) => {
-   const classComponent = 'Gropup'
+import './Group.scss'
 
-   const handleClick = (el) => {
-      console.log(el)
-      console.log(el.name)
-   }
+const Gropup = ({ groups = Data.groups }) => {
+   const classComponent = 'Group'
+
+   // const [statusBtn, setStatusBtn] = useState(false)
+
+   const handleClick = (id) => {}
+   console.log(groups.name, groups.group[0].name)
 
    return (
-      <div>
-         <div className={classComponent}>
-            <button
-               type="button"
-               className={`${classComponent}__name`}
-               dangerouslySetInnerHTML={{ __html: group.name }}
-               label="34"
-            />
-            {/* {group.name} */}
-            {/* </button> */}
-            <span>:</span>
-            <div className={`${classComponent}__list`}>
-               {group.group.map((el) => (
-                  <div key={group.group.indexOf(el)}>
-                     <button
-                        onClick={() => handleClick(el)}
-                        type="button"
-                        className={`${classComponent}__list-item`}
-                     >
-                        {el.name}
-                        {/* <span dangerouslySetInnerHTML={{ __html: title }} /> */}
-                     </button>
-                  </div>
+      <div className={classComponent}>
+         {/* <div className={`${classComponent}-Menu`}> */}
+         <Tabs forceRenderTabPanel defaultIndex={0}>
+            <TabList>
+               <Tab>
+                  <span>{groups.name}</span>
+               </Tab>
+               {groups.group.map((el) => (
+                  <Tab key={el.id}>
+                     <span>{el.name}</span>
+                  </Tab>
                ))}
-            </div>
-         </div>
+            </TabList>
+
+            <TabPanel>0{/* <span>{el.name}</span> */}</TabPanel>
+            {groups.group.map((el) => (
+               <TabPanel key={el.id}>
+                  <span>{el.name}</span>
+                  <span>{el.content}</span>
+               </TabPanel>
+            ))}
+         </Tabs>
+         {/* // </div> */}
       </div>
    )
 }
