@@ -25,17 +25,18 @@ export const btns = [
       class: 'btn__op'
    },
    {
-      display: '÷',
+      display: '+',
       action: BTN_ACTIONS.ADD,
       class: 'btn__op'
    },
    {
-      display: '√x',
+      display: '\\sqrt{x\\mathstrut}',
+      // display: '\\sqrt{x}',
       action: BTN_ACTIONS.ADD,
       class: 'btn__op btn__none'
    },
    {
-      display: 'x^2',
+      display: 'x^{2}',
       action: BTN_ACTIONS.ADD,
       class: 'btn__op btn__none'
    },
@@ -45,7 +46,7 @@ export const btns = [
       class: 'btn__op btn__none'
    },
    {
-      display: '×',
+      display: '\\times',
       action: BTN_ACTIONS.ADD,
       class: 'btn__op'
    },
@@ -85,7 +86,7 @@ export const btns = [
       class: ''
    },
    {
-      display: '+',
+      display: '\\div',
       action: BTN_ACTIONS.ADD,
       class: 'btn__op'
    },
@@ -110,7 +111,7 @@ export const btns = [
       class: 'btn__op'
    },
    {
-      display: '±',
+      display: '\\pm',
       action: BTN_ACTIONS.ADD,
       class: 'btn__op btn__none'
    },
@@ -126,6 +127,31 @@ export const btns = [
    },
    {
       display:',',
+      action: BTN_ACTIONS.ADD,
+      class: 'btn__op'
+   },
+   {
+      display:'\\sin',
+      action: BTN_ACTIONS.ADD,
+      class: 'btn__op'
+   },
+   {
+      display:'\\cos',
+      action: BTN_ACTIONS.ADD,
+      class: 'btn__op'
+   },
+   {
+      display:'\\tg',
+      action: BTN_ACTIONS.ADD,
+      class: 'btn__op'
+   },
+   {
+      display:'\\ctg',
+      action: BTN_ACTIONS.ADD,
+      class: 'btn__op'
+   },
+   {
+      display:'\\pi',
       action: BTN_ACTIONS.ADD,
       class: 'btn__op'
    },
