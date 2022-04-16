@@ -21,14 +21,14 @@ const TSearch = (data = [], value) => {
          // console.log(el.name)
          allResults.groups.push({
             group: el,
-            name: el.name
+            name: el.name,
          })
       }
    }
 
    // Calculator
    if ('Калькулятор'.toLowerCase().includes(value.toLowerCase())) {
-      allResults.calculator.push({ name: 'Calculator' }) 
+      allResults.calculator.push({ name: 'Calculator' })
    }
 
    // Bookmarks

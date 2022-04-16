@@ -50,6 +50,7 @@ $mainTS: linear-gradient(#e2e2e2 0 0) padding-box,
 
          // Search
          .Form {
+            margin-top: 60px;
             background-color: rgb(245, 245, 245);
             border-radius: 16px;
             box-shadow: 0px 2px 36px rgba(190, 130, 130, 0.1);
@@ -65,12 +66,7 @@ $mainTS: linear-gradient(#e2e2e2 0 0) padding-box,
             }
          }
 
-         .Search-Content {
-            // padding-top: 55px;
-         }
-
          .Search {
-            margin-top: 60px;
             &-Input {
                text-align: left;
             }
@@ -89,8 +85,11 @@ $mainTS: linear-gradient(#e2e2e2 0 0) padding-box,
             // right: 50%;
             margin-right: -90px;
             z-index: 1100;
-            background-color: #fff;
             width: 100%;
+
+            @media screen and (max-width: 450px) {
+               background-color: #fff;
+            }
 
             h1 {
                letter-spacing: 0.2em;
@@ -305,17 +304,32 @@ $mainTS: linear-gradient(#e2e2e2 0 0) padding-box,
 
    // Calculator
    .Calculator {
-      // border: 1px solid rgb(107, 107, 107);
       border-radius: 12px;
+
       h2 {
          text-align: left;
       }
 
-      &-Buttons {
-         background: #eee;
-         &__Item {
-            // border: 1px solid #010101;
+      &-Result {
+         padding: 8px 0;
+         border-top: 2px solid #eee;
+         // min-height: 80px;
 
+         &__Expression {
+            font-size: 16px;
+         }
+
+         &__Answer {
+            font-size: 1.5em;
+            height: 60px;
+         }
+      }
+
+      &-Buttons {
+         padding-top: 2px;
+         background: #eee;
+
+         &__Item {
             background: #fff;
          }
 
@@ -326,10 +340,9 @@ $mainTS: linear-gradient(#e2e2e2 0 0) padding-box,
                display: none;
             }
          }
-         
+
          .btn__op {
             color: #7413c9;
-
          }
       }
    }
