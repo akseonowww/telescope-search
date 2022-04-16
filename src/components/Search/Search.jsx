@@ -13,8 +13,9 @@ const Search = ({
    counterResults = false,
    data = baseData,
    work = false,
+   valueDefault = '',
 }) => {
-   const [value, setValue] = useState('форм') // Удалить данные!
+   const [value, setValue] = useState(valueDefault) // Удалить данные!
    const yandex = data.searchEngine[0]
    const defaultLink = `https://${yandex.link + value}`
 
@@ -49,7 +50,7 @@ const Search = ({
                         <BsX />
                      </button>
                      <span className="line" />
-                     <SearchEngine data={data}/>
+                     <SearchEngine data={data} />
                   </div>
                ) : (
                   <div className="Search-Buttons">

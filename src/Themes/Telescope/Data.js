@@ -1,3 +1,5 @@
+import React from 'react'
+
 import gorkiiPhoto from '../../assets/image/authors/gorkii.jpg'
 import lermontovPhoto from '../../assets/image/authors/lermontov.jpg'
 import pushkinPhoto from '../../assets/image/authors/pushkin.jpg'
@@ -143,62 +145,172 @@ const Data = {
    ],
    groups: [
       {
-         name: "Формулы",
+         name: "Формулы А",
          group: [
             {
                name: "Математика",
-               content: "Арифметическая прогрессия: an=an−1+d an=a1+(n−1)⋅d Sn=(a1+an)⋅n2 Геометрическая прогрессия: bn=bn−1⋅q bn=bn−1⋅q bn=bn−1⋅q",
-               id: 0
+               content:
+                  `
+                  <h4>1. Степени</h4>
+                  <ul>
+                     <li>$(3\times 4) \\div (5-3)$</li>
+                     <li>$(3\times 4) \\div (5-3)$</li>
+                     <li></li>
+                  </ul>
+               `,
+               id: 'formula-0'
             },
             {
                name: "Физика",
-               content: '',
-               id: 1
+               content:
+                  `
+                  <h4>1. Степени</h4>
+                  <ul>
+                     <li>$(3\times 4) \\div (5-3)$</li>
+                     <li>$(3\times 4) \\div (5-3)$</li>
+                     <li></li>
+                  </ul>
+               `,
+               id: 'formula-1'
             },
             {
                name: "Химия",
-               content: '',
-               id: 3
+               content:
+                  `
+                  <h4>1. Степени</h4>
+                  <ul>
+                     <li>$(3\times 4) \\div (5-3)$</li>
+                     <li>$(3\times 4) \\div (5-3)$</li>
+                     <li></li>
+                  </ul>
+               `,
+               id: 'formula-3'
             },
             {
                name: "Информатика",
-               content: '',
+               content:
+                  `
+                  <h4>1. Степени</h4>
+                  <ul>
+                     <li>$(3\times 4) \\div (5-3)$</li>
+                     <li>$(3\times 4) \\div (5-3)$</li>
+                     <li></li>
+                  </ul>
+               `,
+               id: 'formula-4'
+            }
+
+         ],
+         id: 0,
+      },
+      {
+         name: "Экзамен А",
+         group: [
+            {
+               name: "ЕГЭ",
+               content:
+                  `
+                  <h4>1. Степени</h4>
+                  <ul>
+                     <li>$(3\times 4) \\div (5-3)$</li>
+                     <li>$(3\times 4) \\div (5-3)$</li>
+                     <li></li>
+                  </ul>
+               `,
+               id: 0
+            },
+            {
+               name: "ОГЭ",
+               content:
+                  `
+                  <h4>1. Степени</h4>
+                  <ul>
+                     <li>$(3\times 4) \\div (5-3)$</li>
+                     <li>$(3\times 4) \\div (5-3)$</li>
+                     <li></li>
+                  </ul>
+               `,
+               id: 1
+            },
+            {
+               name: "ВПР",
+               content:
+                  `
+                  <h4>1. Степени</h4>
+                  <ul>
+                     <li>$(3\times 4) \\div (5-3)$</li>
+                     <li>$(3\times 4) \\div (5-3)$</li>
+                     <li></li>
+                  </ul>
+               `,
+               id: 2
+            },
+            {
+               name: "ГВЭ",
+               content:
+                  `
+                  <h4>1. Степени</h4>
+                  <ul>
+                     <li>$(3\times 4) \\div (5-3)$</li>
+                     <li>$(3\times 4) \\div (5-3)$</li>
+                     <li></li>
+                  </ul>
+               `,
+               id: 3
+            },
+            {
+               name: "ЦТ",
+               content:
+                  `
+                  <h4>1. Степени</h4>
+                  <ul>
+                     <li>$(3\times 4) \\div (5-3)$</li>
+                     <li>$(3\times 4) \\div (5-3)$</li>
+                     <li></li>
+                  </ul>
+               `,
                id: 4
             }
 
-         ]
+         ],
+         id: 1,
       },
       {
-         name: "Экзамен",
+         name: "Софт А",
          group: [
-            { name: "ЕГЭ", url: "/" },
             {
-               name: "ОГЭ", url: "/"
+               name: "Карточки",
+               content:
+                  `
+                  <a href="https://ya.ru">
+                     Перейти играть на сайт СДАМ.ГИА
+                  </a>
+               `,
+               id: 0
             },
             {
-               name: "ВПР", url: "/"
+               name: "Соревнование",
+               content:
+                  `
+               <a href="https://ya.ru">
+                  Перейти играть на сайт СДАМ.ГИА
+               </a>
+            `,
+               id: 1
             },
-            {
-               name: "ГВЭ", url: "/"
-            },
-            {
-               name: "ЦТ", url: "/"
-            }
+            // {
+            //    name: "Калькулятор",
+            //    content:
+            //    `
+            //    <a href="https://ya.ru">
+            //       Перейти играть на сайт СДАМ.ГИА
+            //    </a>
+            // `, 
+            //    id: 2
+            // }
 
-         ]
-      },
-      {
-         name: "Софт",
-         group: [
-            { name: "Карточки", url: "/" },
-            {
-               name: "Соревнование", url: "/"
-            },
-            {
-               name: "Калькулятор", url: "/"
-            }
-
-         ]
+         ],
+         id: 2,
       }
    ]
 }

@@ -110,11 +110,28 @@ $main: #017aff;
    }
 
    &-Content {
-      background: #eee;
-      display: none;
+      // background: #eee;
+      // display: none;
 
       &__Item {
-         border: 1px solid rgb(99, 99, 99);
+         display: none;
+         // border: 1px solid rgb(99, 99, 99);
+         padding-right: 12px;
+         padding-bottom: 8px;
+         overflow: hidden;
+
+         // &-Button {
+         //    text-decoration: none;
+         //    display: flex;
+         //    justify-content: center;
+         //    align-items: center;
+         //    padding: 8px 12px;
+         //    // width: 100%;
+         //    margin: 6px 4px;
+         //    text-align: center;
+         //    color: #fff;
+         //    background: $main;
+         // }
       }
    }
 
@@ -219,4 +236,8 @@ $main: #017aff;
    //         }
    //     }
    // }
+}
+
+.Group-Active {
+   display: block;   
 }

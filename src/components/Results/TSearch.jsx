@@ -2,12 +2,14 @@ import React from 'react'
 import Bookmarks from './Bookmarks/Bookmarks'
 import Card from './Card/Card'
 import Group from './Group/Group'
+import Calculator from '../Calculator/Calculator'
 
 const TSearch = (data = [], value) => {
    const allResults = {
       bookmarks: [],
       cards: [],
       groups: [],
+      calculator: [],
    }
 
    // Groups
@@ -19,8 +21,14 @@ const TSearch = (data = [], value) => {
          // console.log(el.name)
          allResults.groups.push({
             group: el,
+            name: el.name
          })
       }
+   }
+
+   // Calculator
+   if ('Калькулятор'.toLowerCase().includes(value.toLowerCase())) {
+      allResults.calculator.push({ name: 'Calculator' }) 
    }
 
    // Bookmarks
@@ -69,11 +77,13 @@ const TSearch = (data = [], value) => {
    // // USE ALL
    // console.log(allResults)
    const TSResult = () => [
+      allResults.calculator.map((el) => (
+         <Calculator key={`${Date.now()}-${el.name}`} />
+      )),
       allResults.groups.map((el) => (
          <Group
-            key={`${Date.now()}-${el.name}`}
+            key={`${Date.now()}-${el.group.name}`}
             // value={value}
-            // name={el.title}
             groups={el.group}
          />
       )),
@@ -96,6 +106,7 @@ const TSearch = (data = [], value) => {
          />
       )),
    ]
+   // console.log('TSResult', TSResult())
 
    return TSResult()
 }

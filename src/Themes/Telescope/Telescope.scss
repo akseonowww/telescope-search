@@ -1,10 +1,16 @@
-$main: linear-gradient(#e2e2e2 0 0) padding-box,
+$mainTSLite: linear-gradient(24deg, #e33ef2, #5813c9);
+$mainTS: linear-gradient(#e2e2e2 0 0) padding-box,
    linear-gradient(183deg, #5813c9 35%, #e33ef2 81%) border-box;
 
 .Telescope {
    padding: 100px 0 500px;
    height: 100%;
    position: relative;
+
+   .icon-app-mini {
+      background: $mainTSLite;
+      border-radius: 100px;
+   }
 
    h1 {
       text-align: center;
@@ -162,7 +168,7 @@ $main: linear-gradient(#e2e2e2 0 0) padding-box,
          border-radius: 120px;
          padding: 0 12px;
          // padding: 4px 12px;
-         background: $main;
+         background: $mainTS;
          background-origin: border-box;
          background-clip: content-box, border-box;
       }
@@ -183,7 +189,7 @@ $main: linear-gradient(#e2e2e2 0 0) padding-box,
          }
 
          &:hover {
-            background-color: rgba(#e33ef2, 0.08);
+            background-color: rgba(#ffffff,1);
 
             @media screen and (max-width: 450px) {
                background-color: transparent;
@@ -236,7 +242,7 @@ $main: linear-gradient(#e2e2e2 0 0) padding-box,
             &__text-info {
                word-wrap: break-word;
             }
-            
+
             &__icon {
                // height: 150px;
                // min-width: 120px;
@@ -275,7 +281,28 @@ $main: linear-gradient(#e2e2e2 0 0) padding-box,
       }
    }
 
-   // Article
+   // Calculator
+   .Calculator {
+      // border: 1px solid rgb(107, 107, 107);
+      border-radius: 12px;
+      h2 {
+         text-align: left;
+      }
+   }
 
+   // Article
+   .Article {
+      background: rgb(252, 243, 255);
+      margin-right: 16px;
+      padding: 12px;
+      border-radius: 12px;
+      border: 2px solid #5913c952;
+
+      &-Button {
+         background: $mainTSLite;
+         border-radius: 12px;
+         border: none;
+      }
+   }
    // Work
 }

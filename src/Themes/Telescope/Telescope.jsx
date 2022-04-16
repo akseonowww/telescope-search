@@ -2,7 +2,7 @@ import React from 'react'
 import Search from '../../components/Search/Search'
 import logo from '../../assets/image/logo.svg'
 import './Telescope.scss'
-import Data from './Data'
+// import Data from './Data'
 
 const Telescope = () => {
    const f = 5
@@ -16,12 +16,13 @@ const Telescope = () => {
          <Search
             className="Search"
             placeholder="Найди свою звезду!"
+            firstR="Я слушаю вас..."
+            // data={Data}
             searchEngines
             searchActive
             counterResults
-            work
-            firstR="Я слушаю вас..."
-            data={Data}
+            // work
+            // valueDefault="а"
          />
       </div>
    )

@@ -1,0 +1,149 @@
+$main: #017aff;
+
+.Calculator {
+   // background-color: rgb(226, 226, 226);
+   margin-right: 16px;
+   // border: 1px solid #010101;
+   // overflow: hidden;
+   // &:hover {
+   // background: transparent;
+   // }
+
+   * {
+      transition: transform ease .6s;
+   }
+
+   &-Heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   .Heading {
+      &-Title {
+         display: flex;
+         justify-content: start;
+         align-items: center;
+         gap: 8px;
+      }
+
+      &-Open {
+         // mr
+         button {
+            background: transparent;
+            border: 1px solid transparent;
+            padding: 0;
+            margin: 0;
+            color: #76787a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.5s;
+
+            & svg {
+               $size: 20px;
+               height: $size;
+               width: $size;
+
+               @media screen and (max-width: 450px) {
+                  $size: 26px;
+                  height: $size;
+                  width: $size;
+               }
+            }
+         }
+      }
+   }
+
+   h2 {
+      margin: 0;
+      font-size: 18px;
+      // text-transform: uppercase;
+   }
+
+   &-Container {
+      display: none;
+      text-align: right;
+      font-size: 24px;
+      padding: 6px 4px;
+
+      * {
+         transition: all 0.5s;
+      }
+   }
+
+   &-Result {
+      padding-bottom: 4px;
+      width: 100%;
+      overflow: hidden;
+
+      &__Expression {
+         height: 20px;
+         font-size: 16px;
+         opacity: .7;
+      }
+
+      &__Answer {
+         font-size: 24px;
+         white-space: nowrap;
+         // line-height: 46px;
+      }
+   }
+
+   &-Buttons {
+      display: grid;
+      gap: 2px;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      // grid-template-columns: 3fr 1fr;
+
+      &__Item {
+         $color: rgba($main, 0.8);
+
+         overflow: hidden;
+         display: grid;
+         gap: 2px;
+         background-color: $color;
+         border: 1px solid #010101;
+
+         border: none;
+         background: rgb(228, 228, 228);
+         padding: 12px 0;
+         width: 100%;
+         height: 100%;
+         font-size: 18px;
+      }
+
+      .btn__none {
+         background: #010101;
+         color: #fff;
+         opacity: .2;
+         position: relative;
+         
+         &::after {
+            content: 'в разработке';
+            position: absolute;
+            top: 1%;
+            right: 1%;
+            height: 100%;
+            width: 100%;
+            padding: 0 0 0 4px;
+            font-size: 10px;
+            // color: #000;
+            // background: #31313171;
+         }
+      } 
+   }
+
+   &-Active {
+      .Heading {
+         &-Open button {
+            transform: rotate(180deg);
+         }
+      }
+      .Calculator-Container {
+         display: block;
+         // background-color: #017aff;
+      }
+   }
+}

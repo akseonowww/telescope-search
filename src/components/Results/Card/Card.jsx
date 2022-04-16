@@ -21,7 +21,7 @@ const Card = ({ value, title, info, icon }) => {
 
    return (
       <div
-         className={`${classComponent} ${isActive ? 'active' : 'no_active'}`}
+         className={`${classComponent} ${isActive ? 'Card-Active' : ''}`}
          onClick={() => openCard()}
       >
          <div className={`${`${classComponent}__info`}`}>

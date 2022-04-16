@@ -1,11 +1,18 @@
+/* eslint-disable array-callback-return */
+/* eslint-disable no-unused-expressions */
 import React from 'react'
-// import dataBase from '../../store/data'
 import Default from './Default/Default'
 import Buttons from './Buttons/Buttons'
-import './Results.scss'
 import TSearch from './TSearch'
+import './Results.scss'
 
-const Results = ({ value, searchEngines, firstR, counterResults, dataBase }) => {
+const Results = ({
+   value,
+   searchEngines,
+   firstR,
+   counterResults,
+   dataBase,
+}) => {
    const classComponent = 'Results'
    const search = dataBase.searchEngine
 
@@ -26,9 +33,7 @@ const Results = ({ value, searchEngines, firstR, counterResults, dataBase }) => 
             ) : (
                ''
             )}
-            {value ? (
-               <div>
-                  {data.map((el) =>
+            {value ? data.map((el) =>
                      el.map((elem) => {
                         counterRes += 1
                         return (
@@ -40,9 +45,8 @@ const Results = ({ value, searchEngines, firstR, counterResults, dataBase }) => 
                            </div>
                         )
                      })
-                  )}
-               </div>
-            ) : (
+                  )
+                : (
                ''
             )}
             <div className="Results-footer">
