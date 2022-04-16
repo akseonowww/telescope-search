@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { BsX } from 'react-icons/bs'
+
 import Results from '../Results/Results'
 import baseData from '../../store/data'
 import './Search.scss'

@@ -4,6 +4,10 @@ export const BTN_ACTIONS = {
    DELETE: 'DELETE'
 }
 
+export const BTN_NAME = {
+   DELETE: 'DELETE',
+}
+
 export const btns = [
    {
       display: 'C',
@@ -108,7 +112,7 @@ export const btns = [
    {
       display: '±',
       action: BTN_ACTIONS.ADD,
-      class: ' btn__none'
+      class: 'btn__op btn__none'
    },
    {
       display: '0',
@@ -116,13 +120,13 @@ export const btns = [
       class: ''
    },
    {
-      display:',',
+      display: '000',
       action: BTN_ACTIONS.ADD,
       class: ''
    },
    {
-      display: '...',
+      display:',',
       action: BTN_ACTIONS.ADD,
-      class: ' btn__none'
+      class: 'btn__op'
    },
 ];

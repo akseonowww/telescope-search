@@ -35,16 +35,14 @@ button {
    height: 100vh;
    overflow: hidden;
    bottom: none;
-
-   * {
-      transition: all 0.6s;
-   }
-
+   
+   
    @media screen and (max-width: 450px) {
       flex-direction: column-reverse;
    }
-
+   
    &__tab {
+      transition: all 0.6s;
       margin: 4px;
       background-color: rgb(234, 234, 234);
       border-radius: 0;

@@ -3,9 +3,8 @@ $mainTS: linear-gradient(#e2e2e2 0 0) padding-box,
    linear-gradient(183deg, #5813c9 35%, #e33ef2 81%) border-box;
 
 .Telescope {
-   padding: 100px 0 500px;
-   height: 100%;
    position: relative;
+   height: 100%;
 
    .icon-app-mini {
       background: $mainTSLite;
@@ -24,72 +23,89 @@ $mainTS: linear-gradient(#e2e2e2 0 0) padding-box,
       margin: 0;
    }
 
-   &:focus-within {
-      background: rgba(167, 167, 167, 0.344);
-      padding-top: 0;
-      height: auto;
+   &-Main {
+      padding: 100px 0 500px;
+      height: 100%;
 
-      @media screen and (max-width: 450px) {
-         background: rgb(167, 167, 167);
-      }
+      &:focus-within {
+         padding-top: 0;
+         height: auto;
 
-      // Search
-      .Form {
-         background-color: rgb(245, 245, 245);
-         border-radius: 16px;
-         box-shadow: 0px 2px 36px rgba(190, 130, 130, 0.1);
-         border: 1px solid #eee;
-         // margin-bottom: 120px;
+         &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 5;
+            background: rgba(167, 167, 167, 0.344);
+         }
 
          @media screen and (max-width: 450px) {
-            background-color: #fff;
-            box-shadow: none;
-            border: 1px solid transparent;
+            &::after {
+               background: rgb(167, 167, 167);
+            }
+         }
+
+         // Search
+         .Form {
+            background-color: rgb(245, 245, 245);
+            border-radius: 16px;
+            box-shadow: 0px 2px 36px rgba(190, 130, 130, 0.1);
+            border: 1px solid #eee;
             // margin-bottom: 120px;
+
+            @media screen and (max-width: 450px) {
+               background-color: #fff;
+               box-shadow: none;
+               border: 1px solid transparent;
+               // margin-bottom: 120px;
+               width: 100%;
+            }
+         }
+
+         .Search-Content {
+            // padding-top: 55px;
+         }
+
+         .Search {
+            margin-top: 60px;
+            &-Input {
+               text-align: left;
+            }
+         }
+
+         .Header {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            padding: 16px 0 12px;
+
+            position: absolute;
+            top: 0;
+            // right: 50%;
+            margin-right: -90px;
+            z-index: 1100;
+            background-color: #fff;
             width: 100%;
-         }
-      }
 
-      .Search-Content {
-         padding-top: 55px;
-      }
+            h1 {
+               letter-spacing: 0.2em;
+            }
 
-      .Search {
-         &-Input {
-            text-align: left;
-         }
-      }
-
-      .Header {
-         position: relative;
-         z-index: 2;
-         display: flex;
-         flex-direction: row;
-         justify-content: center;
-         padding: 16px 0 12px;
-
-         position: absolute;
-         top: 0;
-         right: 50%;
-         margin-right: -90px;
-         z-index: 1100;
-
-         h1 {
-            letter-spacing: 0.2em;
-         }
-
-         .logoTS {
-            margin-right: 16px;
-            height: 32px;
+            .logoTS {
+               margin-right: 16px;
+               height: 32px;
+            }
          }
       }
    }
 
    // Search
-
    .Search-Content {
-      // padding-top: 32px;
-
       @media screen and (max-width: 450px) {
          background: #fff;
          padding: 0;
@@ -130,6 +146,7 @@ $mainTS: linear-gradient(#e2e2e2 0 0) padding-box,
 
             &:focus-within {
                padding-right: 78px;
+
                &::placeholder {
                   color: #747474;
                }
@@ -159,9 +176,10 @@ $mainTS: linear-gradient(#e2e2e2 0 0) padding-box,
 
       .logoTS {
          height: 100px;
-         transition: all 0.6s;
+         // transition: all 0.6s;
       }
    }
+
    // Buttons
    .Buttons {
       &__item {
@@ -178,6 +196,7 @@ $mainTS: linear-gradient(#e2e2e2 0 0) padding-box,
          border-radius: 120px;
       }
    }
+
    // Results
    .Results {
       &-Item {
@@ -189,7 +208,7 @@ $mainTS: linear-gradient(#e2e2e2 0 0) padding-box,
          }
 
          &:hover {
-            background-color: rgba(#ffffff,1);
+            background-color: rgba(#ffffff, 1);
 
             @media screen and (max-width: 450px) {
                background-color: transparent;
@@ -207,7 +226,9 @@ $mainTS: linear-gradient(#e2e2e2 0 0) padding-box,
          }
       }
    }
+
    // Bookmarks
+
    // Cards
    .Card {
       &__icon {
@@ -254,6 +275,7 @@ $mainTS: linear-gradient(#e2e2e2 0 0) padding-box,
          }
       }
    }
+
    // Groups
    .Group {
       // padding: 8px 0;
@@ -287,6 +309,28 @@ $mainTS: linear-gradient(#e2e2e2 0 0) padding-box,
       border-radius: 12px;
       h2 {
          text-align: left;
+      }
+
+      &-Buttons {
+         background: #eee;
+         &__Item {
+            // border: 1px solid #010101;
+
+            background: #fff;
+         }
+
+         .btn__none {
+            opacity: 1;
+
+            &::after {
+               display: none;
+            }
+         }
+         
+         .btn__op {
+            color: #7413c9;
+
+         }
       }
    }
 

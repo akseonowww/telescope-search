@@ -8,7 +8,9 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useState } from 'react'
 import { BsFillCalculatorFill, BsChevronDoubleDown } from 'react-icons/bs'
+import Latex from 'react-latex-next'
 import { btns, BTN_ACTIONS } from './btnConfig'
+import { btnFunctions } from './btnFunctions'
 import './Calculator.scss'
 
 // МОЁЁЁЁЁЁЁЁЁЁЁЁЁЁЁЁЁЁЁЁЁЁЁЁ
@@ -20,35 +22,10 @@ const Calculator = () => {
       setActive(!isActive)
    }
 
-   const clickBtn = (el) => {
-      if (el.action === 'ADD') {
-         if (value === '0') {
-            setValue(el.display)
-         // } else if (value[value.length - 1] === el.display) {
-         //    setOldValue('Ошибка')
-         //    // setValue(value + el.display)
-         } else {
-            console.log(value[value.length - 1] )
-            setValue(value + el.display)
-         }
-      } else if (el.action === 'CALC') {
-         let valueJS = value
-            .replaceAll('x', '*')
-            .replaceAll(',', '.')
-            .replaceAll('÷', '/')
-         try {
-            setOldValue(`${value}=`)
-            valueJS = eval(valueJS).toString()
-            setValue(valueJS.replace('.', ','))
-         } catch (err) {
-            setOldValue('Ошибка')
-            console.error(err)
-            console.log(eval(valueJS), valueJS)
-         }
-      } else if (el.action === 'DELETE') {
-         setOldValue('')
-         setValue('0')
-      }
+   const clickBtn = (el, valueN, oldValueN) => {
+      const data = btnFunctions(el, valueN, oldValueN)
+      setValue(data[0])
+      setOldValue(data[1])
    }
 
    return (
@@ -75,8 +52,12 @@ const Calculator = () => {
          </div>
          <div className="Calculator-Container">
             <div className="Calculator-Result">
-               <div className="Calculator-Result__Expression">{oldValue}</div>
-               <div className="Calculator-Result__Answer">{value}</div>
+               <div className="Calculator-Result__Expression">
+                  <Latex>{oldValue ? `$${oldValue}$` : ''}</Latex>
+               </div>
+               <div className="Calculator-Result__Answer">
+                  <Latex>{`$${value}$`}</Latex>
+               </div>
             </div>
             <div className="Calculator-Buttons">
                {btns.map((el, index) => (
@@ -84,9 +65,9 @@ const Calculator = () => {
                      type="button"
                      key={index}
                      className={`${el.class} Calculator-Buttons__Item`}
-                     onClick={() => clickBtn(el)}
+                     onClick={() => clickBtn(el, value, oldValue)}
                   >
-                     {el.display}
+                     <Latex>{`$${el.display}$`}</Latex>
                   </button>
                ))}
             </div>
