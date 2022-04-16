@@ -44,6 +44,7 @@ const Card = ({ value, title, info, icon }) => {
          </div>
          <div className={`${classComponent}__option`}>
             <div className={`${classComponent}__option-btn_hidden`}>
+            {/* <div className={`${classComponent}__option-btn ${classComponent}__option-btn_hidden`}> */}
                <a
                   className={`${classComponent}__option-btn`}
                   href={`https://${wiki.link + title}`}

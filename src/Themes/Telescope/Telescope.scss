@@ -230,11 +230,13 @@ $mainTS: linear-gradient(#e2e2e2 0 0) padding-box,
 
    // Cards
    .Card {
+      padding-right: 12px;
+
       &__icon {
          margin-right: 12px;
 
          &-container {
-            border-radius: 32px;
+            border-radius: 30px;
          }
 
          &-default {
@@ -243,33 +245,35 @@ $mainTS: linear-gradient(#e2e2e2 0 0) padding-box,
       }
 
       &__option {
+         right: 16px;
+
          button {
             border-radius: 120px;
          }
          &-btn {
             border-radius: 120px;
 
-            &__img {
-               $size: 1.8em;
-               height: $size;
-               width: $size;
-            }
+            // &__img {
+            //    $size: 1.8em;
+            //    height: $size;
+            //    width: $size;
+            // }
          }
       }
 
-      &.active {
+      &.Card-Active {
          .Card {
             &__text-info {
                word-wrap: break-word;
             }
 
             &__icon {
-               // height: 150px;
-               // min-width: 120px;
-
                &-container {
                   border-radius: 12px;
                }
+            }
+            &__option {
+               right: 16px;
             }
          }
       }

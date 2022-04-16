@@ -43,7 +43,7 @@ export const btns = [
    {
       display: 'x^{2}',
       action: BTN_ACTIONS.ADD,
-      code: 'Math.pow(val, 2)',
+      code: '**',
       class: 'btn__op btn__none'
    },
    {

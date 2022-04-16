@@ -8,8 +8,8 @@ export const btnFunctions = (el, value = '0', oldValue = '') => {
       .replaceAll('\\div', '/')
       .replaceAll('\\times', '*')
       .replaceAll(',', '.')
-      .replaceAll('\\sqrt{x}', 'Math.sqrt(val)')
-      .replaceAll('x^{2}', 'Math.pow(val, 2)')
+      .replaceAll(`\\sqrt{${value}}`, `Math.sqrt(${value}, 2)`)
+      .replaceAll('^{2}', '**2')
       .replaceAll('1/x', '1/(val)')
       .replaceAll('\\pm', '+-')
       .replaceAll('\\sin', 'Math.sin(val)')
@@ -17,6 +17,8 @@ export const btnFunctions = (el, value = '0', oldValue = '') => {
       .replaceAll('\\tg', 'Math.tan(val)')
       .replaceAll('\\ctg', '1/Math.tan(val)')
       .replaceAll('\\pi', 'Math.PI')
+   console.log(value)
+   console.log(valueJS)
 
 
    // -----------------
@@ -26,11 +28,14 @@ export const btnFunctions = (el, value = '0', oldValue = '') => {
       // Проверка для нуля, можно только запятую
       if (value === '0') {
          if (el.display === ',') {
-            value += el.display
+            value = el.display
          } else if (el.display === '000') {
             oldValue = '\\bf Ошибка'
+         } else if(el.display === '\\sqrt{x}') {
+            value = `\\sqrt{${value}}`
+            oldValue = oldValue === '\\bf Ошибка' ? '' : ''
          } else {
-            value = el.display
+            value  = el.display
          }
 
          // Проверка одинаковых символов
@@ -59,27 +64,42 @@ export const btnFunctions = (el, value = '0', oldValue = '') => {
          } else {
             oldValue = '\\bf Ошибка'
          }
+      } else if (el.display === 'x^{2}') {
+         value += '^{2}'
+         oldValue = oldValue === '\\bf Ошибка' ? '' : ''
+      } else if (el.display === '\\sqrt{x}') {
+         value = `\\sqrt{${value}}`
+         oldValue = oldValue === '\\bf Ошибка' ? '' : ''
+      } else if (el.display === '1/x') {
+         value = `1/${value}`
+         // value = `\\frac{1}{${value}}`
+         oldValue = oldValue === '\\bf Ошибка' ? '' : ''
+      } else if (el.display === '\\pm') {
+         value = value[0] === '-'
+            ? value.slice(1)
+            : `-${value}`
+         oldValue = oldValue === '\\bf Ошибка' ? '' : ''
       } else {
-         // console.log(value[value.length - 1])
          value += el.display
          oldValue = oldValue === '\\bf Ошибка' ? '' : ''
-         // value += el.display
       }
+      // value += el.display
+   }
 
 
-      // -----------------
-      // Если нажать равно
-      // -----------------
-   } else if (el.action === BTN_ACTIONS.CALC) {
+   // -----------------
+   // Если нажать равно
+   // -----------------
+   else if (el.action === BTN_ACTIONS.CALC) {
       try {
          oldValue = `${value}=`
          valueJS = eval(valueJS).toString()
          value = valueJS
             .replaceAll('.', ',')
             .replaceAll('/', '\\div')
-            .replaceAll('Math.sqrt(val)', '\\sqrt{x}')
-            .replaceAll('Math.pow(val, 2)', 'x^{2}')
-            .replaceAll('1/(val)', '1/x')
+            .replaceAll(`Math.sqrt(${value}, 2)`, `\\sqrt{${value}}`)
+            .replaceAll('**2', '^{2}')
+            // .replaceAll('1/(val)', '1/x')
             .replaceAll('+-', '\\pm')
             .replaceAll('Math.sin(val)', '\\sin')
             .replaceAll('Math.cos(val)', '\\cos')
