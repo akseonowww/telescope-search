@@ -13,7 +13,7 @@ const Article = ({
 }) => {
    const classComponent = 'Article'
 
-   const [isActive, setActive] = useState(0)
+   const [isActive, setActive] = useState(1)
 
    const openArticle = () => {
       setActive(!isActive)
@@ -24,22 +24,21 @@ const Article = ({
          className={`${classComponent} ${isActive ? 'Article-Active' : ''}`}
          onClick={() => openArticle()}
          >
-         <div className={`${classComponent}-header`}>
+         <div className={`${classComponent}-Header`}>
             {/* <div className={`${classComponent}-header__icon`}>
                <BsJournalRichtext />
             </div> */}
             <strong>{heading}</strong>
             <button
-               className={`${classComponent}-header__open`}
+               className={`${classComponent}-Header__Open`}
                type="button"
                onClick={() => openArticle()}
             >
                <BsChevronDoubleDown />
             </button>
          </div>
-         <div className={`${classComponent}-content`}>
+         <div className={`${classComponent}-Content`}>
             <Latex>{content}</Latex>
-            {/* <MarkdownRender>{content}</MarkdownRender> */}
          </div>
       </div>
    )

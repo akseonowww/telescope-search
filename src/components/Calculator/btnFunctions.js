@@ -31,11 +31,14 @@ export const btnFunctions = (el, value = '0', oldValue = '') => {
             value = el.display
          } else if (el.display === '000') {
             oldValue = '\\bf Ошибка'
-         } else if(el.display === '\\sqrt{x}') {
+         } else if (el.display === '\\sqrt{x}') {
             value = `\\sqrt{${value}}`
             oldValue = oldValue === '\\bf Ошибка' ? '' : ''
+         } else if (el.display === 'x^{2}') {
+            value = `${value}^{2}`
+            oldValue = oldValue === '\\bf Ошибка' ? '' : ''
          } else {
-            value  = el.display
+            value = el.display
          }
 
          // Проверка одинаковых символов

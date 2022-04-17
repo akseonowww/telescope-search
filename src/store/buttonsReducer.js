@@ -6,14 +6,35 @@ const defaultState = {
    buttonsCollections: [
       {
          name: 'Найти вариант',
-         // name: 'Кнопка 1',
+         url: '/',
          id: 0
       },
       {
          name: 'Найти номер или текст задания',
-         // name: 'Кнопка 2',
+         url: '',
          id: 1
       },
+      {
+         name: 'Яндекс',
+         url: 'https://yandex.ru/search/?text=',
+         id: 2
+      },
+      {
+         name: 'Google',
+         url: 'https://google.ru/search?q=',
+         id: 3
+      }
+      ,
+      {
+         name: 'Duckduckgo',
+         url: 'https://duckduckgo.com/?q=',
+         id: 4
+      },
+      {
+         name: 'Wikipedia',
+         url: 'https://ru.wikipedia.org/w/index.php?search=',
+         id: 5
+      }
    ]
 }
 
@@ -23,7 +44,8 @@ export const buttonsReducer = (state = defaultState, action = {}) => {
          return {
             ...state, buttonsCollections: [...state.buttonsCollections,
             {
-               name: action.payload,
+               name: action.payload.name,
+               url: action.payload.url,
                id: state.buttonsCollections.length
             }
             ]
@@ -34,9 +56,9 @@ export const buttonsReducer = (state = defaultState, action = {}) => {
             ...state,
             buttonsCollections: [
                state.buttonsCollections[action.payload] === 'none'
-                  // console.log(state.buttonsCollections, el, el.id !== action.payload)
+               // console.log(state.buttonsCollections, el, el.id !== action.payload)
 
-                  // return 
+               // return 
                // ),
                // console.log(state.buttonsCollections)
 

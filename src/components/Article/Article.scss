@@ -5,8 +5,28 @@ $main: #017aff;
    width: 100%;
    text-align: left;
 
-   &-content {
+   &-Content {
       display: none;
+
+      &__List {
+         display: grid;
+         grid-template-columns: repeat(4, 1fr);
+         flex-direction: column;
+         gap: 4px;
+         
+         @media screen and (max-width: 450px) {
+            grid-template-columns: repeat(2, 1fr);
+
+         }
+
+         &-Item {
+            padding: 8px;
+            text-align: center;
+            background-color: $main;
+            text-decoration: none;
+            color: #fff;
+         }
+      }
    }
 
    &-Button {
@@ -21,14 +41,14 @@ $main: #017aff;
       background: $main;
    }
 
-   &-header {
+   &-Header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       gap: 8px;
       font-size: 18px;
 
-      &__open {
+      &__Open {
          background-color: transparent;
          border: none;
          height: 100%;
@@ -77,11 +97,10 @@ $main: #017aff;
 }
 
 .Article-Active {
-   .Article-header__open {
+   .Article-Header__Open {
       transform: rotate(180deg);
    }
-   .Article-content {
-      // transition: all 0.5s;
+   .Article-Content {
       display: block;
    }
 }

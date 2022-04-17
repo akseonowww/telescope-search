@@ -1,5 +1,5 @@
 $btn-h: 38px;
-$main: #017AFF;
+$main: #017aff;
 
 .Buttons {
    display: flex;
@@ -10,7 +10,7 @@ $main: #017AFF;
       gap: 6px;
       padding: 0 4px 4px;
       position: relative;
-      overflow-x: auto;
+      overflow-x: scroll;
       width: 100%;
 
       &::-webkit-scrollbar {
@@ -44,29 +44,19 @@ $main: #017AFF;
       }
    }
 
-   button {
-      height: 24px;
-
-      @media screen and (max-width: 450px) {
-         height: $btn-h;
-         padding: 0 12px;
-      }
-   }
-
    &__item {
-      background: transparent;
       color: #333;
       font-weight: 400;
       font-size: 14px;
       line-height: 16px;
       border: solid 2px transparent;
-      // padding: 4px 12px;
-      // background: linear-gradient(#e2e2e2 0 0) padding-box,
-      //    linear-gradient(183deg, #5813c9 35%, #e33ef2 81%) border-box;
       background: $main;
-      // background-origin: border-box;
-      // background-clip: content-box, border-box;
       box-shadow: 2px 1000px 1px #fff inset;
+      white-space: nowrap;
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
       @media screen and (max-width: 450px) {
          font-size: 16px;
@@ -76,20 +66,95 @@ $main: #017AFF;
    &__add {
       width: 24px;
       color: #ffffff;
-      // border-radius: 120px;
       line-height: 16px;
       border: none;
-      // background: linear-gradient(24deg, #e33ef2, #5813c9);
       background: $main;
       display: flex;
       justify-content: center;
       align-items: center;
       font-size: 24px;
       font-weight: 400 !important;
+      height: 24px;
 
       @media screen and (max-width: 450px) {
          width: $btn-h;
+         height: $btn-h;
          padding: 0;
+         padding: 0 12px;
+      }
+   }
+
+   &-Modal {
+      background: #fff;
+      border-radius: 12px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      padding: 12px 18px;
+      height: 100%;
+      width: 100%;
+
+      &__Header {
+         display: flex;
+         justify-content: space-between;
+         text-align: left;
+         font-size: 18px;
+      }
+
+      &__Close {
+         background: transparent;
+         border: none;
+
+         svg {
+            $size: 1.5em;
+            height: $size;
+            width: $size;
+         }
+      }
+
+      &__Add {
+         background-color: $main;
+         padding: 12px 24px;
+         border: none;
+         border-radius: 12px;
+         font-size: 18px;
+         color: #fff;
+         margin-top: 18px;
+         height: auto;
+      }
+
+      &__Content {
+         display: flex;
+         justify-content: center;
+         flex-direction: column;
+         gap: 12px;
+
+         &-Input {
+            display: flex;
+            justify-content: start;
+            flex-direction: column;
+
+            input {
+               padding: 12px;
+               font-size: 18px;
+               border-radius: 12px;
+               border: 2px solid #000000;
+               
+               &:focus-within {
+                  border-radius: 12px;
+                  background: rgba($main, 0.1);
+                  border: 2px solid $main;
+               }
+            }
+
+            label {
+               font-size: 16px;
+               text-align: left;
+               margin-left: 4px;
+               margin-bottom: 2px;
+            }
+         }
       }
    }
 }

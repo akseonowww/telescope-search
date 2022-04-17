@@ -7,9 +7,9 @@ import { FaWikipediaW } from 'react-icons/fa'
 import './Card.scss'
 import Data from '../../../store/data'
 
-const Card = ({ value, title, info, icon }) => {
+const Card = ({ value, card }) => {
    const classComponent = 'Card'
-   const titleNoHTML = title.replace('<mark>', '', 1).replace('</mark>', '', 1)
+   // const titleNoHTML = card.name.replace('<mark>', '', 1).replace('</mark>', '', 1)
 
    const [isActive, setActive] = useState(false)
 
@@ -29,16 +29,16 @@ const Card = ({ value, title, info, icon }) => {
                <div className={`${classComponent}__icon-container`}>
                   <img
                      className={`${classComponent}__icon-img`}
-                     src={icon}
+                     src={card.img}
                      alt={`icon ${value}`}
                   />
                </div>
             </div>
             <div className={`${classComponent}__text`}>
-               <span dangerouslySetInnerHTML={{ __html: title }} />
+               <span dangerouslySetInnerHTML={{ __html: card.name }} />
                <span
                   className={`${classComponent}__text-info`}
-                  dangerouslySetInnerHTML={{ __html: info }}
+                  dangerouslySetInnerHTML={{ __html: card.info }}
                />
             </div>
          </div>
@@ -47,7 +47,7 @@ const Card = ({ value, title, info, icon }) => {
             {/* <div className={`${classComponent}__option-btn ${classComponent}__option-btn_hidden`}> */}
                <a
                   className={`${classComponent}__option-btn`}
-                  href={`https://${wiki.link + title}`}
+                  href={card.link}
                >
                   <div className={`${classComponent}__option-btn__img`}>
                      <BsBook />
@@ -57,7 +57,7 @@ const Card = ({ value, title, info, icon }) => {
             </div>
             <a
                className={`${classComponent}__option-btn`}
-               href={`https://${wiki.link + titleNoHTML}`}
+               href={card.wiki}
             >
                <div className={`${classComponent}__option-btn__img`}>
                   <FaWikipediaW />

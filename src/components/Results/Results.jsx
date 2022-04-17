@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 /* eslint-disable array-callback-return */
 /* eslint-disable no-unused-expressions */
 import React from 'react'
@@ -33,22 +34,21 @@ const Results = ({
             ) : (
                ''
             )}
-            {value ? data.map((el) =>
-                     el.map((elem) => {
-                        counterRes += 1
-                        return (
-                           <div
-                              key={`${elem.key}`}
-                              className={`${classComponent}-Item`}
-                           >
-                              {elem}
-                           </div>
-                        )
-                     })
-                  )
-                : (
-               ''
-            )}
+            {value
+               ? data.map((el) =>
+                    el.map((elem, index) => {
+                       counterRes += 1
+                       return (
+                          <div
+                             key={`${index}`}
+                             className={`${classComponent}-Item`}
+                          >
+                             {elem}
+                          </div>
+                       )
+                    })
+                 )
+               : ''}
             <div className="Results-footer">
                {counterResults ? <span>Результаты: {counterRes}</span> : ''}
                {searchEngines ? (

@@ -28,11 +28,11 @@ const Telescope = () => {
                placeholder="Найди свою звезду!"
                firstR="Я слушаю вас..."
                // data={Data}
-               searchEngines
-               searchActive
+               // searchEngines
+               // searchActive
                counterResults
                // work
-               valueDefault="ка"
+               valueDefault="а"
             />
          </div>
          <div className="Telescope-Footer">

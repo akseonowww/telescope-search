@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-expressions */
 /* eslint-disable react/no-array-index-key */
 /* eslint-disable react/no-danger */
 import React, { useState } from 'react'
@@ -11,10 +12,11 @@ import './Group.scss'
 const Gropup = ({ groups = Data.groups }) => {
    const classComponent = 'Group'
 
-   const [statusBtn, setStatusBtn] = useState(false)
+   const [statusBtn, setStatusBtn] = useState(-1)
 
-   const handleClick = () => {
-      setStatusBtn(!statusBtn)
+   const handleClick = (el) => {
+      el.id === 0 ? console.log(el) : ''
+      statusBtn === el.id ? setStatusBtn(-1) : setStatusBtn(el.id)
    }
 
    return (
@@ -22,22 +24,25 @@ const Gropup = ({ groups = Data.groups }) => {
          <div className={`${classComponent}-Menu`}>
             <button
                type="button"
-               className={`${classComponent}__Name`}
+               className={`${classComponent}__Name` }
                dangerouslySetInnerHTML={{ __html: groups.name }}
                label="34"
             />
             <span>:</span>
             <div className={`${classComponent}__List`}>
                {groups.group.map((el, index) => (
-                  <div key={`${index}-List-Item`}>
+                  // <div key={`${index}-List`}>
                      <button
-                        onClick={() => handleClick(el.id)}
+                        key={`${index}-list`}
+                        onClick={() => handleClick(el)}
                         type="button"
-                        className={`${classComponent}__List-item`}
+                        className={`${classComponent}__List-Item ${
+                           statusBtn === el.id ? `Group-Active__btn` : ''
+                        }`}
                      >
                         {el.name}
                      </button>
-                  </div>
+                  // </div>
                ))}
             </div>
          </div>
@@ -46,10 +51,10 @@ const Gropup = ({ groups = Data.groups }) => {
                <div
                   key={`${index}-Item`}
                   className={`${classComponent}-Content__Item ${
-                     statusBtn ? `Group-Active ${el.id}` : ''
+                     statusBtn === el.id ? `Group-Active` : ''
                   }`}
                >
-                  <Article heading={el.name} content={el.content} />
+                  <Article heading={el.name} content={`${el.content}`} />
                </div>
             ))}
          </div>
