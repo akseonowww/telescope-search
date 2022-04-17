@@ -9,8 +9,6 @@ import Data from '../../../store/data'
 
 const Card = ({ value, card }) => {
    const classComponent = 'Card'
-   // const titleNoHTML = card.name.replace('<mark>', '', 1).replace('</mark>', '', 1)
-
    const [isActive, setActive] = useState(false)
 
    const openCard = () => {
@@ -44,7 +42,6 @@ const Card = ({ value, card }) => {
          </div>
          <div className={`${classComponent}__option`}>
             <div className={`${classComponent}__option-btn_hidden`}>
-            {/* <div className={`${classComponent}__option-btn ${classComponent}__option-btn_hidden`}> */}
                <a
                   className={`${classComponent}__option-btn`}
                   href={card.link}
@@ -52,7 +49,7 @@ const Card = ({ value, card }) => {
                   <div className={`${classComponent}__option-btn__img`}>
                      <BsBook />
                   </div>
-                  <span>Произведения</span>
+                  <span>Читать</span>
                </a>
             </div>
             <a

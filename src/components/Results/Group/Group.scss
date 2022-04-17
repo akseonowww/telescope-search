@@ -2,7 +2,7 @@ $main: #017aff;
 
 .Group {
    display: flex;
-   gap: 6px;
+   // gap: 6px;
    // padding: 8px 0;
    flex-direction: column;
    width: 100%;
@@ -42,7 +42,7 @@ $main: #017aff;
       position: relative;
       width: 100%;
       height: 24px;
-      padding-bottom: 20px;
+      // padding-bottom: 20px;
 
       @media screen and (max-width: 450px) {
          height: 36px;
@@ -121,6 +121,7 @@ $main: #017aff;
 }
 
 .Group-Active {
+   margin-top: 6px;
    display: block;
 
    &__btn {

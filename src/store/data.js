@@ -155,38 +155,156 @@ const Data = {
          group: [
             {
                name: "Математика",
-               content: `
-                  <h4>1. Степени</h4>
-                  <ul>
-                     <li>$(3\times 4) \\div (5-3)$</li>
-                     <li>$(3\times 4) \\div (5-3)$</li>
-                     <li></li>
-                  </ul>
+               content: `<div class="Article-Content__Text">
+               <div class="Article-Content__Text-Content">
+                  <div class="Article-Content__Text-Content__Item">
+                     <h3>Степени</h3>
+                     <ol>
+                        <li>$a^{n} \\times a^{m}=a^{n+m}$</li>
+                        <li>$a^{n} \\div a^{m}=a^{n-m}$</li>
+                        <li>$(a^{n})^{m}=a^{n \\times m}$</li>
+                        <li>$\\dfrac{a^{n}}{b^{n}}=\\left(\\dfrac{a}{b} \\right)^{n}$</li>
+                        <li>$a^{0}=1$</li>
+                        <li>$a^{-n}=\\dfrac{1}{a^{n}}$</li>
+                        <li>
+                           $\\left(\\dfrac{a}{b}
+                           \\right)^{-n}=\\left(\\dfrac{b}{a}\\right)^{n}$
+                        </li>
+                     </ol>
+                  </div>
+            
+                  <div class="Article-Content__Text-Content__Item">
+                     <h3>Корни</h3>
+                     <ol>
+                        <li>$\\sqrt{a} \\times \\sqrt{b} = \\sqrt{ab}$</li>
+                        <li>$\\dfrac{\\sqrt{a} }{ \\sqrt{b}} = \\sqrt{\\dfrac{a}{b}}$</li>
+                        <li>$(\\sqrt{a})^{2} = a$</li>
+                        <li>$\\sqrt{a^{2}} = |a|$</li>
+                        <li>$\\sqrt[n]{a^{m}} = a^{\\frac{m}{n}}$</li>
+                     </ol>
+                  </div>
+            
+                  <div class="Article-Content__Text-Content__Item">
+                     <h3>Логарифмы</h3>
+                     Если $\\log_{a}{b}=c$, то $a^{c}=b$. Основное лоагрифмическиое
+                     тождество: $$a^{\\log_{a}{b}}$$ ОДЗ логарифма $$ a > 10, a \\not= 1, b
+                     > 0$$
+                     <ol>
+                        <li>$\\log_{a}b + \\log_{a}{c} = log_{a}{b} \\times c$</li>
+                     </ol>
+                  </div>
+                  <div class="Article-Content__Text-Content__Item">
+                     <h3>Формулы сокращённого умножения</h3>
+                     <dl>
+                        <dt>Разность квадратов:</dt>
+                        <dd>$ a^{2} - b^{2} = (a - b)(a + b) $</dd>
+                        <dt>Квадрат разности:</dt>
+                        <dd>$ (a - b)^{2} = a^{2} - 2ab + b^{2} $</dd>
+                        <dt>Квадрат cevvs:</dt>
+                        <dd>$ (a + b)^{2} = a^{2} + 2ab + b^{2}$</dd>
+                        <dt>Разность кубов:</dt>
+                        <dd>$ a^{3} - b^{3} = (a - b)(a^{2} + ab + b^{2}) $</dd>
+                        <dt>Сумма кубов:</dt>
+                        <dd>$ a^{3} + b^{3} = (a + b)(a^{2} - ab + b^{2}) $</dd>
+                     </dl>
+                  </div>
+               </div>
+            </div>
+            
                `,
                id: 'formula-0'
             },
             {
                name: "Физика",
-               content:
-                  `
-                  Физика
+               content:`<div class="Article-Content__Text">
+               <div class="Article-Content__Text-Content">
+                  <div class="Article-Content__Text-Content__Item">
+                     <h3>Механика</h3>
+                     <h4>Кинематика прямолинейного движения</h4>
+                     <dl>
+                        <dt>Проекция перемещения на ось Х</dt>
+                        <dd>$s_x = x - x_0$</dd>
+                        <dt>Cкорость равномерного прямолинейного движения</dt>
+                        <dd>$\\overrightarrow{v} = \\dfrac{\\overrightarrow{s}}{t}$</dd>
+                        <dt>Средняя скорость</dt>
+                        <dd>$v_ср = \\dfrac{s}{t}$</dd>
+                        <dt>Уравнение равномерного прямолинейного движения</dt>
+                        <dd>$x = x_0 + v_x t$</dd>
+                        <dt>Ускорение при равноускоренном движении</dt>
+                        <dd>
+                           $ \\overrightarrow{a} = \\dfrac{\\overrightarrow{v} -
+                           \\overrightarrow{v_0}}{t} $
+                        </dd>
+                        <dt>Cкорость при равноускоренном движении</dt>
+                        <dd>
+                           $ \\overrightarrow{v}=\\overrightarrow{v_0}+\\overrightarrow{a}t
+                           $
+                        </dd>
+                        <dt>Перемещение при равноускоренном движении</dt>
+                        <dd>
+                           $
+                           \\overrightarrow{s}=\\dfrac{\\overrightarrow{v}+\\overrightarrow{v_0}}{2}t
+                           $
+                        </dd>
+                        <dt>
+                           Зависимость перемещения при равноускоренном движении от времени
+                        </dt>
+                        <dd>
+                           $
+                           \\overrightarrow{s}=\\overrightarrow{v_0}t+\\dfrac{\\overrightarrow{a}t^{2}}{2}
+                           $
+                        </dd>
+                        <dt>
+                           Проекция перемещения при равноускоренном движении без времени
+                        </dt>
+                        <dd>$s_x = \\dfrac{v^{2}_x - v^{2}_0x}{2a_x}$</dd>
+                        <dt>Уравнение равноускоренного движения</dt>
+                        <dd>$x = x_0 + v_0 t + \\dfrac{at^{2}}{2}$</dd>
+                     </dl>
+                  </div>
+               </div>
+            </div>
+            
                `,
                id: 'formula-1'
             },
             {
-               name: "Химия",
-               content:
-                  `
-                 Химия
-               `,
-               id: 'formula-3'
-            },
-            {
                name: "Информатика",
-               content:
-                  `
-                  Инфа
-               `,
+               content:`<div class="Article-Content__Text">
+               <div class="Article-Content__Text-Content">
+                  <div class="Article-Content__Text-Content__Item">
+                     <h3>Информация</h3>
+                     <h4>Формула Хартли</h4>
+                     <dl>
+                        <dt>$\\boxed{N=p^i}$</dt>
+                        <dd>
+                           <p>
+                              $p~ - $ количество вариантов (используемых символов, сигналов),
+                              мощность алфавита
+                           </p>
+                           <p>$i~ - $ длина кода</p>
+                           <p>$N~ - $ количество комбинаций</p>
+                        </dd>
+                        <dt>$\\boxed{N=2^i}$</dt>
+                        <dd>
+                           <p>
+                              $i~ - $ информационный вес одного символа алфавита (выражается в
+                              битах)
+                           </p>
+                           <p>$N~ - $ мощность исходного алфавита</p>
+                        </dd>
+                        <dt>$\\boxed{I=k \\times i}$</dt>
+                        <dd>
+                           <p>$k~ - $ количество символов в сообщении</p>
+                           <p>$i~ - $ информационный вес символа</p>
+                           <p>$I~ - $ информационный объем сообщения</p>
+                        </dd>
+                     </dl>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            `,
                id: 'formula-4'
             }
 

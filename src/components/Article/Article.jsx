@@ -15,14 +15,10 @@ const Article = ({
 
    const [isActive, setActive] = useState(1)
 
-   const openArticle = () => {
-      setActive(!isActive)
-   }
-
    return (
       <div
          className={`${classComponent} ${isActive ? 'Article-Active' : ''}`}
-         onClick={() => openArticle()}
+         onClick={() => setActive(!isActive)}
          >
          <div className={`${classComponent}-Header`}>
             {/* <div className={`${classComponent}-header__icon`}>
@@ -32,13 +28,14 @@ const Article = ({
             <button
                className={`${classComponent}-Header__Open`}
                type="button"
-               onClick={() => openArticle()}
+               onClick={() => setActive(!isActive)}
             >
                <BsChevronDoubleDown />
             </button>
          </div>
          <div className={`${classComponent}-Content`}>
             <Latex>{content}</Latex>
+            и т. д. 
          </div>
       </div>
    )

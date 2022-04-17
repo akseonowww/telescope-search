@@ -6,7 +6,7 @@ import { BsXCircle } from 'react-icons/bs'
 import Data from '../../../store/data'
 import './Buttons.scss'
 
-const Buttons = ({ value, data = Data }) => {
+const Buttons = ({ value }) => {
    const classComponent = 'Buttons'
    const [statusModal, setStatusModal] = useState()
    const [newName, setNewName] = useState()
@@ -37,6 +37,13 @@ const Buttons = ({ value, data = Data }) => {
    return (
       <div className={classComponent}>
          <div className={`${classComponent}__list`}>
+            <button
+               onClick={() => setStatusModal(!statusModal)}
+               type="button"
+               className={`${classComponent}__add`}
+            >
+               +
+            </button>
             {buttons.map((el, index) => (
                <a
                   href={`${el.url + value}`}
@@ -50,13 +57,6 @@ const Buttons = ({ value, data = Data }) => {
                   {el.name}
                </a>
             ))}
-            <button
-               onClick={() => setStatusModal(!statusModal)}
-               type="button"
-               className={`${classComponent}__add`}
-            >
-               +
-            </button>
          </div>
          {statusModal ? (
             <div className="Buttons-Modal">

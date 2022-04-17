@@ -8,17 +8,17 @@ export const btnFunctions = (el, value = '0', oldValue = '') => {
       .replaceAll('\\div', '/')
       .replaceAll('\\times', '*')
       .replaceAll(',', '.')
-      .replaceAll(`\\sqrt{${value}}`, `Math.sqrt(${value}, 2)`)
+      .replaceAll('\\pm', '+-')
       .replaceAll('^{2}', '**2')
       .replaceAll('1/x', '1/(val)')
-      .replaceAll('\\pm', '+-')
-      .replaceAll('\\sin', 'Math.sin(val)')
-      .replaceAll('\\cos', 'Math.cos(val)')
-      .replaceAll('\\tg', 'Math.tan(val)')
-      .replaceAll('\\ctg', '1/Math.tan(val)')
-      .replaceAll('\\pi', 'Math.PI')
-   console.log(value)
-   console.log(valueJS)
+   // .replaceAll(`\\sqrt{${value}}`, `Math.sqrt(${value}, 2)`)
+   // .replaceAll('\\sin', 'Math.sin(val)')
+   // .replaceAll('\\cos', 'Math.cos(val)')
+   // .replaceAll('\\tg', 'Math.tan(val)')
+   // .replaceAll('\\ctg', '1/Math.tan(val)')
+   // .replaceAll('\\pi', 'Math.PI')
+   // console.log(value)
+   // console.log(valueJS)
 
 
    // -----------------
@@ -31,9 +31,14 @@ export const btnFunctions = (el, value = '0', oldValue = '') => {
             value = el.display
          } else if (el.display === '000') {
             oldValue = '\\bf Ошибка'
+
          } else if (el.display === '\\sqrt{x}') {
-            value = `\\sqrt{${value}}`
-            oldValue = oldValue === '\\bf Ошибка' ? '' : ''
+            valueJS = eval(value ** 0.5).toString()
+            oldValue = `\\sqrt{${value}}=`
+            value = valueJS
+
+         } else if (el.display === '\\pm') {
+            oldValue = oldValue === '\\bf Ошибка' ? '' : '\\bf Ошибка'
          } else if (el.display === 'x^{2}') {
             value = `${value}^{2}`
             oldValue = oldValue === '\\bf Ошибка' ? '' : ''
@@ -71,8 +76,9 @@ export const btnFunctions = (el, value = '0', oldValue = '') => {
          value += '^{2}'
          oldValue = oldValue === '\\bf Ошибка' ? '' : ''
       } else if (el.display === '\\sqrt{x}') {
-         value = `\\sqrt{${value}}`
-         oldValue = oldValue === '\\bf Ошибка' ? '' : ''
+         valueJS = eval(value ** 0.5).toString()
+         oldValue = `\\sqrt{${value}}=`
+         value = valueJS
       } else if (el.display === '1/x') {
          value = `1/${value}`
          // value = `\\frac{1}{${value}}`
@@ -100,7 +106,7 @@ export const btnFunctions = (el, value = '0', oldValue = '') => {
          value = valueJS
             .replaceAll('.', ',')
             .replaceAll('/', '\\div')
-            .replaceAll(`Math.sqrt(${value}, 2)`, `\\sqrt{${value}}`)
+            // .replaceAll(`Math.sqrt(${value}, 2)`, `\\sqrt{${value}}`)
             .replaceAll('**2', '^{2}')
             // .replaceAll('1/(val)', '1/x')
             .replaceAll('+-', '\\pm')

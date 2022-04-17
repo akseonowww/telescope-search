@@ -34,7 +34,6 @@ export const btns = [
       class: 'btn__op'
    },
    {
-      // display: '\\sqrt${x\\mathstrut}',
       display: '\\sqrt{x}',
       action: BTN_ACTIONS.ADD,
       code: 'Math.sqrt(val)',
