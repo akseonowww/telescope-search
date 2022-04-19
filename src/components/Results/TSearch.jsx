@@ -35,8 +35,6 @@ const TSearch = (data = [], value) => {
          if (el.name.toLowerCase().includes(value.toLowerCase())) {
 
             allResults.cards.push({
-               // title: el.name,
-               // infoLink: el.info,
                card: el,
             })
          }

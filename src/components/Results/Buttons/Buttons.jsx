@@ -2,14 +2,12 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { BsXCircle } from 'react-icons/bs'
-
-import Data from '../../../store/data'
 import './Buttons.scss'
 
 const Buttons = ({ value }) => {
    const classComponent = 'Buttons'
    const [statusModal, setStatusModal] = useState()
-   const [newName, setNewName] = useState()
+   const [newName, setNewName] = useState(value)
    const [newURL, setNewURL] = useState('https://')
 
    const dispatch = useDispatch()
@@ -25,14 +23,6 @@ const Buttons = ({ value }) => {
          },
       })
    }
-   // const deleteBtn = (button) => {
-   //    console.log(button)
-   //    dispatch({ type: 'DELETE_BTN', payload: button.id })
-   // }
-
-   // for (let i = 0; i < data.resultButtons.length; i+=1) {
-   // createBtn(data.resultButtons[i].name)
-   // }
 
    return (
       <div className={classComponent}>
@@ -47,11 +37,7 @@ const Buttons = ({ value }) => {
             {buttons.map((el, index) => (
                <a
                   href={`${el.url + value}`}
-                  // eslint-disable-next-line react/no-array-index-key
                   key={index}
-                  // onClick={() => deleteBtn(el)}
-                  // onClick={() => console.log(el.id, buttons)}
-                  // type="button"
                   className={`${classComponent}__item`}
                >
                   {el.name}
@@ -72,20 +58,24 @@ const Buttons = ({ value }) => {
                </div>
                <div className="Buttons-Modal__Content">
                   <div className="Buttons-Modal__Content-Input">
-                     <label>Название</label>
-                     <input
-                        type="text"
-                        onChange={(el) => setNewName(el.target.value)}
-                        value={newName || ''}
-                     />
+                     <label>
+                        <div>Название:</div>
+                        <input
+                           type="text"
+                           onChange={(el) => setNewName(el.target.value)}
+                           value={newName || ''}
+                        />
+                     </label>
                   </div>
                   <div className="Buttons-Modal__Content-Input">
-                     <label>Ссылка</label>
-                     <input
-                        type="text"
-                        onChange={(el) => setNewURL(el.target.value)}
-                        value={newURL || ''}
-                     />
+                     <label>
+                        <div>Ссылка:</div>
+                        <input
+                           type="text"
+                           onChange={(el) => setNewURL(el.target.value)}
+                           value={newURL || ''}
+                        />
+                     </label>
                   </div>
                </div>
                <button

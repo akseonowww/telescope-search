@@ -137,7 +137,6 @@ $iconHW: 50px;
          color: #76787a;
          height: 22px;
          background: transparent;
-         // border-radius: 120px;
 
          text-decoration: none;
          font-weight: normal;
@@ -217,7 +216,6 @@ $iconHW: 50px;
 .Card-Active {
    display: grid;
    grid-template-columns: 1fr;
-   // padding-right: 12px;
 
    @media screen and (max-width: 450px) {
       padding-bottom: 8px;
@@ -313,7 +311,6 @@ $iconHW: 50px;
 
             @media screen and (max-width: 450px) {
                width: 36px;
-               // padding: 0;
 
                span {
                   display: none;

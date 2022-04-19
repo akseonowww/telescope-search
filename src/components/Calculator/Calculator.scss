@@ -1,8 +1,6 @@
 $main: #017aff;
 
 .Calculator {
-   // margin-right: 16px;
-
    &-Heading {
       display: flex;
       justify-content: space-between;
@@ -57,7 +55,6 @@ $main: #017aff;
 
    &-Result {
       padding-bottom: 4px;
-      // width: 100%;
       overflow: hidden;
       display: flex;
       justify-content: stretch;
@@ -96,36 +93,19 @@ $main: #017aff;
          height: 100%;
          font-size: 18px;
       }
-
-      // .btn__none {
-      //    opacity: 0.2;
-      //    position: relative;
-
-      //    &::after {
-      //       content: 'в разработке';
-      //       position: absolute;
-      //       top: 1%;
-      //       right: 1%;
-      //       height: 100%;
-      //       width: 100%;
-      //       padding: 0 0 0 4px;
-      //       font-size: 10px;
-      //       // color: #000;
-      //       // background: #31313171;
-      //    }
-      // }
    }
 
    &-Active {
       font-family: sans-serif;
+      
       .Heading {
          &-Open button {
             transform: rotate(180deg);
          }
       }
+
       .Calculator-Container {
          display: block;
-         // background-color: #017aff;
       }
    }
 }

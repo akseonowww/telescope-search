@@ -5,7 +5,6 @@ import { BsChevronDoubleDown } from 'react-icons/bs'
 import Latex from 'react-latex-next'
 import './Article.scss'
 import 'katex/dist/katex.min.css'
-// import MarkdownRender from './MarkdownRender/MarkdownRender'
 
 const Article = ({
    heading = 'Математика',
@@ -21,9 +20,6 @@ const Article = ({
          onClick={() => setActive(!isActive)}
          >
          <div className={`${classComponent}-Header`}>
-            {/* <div className={`${classComponent}-header__icon`}>
-               <BsJournalRichtext />
-            </div> */}
             <strong>{heading}</strong>
             <button
                className={`${classComponent}-Header__Open`}
@@ -35,7 +31,6 @@ const Article = ({
          </div>
          <div className={`${classComponent}-Content`}>
             <Latex>{content}</Latex>
-            и т. д. 
          </div>
       </div>
    )

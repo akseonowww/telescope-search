@@ -10,7 +10,7 @@ const devToolRedux = window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DEVTOO
 
 const store = createStore(
    rootReducer,
-   // devToolRedux
+   devToolRedux
 )
 
 export default store;

@@ -14,8 +14,6 @@ const Bookmarks = ({
       },
    }
 
-   // const newTitle = `${title.replace(value, `<mark>${value}</mark>`)}`
-
    const classComponent = 'Bookmarks'
 
    return (

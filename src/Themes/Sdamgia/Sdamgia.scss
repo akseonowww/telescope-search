@@ -11,9 +11,10 @@
       width: 90%;
       margin: auto;
       margin-bottom: 24px;
+      border: 2px solid rgba(100, 0, 12, 0.275);
 
       a {
-         color: rgb(78, 0, 9);
+         color: rgb(102, 0, 12);
       }
    }
 
@@ -23,8 +24,6 @@
 
    h2 {
       font-weight: 400;
-      text-transform: uppercase;
-      font-size: 30px;
       margin: 0;
    }
 
@@ -37,7 +36,6 @@
    }
 
    h4 {
-      // padding-top: 0.15rem;
       margin: 0;
       margin-bottom: 0.75rem;
       font-size: 21px;
@@ -130,8 +128,6 @@
             left: 10%;
             height: 80%;
             width: 80%;
-            // border-radius: 100px;
-            // background-color: rgb(139, 139, 139);
          }
       }
    }
@@ -161,11 +157,12 @@
          }
 
          .Card__icon-container {
-            border-radius: 100px;
+            border-radius: 10px;
             background-color: transparent;
-            
+
             &:focus-within {
                border-radius: 10px;
+               
                @media screen and (max-width: 450px) {
                   border-radius: 10px;
                }
@@ -175,7 +172,7 @@
          .Search {
             border: none;
             border-radius: 6px;
-            width: 300px;
+            width: 500px;
             margin: 0 auto;
 
             @media screen and (max-width: 450px) {
@@ -214,7 +211,7 @@
          .Result-List {
             width: 80%;
             margin: 0 auto;
-            margin-top: 8px;
+            margin-top: 6px;
 
             @media screen and (max-width: 450px) {
                width: 100%;
@@ -232,11 +229,13 @@
                }
             }
             .Buttons {
-               padding-top: 6px;
-
                &__list {
                   padding: 0;
                   margin-bottom: 0;
+
+                  @media screen and (max-width: 450px) {
+                     margin-top: 6px;
+                  }
                }
 
                &__add {
@@ -244,6 +243,8 @@
                   background: linear-gradient(180deg, #d2e2ff, #9dccff);
                   border-radius: 6px;
                   color: #1d1d1d;
+                  height: 28px;
+                  width: 28px;
                }
 
                &__item {
@@ -251,6 +252,7 @@
                   background: linear-gradient(180deg, #d2e2ff, #9dccff);
                   border-radius: 6px;
                   color: #1d1d1d;
+                  padding: 4px 8px;
                }
             }
          }

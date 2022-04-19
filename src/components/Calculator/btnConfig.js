@@ -154,34 +154,4 @@ export const btns = [
       code: '.',
       class: 'btn__op'
    },
-   // {
-   //    display: '\\sin',
-   //    action: BTN_ACTIONS.ADD,
-   //    code: 'Math.sin(val)',
-   //    class: 'btn__op'
-   // },
-   // {
-   //    display: '\\cos',
-   //    action: BTN_ACTIONS.ADD,
-   //    code: 'Math.cos(val)',
-   //    class: 'btn__op'
-   // },
-   // {
-   //    display: '\\tg',
-   //    action: BTN_ACTIONS.ADD,
-   //    code: 'Math.tan(val)',
-   //    class: 'btn__op'
-   // },
-   // {
-   //    display: '\\ctg',
-   //    action: BTN_ACTIONS.ADD,
-   //    code: '1/Math.tan(val)',
-   //    class: 'btn__op'
-   // },
-   // {
-   //    display: '\\pi',
-   //    action: BTN_ACTIONS.ADD,
-   //    code: 'Math.PI',
-   //    class: 'btn__op'
-   // },
 ];

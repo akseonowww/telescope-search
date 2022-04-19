@@ -11,9 +11,8 @@ const Sdamgia = () => {
       <div className="Sdamgia">
          <div className="Sdamgia-Header">
             <div className="vnimanie">
-               Сайт не оригинальный, но вы можете <br />
                <a href="https://math-ege.sdamgia.ru/">
-                  перейти на оригинальный сайт СДАМ.ГИА (ЕГЭ/мат.)
+                  Перейти на оригинальный сайт СДАМ.ГИА (ЕГЭ/мат.)
                </a>
             </div>
             <div className="Sdamgia-Logo">
@@ -49,7 +48,10 @@ const Sdamgia = () => {
          <div className="Sdamgia-Search">
             <h4>Поиск по сайту</h4>
             <div className="Sdamgia-Search__block">
-               <Search className="Search" />
+               <Search
+                  className="Search"
+                  placeholder="Найти вариант/номер или текст задание"
+               />
             </div>
          </div>
          <div className="content">

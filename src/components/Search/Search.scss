@@ -5,25 +5,14 @@ $main: #017aff;
    width: 80%;
    overflow: hidden;
    background-color: transparent;
-   // border-radius: 12px;
-   // box-shadow: 0px 2px 36px transparent;
-   // border: 1px solid transparent;
-   // border: 1px solid #eee;
    position: relative;
    z-index: 2;
-   // transition: all 0.6s;
-   // width: 100%;
 
    .Result-List {
       display: none;
    }
 
    &:focus-within {
-      // background-color: rgb(245, 245, 245);
-      // border-radius: 16px;
-      // box-shadow: 0px 2px 36px rgba(190, 130, 130, 0.1);
-      // border: 1px solid #e3e3e3;
-
       @media screen and (max-width: 450px) {
          background-color: transparent;
          box-shadow: none;
@@ -40,7 +29,6 @@ $main: #017aff;
       background-color: transparent;
       border-radius: 12px;
       box-shadow: 0px 2px 36px transparent;
-      // border: 1px solid transparent;
    }
 
    @media screen and (min-width: 800px) {
@@ -50,34 +38,19 @@ $main: #017aff;
 
 .Search-Content {
    display: flex;
-   // padding-bottom: 100px;
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   // padding-top: 15vh;
    position: relative;
    z-index: 2;
 
-   // .Header {
-   //    display: flex;
-   //    flex-direction: column;
-   //    justify-content: center;
-   //    margin-bottom: 20px;
-
-   //    .logoTS {
-   //       height: 100px;
-   //       transition: all .6s;
-   //    } }
-
    &:focus-within {
       padding: 0;
-      // padding-top: 22px;
       position: relative;
       z-index: 100;
 
       @media screen and (max-width: 450px) {
          background: #fff;
-         // border-radius: 0 0 16px 16px;
       }
 
       &::after,
@@ -108,9 +81,6 @@ $main: #017aff;
             &__delete svg {
                display: block;
             }
-            @media screen and (max-width: 450px) {
-               // right: 51px;
-            }
 
             & button {
                display: block;
@@ -131,22 +101,18 @@ $main: #017aff;
    &-Input {
       font-size: 18px;
       position: relative;
-      // text-align: center;
       outline: none;
       height: 100%;
-      // padding: 12px;
       padding: 4px 8px;
       width: 100%;
       border: none;
       background: #fff;
       color: #000;
-      // color: #5813c9;
       font-weight: 400;
       -webkit-tap-highlight-color: transparent;
 
       @media screen and (max-width: 450px) {
          height: 2.5em;
-         // padding: 16px 12px;
       }
 
       &::placeholder {
@@ -156,7 +122,6 @@ $main: #017aff;
       &:focus {
          text-align: left;
          padding-right: 38px;
-         // padding-right: 78px;
          color: #000;
          font-weight: normal;
 
@@ -201,9 +166,7 @@ $main: #017aff;
          height: 24px;
          width: 24px;
          cursor: pointer;
-         // display: none;
          opacity: 0.5;
-         // font-size: 20px;
          display: flex;
          justify-content: center;
          align-items: center;
@@ -237,7 +200,6 @@ $main: #017aff;
    margin: 1em auto 0;
    padding: 4px 0;
    background-color: #f8f8f8;
-   // border: 1px solid #e3e3e3;
    border-radius: 12px;
    overflow: hidden;
 
@@ -251,118 +213,9 @@ $main: #017aff;
       text-align: left;
       padding: 10px;
       cursor: pointer;
-      // transition: all 0.6s;
 
       &:hover {
          background-color: #724040;
-      }
-   }
-}
-
-mark {
-   // Не рааботает, если размер разный (П != п)
-
-   // ВЫКЛ
-
-   background-color: transparent;
-   position: relative;
-   color: $main;
-   font-family: Roboto, Arial, sans-serif;
-   // text-decoration:underline;
-   // background-color: rgba($main, 0.15);
-
-   // border-radius: 2px;
-   // border: 1px solid $main;
-   // padding: 0 1px;
-   // background-image: linear-gradient(160deg, #5813c9 35%, #e33ef2 81%);
-   // -webkit-background-clip: text;
-   // -webkit-text-fill-color: transparent;
-
-   // &::after {
-   //    content: '';
-   //    display: block;
-   //    bottom: .5px;
-   //    left: 0;
-   //    height: 1px;
-   //    width: 120%;
-   //    background-color: $main;
-   //    position: absolute;
-   // }
-}
-
-.Work {
-   // padding-top: 22px;
-
-   // .Header {
-   //    position: relative;
-   //    z-index: 2;
-   //    display: flex;
-   //    flex-direction: row;
-   //    justify-content: center;
-   //    margin-bottom: 16px;
-
-   //    h1 {
-   //       letter-spacing: 0.2em;
-   //    }
-
-   //    .logoTS {
-   //       margin-right: 16px;
-   //       height: 32px;
-   //    }
-   // }
-
-   &:focus-within {
-      .Header {
-         position: relative;
-         z-index: 2;
-         display: flex;
-         flex-direction: row;
-         justify-content: center;
-         margin-bottom: 16px;
-
-         h1 {
-            letter-spacing: 0.2em;
-         }
-
-         .logoTS {
-            margin-right: 16px;
-            height: 32px;
-         }
-      }
-   }
-
-   .Form {
-      position: relative;
-      width: 80%;
-      overflow: hidden;
-      background-color: transparent;
-      border-radius: 12px;
-      // box-shadow: 0px 2px 36px transparent;
-      // border: 1px solid transparent;
-      position: relative;
-      z-index: 2;
-      width: 100%;
-
-      .Result-List {
-         display: block;
-      }
-
-      &:focus-within {
-         // background-color: rgb(245, 245, 245);
-         border-radius: 16px;
-         // box-shadow: 0px 2px 36px rgba(190, 130, 130, 0.1);
-         // border: 1px solid #e3e3e3;
-
-         @media screen and (max-width: 450px) {
-            box-shadow: none;
-            background-color: #fff;
-            // border: none;
-            width: 100%;
-         }
-
-         .Result-List {
-            display: block;
-         }
       }
    }
 }

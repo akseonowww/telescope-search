@@ -11,14 +11,6 @@ export const btnFunctions = (el, value = '0', oldValue = '') => {
       .replaceAll('\\pm', '+-')
       .replaceAll('^{2}', '**2')
       .replaceAll('1/x', '1/(val)')
-   // .replaceAll(`\\sqrt{${value}}`, `Math.sqrt(${value}, 2)`)
-   // .replaceAll('\\sin', 'Math.sin(val)')
-   // .replaceAll('\\cos', 'Math.cos(val)')
-   // .replaceAll('\\tg', 'Math.tan(val)')
-   // .replaceAll('\\ctg', '1/Math.tan(val)')
-   // .replaceAll('\\pi', 'Math.PI')
-   // console.log(value)
-   // console.log(valueJS)
 
 
    // -----------------
@@ -81,7 +73,6 @@ export const btnFunctions = (el, value = '0', oldValue = '') => {
          value = valueJS
       } else if (el.display === '1/x') {
          value = `1/${value}`
-         // value = `\\frac{1}{${value}}`
          oldValue = oldValue === '\\bf Ошибка' ? '' : ''
       } else if (el.display === '\\pm') {
          value = value[0] === '-'
@@ -92,9 +83,7 @@ export const btnFunctions = (el, value = '0', oldValue = '') => {
          value += el.display
          oldValue = oldValue === '\\bf Ошибка' ? '' : ''
       }
-      // value += el.display
    }
-
 
    // -----------------
    // Если нажать равно
@@ -106,9 +95,7 @@ export const btnFunctions = (el, value = '0', oldValue = '') => {
          value = valueJS
             .replaceAll('.', ',')
             .replaceAll('/', '\\div')
-            // .replaceAll(`Math.sqrt(${value}, 2)`, `\\sqrt{${value}}`)
             .replaceAll('**2', '^{2}')
-            // .replaceAll('1/(val)', '1/x')
             .replaceAll('+-', '\\pm')
             .replaceAll('Math.sin(val)', '\\sin')
             .replaceAll('Math.cos(val)', '\\cos')
@@ -118,33 +105,12 @@ export const btnFunctions = (el, value = '0', oldValue = '') => {
       } catch (err) {
          oldValue = '\\bf Ошибка'
          console.error(err)
-         // console.log(eval(valueJS), valueJS)
       }
       // Всё удаляем
    } else if (el.action === BTN_ACTIONS.DELETE) {
       oldValue = ''
       value = '0'
-      // let valueEu = ''
-      // if (value.length === 1) {
-      // } else if (
-      //       value[value.length - 1] === '}' 
-      //       || value[value.length - 1] === 'x' 
-      //       || value[value.length - 1] === 'v' 
-      //       || value[value.length - 1] === 'm' 
-      //       || value[value.length - 1] === '' 
-      //       ) {
-      //    for (let i = 0; i <= value.length; i + 1) {
-      //       valueEu = value[i] + valueEu
-      //       console.log(valueEu)
-      //    }
-      // } else {
-      //    value = value.slice(0, -1)
-
-      // }
    }
-
-   // console.log('value', value)
-   // console.log('oldValue', oldValue)
 
    return [value, oldValue]
 }

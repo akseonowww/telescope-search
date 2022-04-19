@@ -2,7 +2,6 @@
 /* eslint-disable react/no-array-index-key */
 /* eslint-disable react/no-danger */
 import React, { useState } from 'react'
-// import { Tab, TabPanel, TabList, Tabs } from 'react-tabs'
 import 'react-tabs/style/react-tabs.css'
 import Data from '../../../store/data'
 import Article from '../../Article/Article'
@@ -24,25 +23,23 @@ const Gropup = ({ groups = Data.groups }) => {
          <div className={`${classComponent}-Menu`}>
             <button
                type="button"
-               className={`${classComponent}__Name` }
+               className={`${classComponent}__Name`}
                dangerouslySetInnerHTML={{ __html: groups.name }}
                label="34"
             />
             <span>:</span>
             <div className={`${classComponent}__List`}>
                {groups.group.map((el, index) => (
-                  // <div key={`${index}-List`}>
-                     <button
-                        key={`${index}-list`}
-                        onClick={() => handleClick(el)}
-                        type="button"
-                        className={`${classComponent}__List-Item ${
-                           statusBtn === el.id ? `Group-Active__btn` : ''
-                        }`}
-                     >
-                        {el.name}
-                     </button>
-                  // </div>
+                  <button
+                     key={`${index}-list`}
+                     onClick={() => handleClick(el)}
+                     type="button"
+                     className={`${classComponent}__List-Item ${
+                        statusBtn === el.id ? `Group-Active__btn` : ''
+                     }`}
+                  >
+                     {el.name}
+                  </button>
                ))}
             </div>
          </div>

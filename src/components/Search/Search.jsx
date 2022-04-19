@@ -13,10 +13,9 @@ const Search = ({
    firstR = '',
    counterResults = false,
    data = baseData,
-   work = false,
    valueDefault = '',
 }) => {
-   const [value, setValue] = useState(valueDefault) // Удалить данные!
+   const [value, setValue] = useState(valueDefault)
    const yandex = data.searchEngine[0]
    const defaultLink = `https://${yandex.link + value}`
 
@@ -31,7 +30,7 @@ const Search = ({
    }
 
    return (
-      <form className={`Search-Content ${work ? 'Work' : ''}`}>
+      <form className="Search-Content">
          <div className="Form">
             <div className="Search">
                <input
