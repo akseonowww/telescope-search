@@ -154,7 +154,7 @@ const Data = {
          name: "Формулы",
          group: [
             {
-               name: "Математика",
+               name: "Мате матика",
                content: `<div class="Article-Content__Text">
                <div class="Article-Content__Text-Content">
                   <div class="Article-Content__Text-Content__Item">

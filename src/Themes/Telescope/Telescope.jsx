@@ -23,7 +23,7 @@ const Telescope = () => {
                placeholder="Найди свою звезду!"
                firstR="Я слушаю вас..."
                counterResults
-               work
+               
             />
          </div>
          <div className="Telescope-Footer">
