@@ -5,7 +5,6 @@ import React, { useState } from 'react'
 import { BsChevronDoubleDown, BsBook } from 'react-icons/bs'
 import { FaWikipediaW } from 'react-icons/fa'
 import './Card.scss'
-import Data from '../../../store/data'
 
 const Card = ({ value, card }) => {
    const classComponent = 'Card'
@@ -14,8 +13,6 @@ const Card = ({ value, card }) => {
    const openCard = () => {
       setActive(!isActive)
    }
-
-   const wiki = Data.searchEngine[3]
 
    return (
       <div
