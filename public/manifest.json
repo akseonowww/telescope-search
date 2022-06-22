@@ -3,7 +3,7 @@
    "short_name": "Телескоп",
    "start_url": ".",
    "id": "/",
-   "description": "Поиск для React-приложений.",
+   "description": "Телескоп — это компонент поиска для ваших React-приложений. Главной особенностью Телескопа является поиск по ссылкам, группам, карточкам. Также есть калькулятор и поисковые системы (можно добавить свои собственные). Автор: R. Akseonowww (t.me/akseonowww)",
    "background_color": "#e2e2e2",
    "display": "standalone",
    "theme_color": "#5813c9",
@@ -77,8 +77,33 @@
          "sizes": "540x720"
       },
       {
-         "src": "./images/screenshot2.png",
-         "type": "image/png",
+         "src": "./images/screenshot2.jpg",
+         "type": "image/jpg",
+         "sizes": "540x720"
+      },
+      {
+         "src": "./images/screenshot3.jpg",
+         "type": "image/jpg",
+         "sizes": "540x720"
+      },
+      {
+         "src": "./images/screenshot4.jpg",
+         "type": "image/jpg",
+         "sizes": "540x720"
+      },
+      {
+         "src": "./images/screenshot5.jpg",
+         "type": "image/jpg",
+         "sizes": "540x720"
+      },
+      {
+         "src": "./images/screenshot6.jpg",
+         "type": "image/jpg",
+         "sizes": "540x720"
+      },
+      {
+         "src": "./images/screenshot7.jpg",
+         "type": "image/jpg",
          "sizes": "540x720"
       }
    ]
