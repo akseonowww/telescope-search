@@ -3,7 +3,7 @@ import baseData from '../../../store/data'
 
 const SearchEngine = ({ data = baseData }) => {
    const yandex = data.searchEngine[0]
-   const searchList = data.searchEngine
+   // const searchList = data.searchEngine
 
    return (
       <div>

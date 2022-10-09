@@ -14,6 +14,7 @@ const Gropup = ({ groups = Data.groups }) => {
    const [statusBtn, setStatusBtn] = useState(-1)
 
    const handleClick = (el) => {
+      // eslint-disable-next-line no-console
       el.id === 0 ? console.log(el) : ''
       statusBtn === el.id ? setStatusBtn(-1) : setStatusBtn(el.id)
    }
