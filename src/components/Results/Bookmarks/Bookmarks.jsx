@@ -22,7 +22,7 @@ const Bookmarks = ({
             <div className={`${classComponent}__icon`}>
                <div
                   className={`${classComponent}__icon-container`}
-                  styles ={codeStyles.Icon}
+                  styles={codeStyles.Icon}
                >
                   <img
                      className={`${classComponent}__icon-img`}
