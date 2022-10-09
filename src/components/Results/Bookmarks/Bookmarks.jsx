@@ -1,4 +1,5 @@
 /* eslint-disable react/no-danger */
+/* eslint-disable react/no-unknown-property */
 import React from 'react'
 import './Bookmarks.scss'
 
