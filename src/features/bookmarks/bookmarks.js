@@ -12,7 +12,7 @@ export const counterSlice = createSlice({
     initialState: {
         value: [
             {
-                name: 'ВКонтакте',
+                name: 'VK',
                 link: 'vk.com',
                 icon: `${iconVk}`,
             },

@@ -56,12 +56,23 @@ const Buttons = ({ value }) => {
                      <BsXCircle />
                   </button>
                </div>
+               
+               <div className="Buttons-Modal__List">
+                  {buttons.map((el, index) => (
+                     <div key={index}>
+                        <b href={`${+value}`}>{el.name}</b>
+                        <span>{el.url || <i>Префикс отсутствует</i>}</span>
+                     </div>
+                  ))}
+               </div>
+
                <div className="Buttons-Modal__Content">
                   <div className="Buttons-Modal__Content-Input">
                      <label>
                         <div>Название:</div>
                         <input
                            type="text"
+                           placeholder='Яндекс'
                            onChange={(el) => setNewName(el.target.value)}
                            value={newName || ''}
                         />
@@ -69,7 +80,7 @@ const Buttons = ({ value }) => {
                   </div>
                   <div className="Buttons-Modal__Content-Input">
                      <label>
-                        <div>Ссылка:</div>
+                        <div>Префикс:</div>
                         <input
                            type="text"
                            onChange={(el) => setNewURL(el.target.value)}
@@ -78,6 +89,7 @@ const Buttons = ({ value }) => {
                      </label>
                   </div>
                </div>
+
                <button
                   type="button"
                   className="Buttons-Modal__Add"

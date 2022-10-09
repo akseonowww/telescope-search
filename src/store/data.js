@@ -46,7 +46,7 @@ const Data = {
    ],
    bookmarks: [
       {
-         name: "ВКонтакте",
+         name: "VK",
          link: "vk.com",
          icon: vkIcon
       },
@@ -154,7 +154,7 @@ const Data = {
          name: "Формулы",
          group: [
             {
-               name: "Мате матика",
+               name: "Математика",
                content: `<div class="Article-Content__Text">
                <div class="Article-Content__Text-Content">
                   <div class="Article-Content__Text-Content__Item">
@@ -216,7 +216,7 @@ const Data = {
             },
             {
                name: "Физика",
-               content:`<div class="Article-Content__Text">
+               content: `<div class="Article-Content__Text">
                <div class="Article-Content__Text-Content">
                   <div class="Article-Content__Text-Content__Item">
                      <h3>Механика</h3>
@@ -270,7 +270,7 @@ const Data = {
             },
             {
                name: "Информатика",
-               content:`<div class="Article-Content__Text">
+               content: `<div class="Article-Content__Text">
                <div class="Article-Content__Text-Content">
                   <div class="Article-Content__Text-Content__Item">
                      <h3>Информация</h3>

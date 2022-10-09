@@ -8,7 +8,7 @@ import 'katex/dist/katex.min.css'
 
 const Article = ({
    heading = 'Математика',
-   content = '<h4>1. Степени (пример)</h4><ol><li> $a^n*a^m=a^{n+m}$</li><li> $a^n*a^m=a^{n+m}$</li><li> $a^n*a^m=a^{n+m}$</li></ol>',
+   content = '<h4>1. Степени (пример)</h4><ol><li> $a^n*a^m=a^{n+m}$</li><li> $a^n*a^m=a^{n+m}$</li></ol>',
 }) => {
    const classComponent = 'Article'
 

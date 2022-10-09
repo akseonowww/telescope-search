@@ -242,9 +242,11 @@
                   background: #d2e2ff;
                   background: linear-gradient(180deg, #d2e2ff, #9dccff);
                   border-radius: 6px;
+                  border: none;
                   color: #1d1d1d;
                   height: 28px;
-                  width: 28px;
+                  min-width: 28px;
+                  display: block;
                }
 
                &__item {

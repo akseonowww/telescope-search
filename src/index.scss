@@ -5,6 +5,11 @@ $main: #017AFF;
 
 * {
    box-sizing: border-box;
+   outline: none;
+
+   &:focus-visible {
+      outline: none;
+   }
 }
 
 body {

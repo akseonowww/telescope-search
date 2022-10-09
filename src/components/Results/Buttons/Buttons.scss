@@ -25,7 +25,7 @@ $main: #017aff;
 
       &::-webkit-scrollbar-track {
          background: transparent;
-         opacity: 0;
+         opacity: 1;
       }
 
       &::-webkit-scrollbar-thumb {
@@ -63,7 +63,7 @@ $main: #017aff;
       }
    }
 
-   &__add {
+   &__dd {
       width: 24px;
       color: #ffffff;
       line-height: 16px;
@@ -129,13 +129,13 @@ $main: #017aff;
 
       &__Add {
          background-color: $main;
-         padding: 12px 24px;
+         padding: 16px 32px;
          border: none;
          border-radius: 12px;
          font-size: 18px;
+         font-weight: 700;
          color: #fff;
          margin-top: 18px;
-         height: auto;
       }
 
       &__Content {
@@ -159,21 +159,27 @@ $main: #017aff;
             justify-content: start;
             flex-direction: column;
 
+            div {
+               font-weight: 600;
+               margin-bottom: 4px;
+            }
+
             & input {
                padding: 12px;
                font-size: 18px;
                border-radius: 12px;
-               border: 2px solid #000;
+               border: 2px solid transparent;
+               background: #eee;
                width: 100%;
+
                @media screen and (max-width: 450px) {
                   padding: 16px 12px;
                }
 
-               &:focus-within,
-               &:focus {
-                  border-radius: 12px;
+               &:focus-visible {
                   background: rgba($main, 0.1);
                   border: 2px solid $main;
+                  outline: none;
                }
             }
 
@@ -183,6 +189,64 @@ $main: #017aff;
                margin-left: 4px;
                margin-bottom: 2px;
             }
+
+            &:nth-child(2) {
+               input {
+                  color: #777777;
+                  &:focus {
+                     color: #333;
+                  }
+               }
+            }
+         }
+      }
+
+      &__List {
+         text-align-last: left;
+         display: flex;
+         flex-direction: column;
+         border: 2px solid #eee;
+         border-radius: 12px;
+         overflow: hidden;
+         width: 600px;
+         margin: 0 auto 22px;
+
+         @media screen and (max-width: 670px) {
+            width: 80%;
+         }
+
+         @media screen and (max-width: 450px) {
+            width: 100%;
+         }
+
+         div {
+            padding: 12px 16px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+
+            &:before {
+               content: '';
+               display: block;
+               position: absolute;
+               bottom: 0;
+               left: 0;
+               height: 1px;
+               width: 100%;
+               background-color: #eee;
+            }
+
+            &:nth-last-child(-n + 1) {
+               &:before {
+                  content: '';
+                  display: none;
+               }
+            }
+         }
+
+         span {
+            color: #777777;
+            font-size: 14px;
          }
       }
    }

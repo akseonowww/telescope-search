@@ -3,16 +3,16 @@
 
 const defaultState = {
    buttonsCollections: [
-      {
-         name: 'Найти вариант',
-         url: '/',
-         id: 0
-      },
-      {
-         name: 'Найти номер или текст задания',
-         url: '',
-         id: 1
-      },
+      // {
+      //    name: 'Найти вариант',
+      //    url: '/',
+      //    id: 0
+      // },
+      // {
+      //    name: 'Найти номер или текст задания',
+      //    url: '/',
+      //    id: 1
+      // },
       {
          name: 'Яндекс',
          url: 'https://yandex.ru/search/?text=',

@@ -7,8 +7,8 @@ import './App.scss'
 import { BsSearch } from 'react-icons/bs'
 import Search from './components/Search/Search'
 import Data from './store/data'
-import Sdamgia from './Themes/Sdamgia/Sdamgia'
-import Telescope from './Themes/Telescope/Telescope'
+import Sdamgia from './themes/sdamgia/Sdamgia'
+import Telescope from './themes/telescope/Telescope'
 import logoTS from './assets/image/logo.svg'
 
 const App = () => {
