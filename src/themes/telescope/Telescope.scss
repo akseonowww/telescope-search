@@ -1,0 +1,668 @@
+$mainTSLite: linear-gradient(24deg, #e33ef2, #5813c9);
+$mainTS: linear-gradient(#e2e2e2 0 0) padding-box,
+   linear-gradient(183deg, #5813c9 35%, #e33ef2 81%) border-box;
+
+.Telescope {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+   height: 100%;
+
+   * {
+      transition: all ease 0.6s; 
+   }
+
+   .icon-app-mini {
+      background: $mainTSLite;
+      border-radius: 100px;
+   }
+
+   &-Footer {
+      padding: 1em 0;
+      display: flex;
+      gap: 24px;
+
+      * {
+         transition: all 0.1s; 
+      }
+
+      a {
+         font-size: 18px;
+         display: flex;
+         padding: 12px 24px;
+         border-radius: 12px;
+         background: #e5d5ff;
+         text-decoration: none;
+         color: #5813c9;
+         font-weight: 500;
+         gap: 12px;
+         text-align: center;
+         align-items: center;
+         transition: all 0.6s;
+
+         svg {
+            transition: all 0;
+            height: 2em;
+            width: 2em;
+            color: #111;
+         }
+
+         &:nth-child(2) {
+            svg {
+               color: #0088cc;
+            }
+         }
+
+         &:hover {
+            background: #ccacff;
+         }
+      }
+
+      @media screen and (max-width: 570px) {
+         padding-bottom: 4em;
+         gap: 8px;
+         flex-direction: column;
+         width: 100%;
+         padding: 0 1em 5em;
+
+         a {
+            width: 100%;
+
+            &:hover {
+               background: #e5d5ff;
+            }
+         }
+      }
+   }
+
+   h1 {
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.4em;
+      font-family: 'Space Mono', monospace;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 22px;
+      line-height: 28px;
+      margin: 0;
+   }
+
+   &-Header {
+      display: flex;
+      justify-content: end;
+      padding: 24px;
+      padding-bottom: 0;
+      width: 100%;
+   }
+
+   &-Theme {
+      transition: transform 0.5s;
+      background-color: rgb(221, 221, 221);
+      color: rgb(0, 0, 0);
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      border-radius: 100px;
+      padding: 12px 18px;
+
+      @media screen and (max-width: 450px) {
+         height: 50px;
+         width: 50px;
+         padding: 0;
+
+         span {
+            display: none;
+         }
+
+         svg {
+            height: 1.5em;
+            width: 1.5em;
+         }
+      }
+   }
+
+   &-Focus {
+      * {
+         display: none;
+         transition: all ease 0.6s;
+      }
+
+      .Telescope-Main {
+         display: block;
+      }
+   }
+
+   &-Main {
+      padding-top: 100px;
+      width: 100%;
+      height: 100%;
+      transition: all ease-in-out 0.3s;
+
+      &:focus-within {
+         padding-top: 0;
+         height: auto;
+         position: absolute;
+         top: 0;
+         left: 0;
+         height: 100%;
+         width: 100%;
+
+         // Search
+         .Form {
+            margin-top: 60px;
+            transition: 0.001s; 
+            background-color: #fff;
+            border-radius: 16px;
+            box-shadow: 0px 2px 36px rgba(190, 130, 130, 0.1);
+            border: 1px solid #eee;
+            margin-bottom: 120px;
+            overflow: auto;
+            height: 100%;
+
+            @media screen and (max-width: 800px) {
+               width: 600px;
+            }
+
+            @media screen and (max-width: 450px) {
+               background-color: #fff;
+               box-shadow: none;
+               border: 1px solid transparent;
+               margin-bottom: 400px;
+               width: 100%;
+               border-top-left-radius: 0;
+               border-top-right-radius: 0;
+            }
+         }
+
+         .Search {
+            &-Input {
+               text-align: left;
+            }
+         }
+
+         .Search-Content {
+            background-color: #fff;
+            justify-content: start;
+            transition: all ease-in-out 0.3s;
+            min-height: 100%;
+            margin-bottom: 100px;
+
+            @media screen and (max-width: 450px) {
+               border-radius: 0;
+               background: rgb(168, 168, 168);
+            }
+         }
+
+         .Header {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            padding: 16px 0 12px;
+
+            position: absolute;
+            top: 0;
+            margin-right: -90px;
+            z-index: 1100;
+            width: 100%;
+
+            @media screen and (max-width: 450px) {
+               background-color: #fff;
+            }
+
+            h1 {
+               letter-spacing: 0.2em;
+            }
+
+            .logoTS {
+               margin-right: 16px;
+               height: 32px;
+            }
+         }
+      }
+   }
+
+   // Search
+   .Search-Content {
+      @media screen and (max-width: 450px) {
+         background: #fff;
+         padding: 0;
+         border-radius: 0 0 16px 16px;
+      }
+   }
+
+   .Form {
+      box-shadow: 0px 2px 36px transparent;
+      border: 1px solid transparent;
+      border-radius: 16px;
+
+      @media screen and (max-width: 450px) {
+         width: 95%;
+      }
+
+      .Search {
+         border-radius: 12px;
+         border: 1px solid rgb(145, 145, 145);
+         border: 2.4px solid transparent;
+         background: linear-gradient(#e2e2e2 0 0) padding-box;
+         background: linear-gradient(#e2e2e2 0 0) padding-box,
+            linear-gradient(183deg, #5813c9 35%, #e33ef2 81%) border-box;
+
+         &-Input {
+            text-align: center;
+            padding: 12px;
+            color: #5813c9;
+
+            @media screen and (max-width: 450px) {
+               height: auto;
+               padding: 16px 12px;
+            }
+
+            &::placeholder {
+               color: #5813c9;
+            }
+
+            &:focus-within {
+               padding-right: 45px;
+
+               &::placeholder {
+                  color: #747474;
+               }
+
+               text-align: left;
+               color: #000;
+            }
+         }
+
+         &-Buttons {
+            top: 6px;
+            right: 9px;
+
+            @media screen and (max-width: 450px) {
+               top: 10px;
+            }
+         }
+      }
+   }
+
+   .Header {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0;
+      padding-bottom: 20px;
+
+      h1 {
+         transition: all 0;
+      }
+
+      .logoTS {
+         height: 100px;
+      }
+   }
+
+   // Buttons
+   .Buttons {
+      &__list {
+         padding-right: 6px;
+
+         &::-webkit-scrollbar-thumb,
+         &::-webkit-scrollbar-track {
+            border-radius: 10px;
+         }
+      }
+
+      &__item {
+         border-radius: 120px;
+         padding: 0 12px;
+         background: $mainTS;
+         background-origin: border-box;
+         background-clip: content-box, border-box;
+      }
+
+      &__add {
+         background: linear-gradient(31deg, #e33ef2, #5813c9);
+         border-radius: 120px;
+         color: #fff;
+         border: none;
+      }
+
+      &-Modal {
+         &__Add {
+            background: linear-gradient(31deg, #e33ef2, #5813c9);
+         }
+
+         input {
+            &:checked,
+            &:focus-within,
+            &:focus-visible,
+            &:active,
+            &:focus {
+               border-radius: 12px;
+               background: #f6e9ff;
+               border: 2px solid #8013c9;
+               outline: none;
+            }
+         }
+      }
+   }
+
+   // Results
+   .Results {
+      &-Item {
+         padding: 0;
+         padding: 6px 0 6px 16px;
+
+         @media screen and (max-width: 450px) {
+            padding: 4px 0 4px 12px;
+         }
+
+         &:hover {
+            background-color: rgba(#ffffff, 1);
+
+            @media screen and (max-width: 450px) {
+               background-color: transparent;
+            }
+         }
+      }
+
+      &-footer {
+         padding: 1.5em;
+         border-top: 1px solid #e1e1e1;
+
+         @media screen and (max-width: 450px) {
+            padding: 1em;
+            border-top: none;
+         }
+      }
+   }
+
+   // Bookmarks
+
+   // Cards
+   .Card {
+      padding-right: 12px;
+
+      &__icon {
+         margin-right: 12px;
+
+         &-container {
+            border-radius: 30px;
+         }
+
+         &-default {
+            border-radius: 20px;
+         }
+      }
+
+      &__option {
+         right: 16px;
+
+         button {
+            border-radius: 120px;
+         }
+         &-btn {
+            border-radius: 120px;
+         }
+      }
+
+      &.Card-Active {
+         .Card {
+            &__text-info {
+               word-wrap: break-word;
+            }
+
+            &__icon {
+               &-container {
+                  border-radius: 12px;
+               }
+            }
+            &__option {
+               right: 16px;
+
+               @media screen and (max-width: 450px) {
+                  display: flex;
+                  align-items: start;
+                  gap: 8px;
+
+                  &-btn {
+                     padding: 18px;
+                  }
+
+                  &-btn {
+                     height: 50px;
+                     width: 50px;
+                     border-radius: 120px;
+
+                     &__img,
+                     &__img svg {
+                        $size: 2em;
+                        height: $size;
+                        width: $size;
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+
+   // Groups
+   .Group {
+      &__Name {
+         border-radius: 8px;
+         background-color: #e5c3fd;
+         color: #8313c9;
+
+         @media screen and (max-width: 450px) {
+            height: 38px;
+            padding-right: 12px;
+            padding-left: 12px;
+         }
+      }
+
+      &-Menu {
+         gap: 4px;
+      }
+
+      &__List {
+         padding-right: 12px;
+
+         &::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+         }
+
+         &-Item {
+            border: none;
+
+            border-radius: 8px;
+            @media screen and (max-width: 450px) {
+               padding-right: 12px;
+               padding-left: 12px;
+            }
+         }
+      }
+      &-Active__btn {
+         background: $mainTSLite;
+         border-radius: 8px;
+      }
+   }
+
+   // Calculator
+   .Calculator {
+      border-radius: 12px;
+      margin-right: 16px;
+
+      h2 {
+         text-align: left;
+      }
+
+      &-Result {
+         padding: 8px 0;
+         border-top: 2px solid #eee;
+
+         &__Expression {
+            font-size: 16px;
+         }
+
+         &__Answer {
+            font-size: 1.5em;
+            height: 60px;
+         }
+      }
+
+      &-Buttons {
+         padding-top: 2px;
+         background: #eee;
+
+         &__Item {
+            background: #fff;
+         }
+
+         .btn__none {
+            opacity: 1;
+
+            &::after {
+               display: none;
+            }
+         }
+
+         .btn__op {
+            color: #7413c9;
+         }
+      }
+   }
+
+   // Article
+   .Article {
+      background: rgb(252, 243, 255);
+      margin-right: 16px;
+      padding: 12px;
+      border-radius: 12px;
+      border: 2px solid #5913c952;
+
+      &-Button {
+         background: $mainTSLite;
+         border-radius: 12px;
+         border: none;
+      }
+
+      &-Content {
+         padding-top: 4px;
+
+         strong {
+            display: block;
+            font-size: 16px;
+            margin: 8px 0 4px;
+         }
+
+         &__List {
+            &-Item {
+               background-color: transparent;
+               border: 2px solid red;
+               padding: 0 12px;
+               background: $mainTS;
+               background-origin: border-box;
+               background-clip: content-box, border-box;
+
+               background: transparent;
+               color: #333;
+               font-weight: 400;
+               font-size: 16px;
+               line-height: 16px;
+               border: solid 2px transparent;
+               padding: 4px 10px;
+               background: $mainTS;
+               box-shadow: 2px 1000px 1px #fff inset;
+               border-radius: 18px;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+
+               @media screen and (max-width: 450px) {
+                  border-radius: 20px;
+                  padding: 10px 12px;
+               }
+            }
+         }
+      }
+   }
+
+   // Work
+   // DARK
+   &-Dark {
+      $bgMain: #121212;
+      $bgBlock: #212121;
+      $text: rgb(245, 245, 245);
+      $mainTSLite: linear-gradient(24deg, #9e3ef2, #5813c9);
+      $mainTS: linear-gradient(#262626 0 0) padding-box,
+         linear-gradient(183deg, #5813c9 35%, #e33ef2 81%) border-box;
+
+      background-color: $bgMain;
+      color: #eee;
+      .Telescope {
+         &-Main {
+            .Form {
+               @media screen and (max-width: 450px) {
+                  background: $bgMain;
+               }
+            }
+
+            .Search {
+               background: $mainTS;
+
+               &-Content {
+                  background-color: transparent;
+               }
+
+               &-Input {
+                  background: linear-gradient(#262626 0 0) padding-box;
+                  background: $mainTS;
+               }
+
+               &-Buttons {
+                  background: $bgBlock;
+
+                  &-delete,
+                  svg {
+                     color: $text;
+                  }
+               }
+
+               .Results {
+                  background-color: $bgBlock;
+               }
+            }
+
+            &:focus-within {
+               .Form,
+               .Header {
+                  background: $bgBlock;
+               }
+
+               .Search-Input {
+                  color: $text;
+               }
+
+               .Buttons__item {
+                  color: $text;
+                  background: linear-gradient(#e2e2e2 0 0) padding-box,
+                     linear-gradient(183deg, #5813c9 35%, #e33ef2 81%)
+                        border-box;
+                  box-shadow: 2px 1000px 1px #262626 inset;
+               }
+            }
+         }
+
+         &-Theme {
+            background-color: rgb(60, 60, 60);
+            color: rgb(169, 169, 169);
+         }
+      }
+   }
+}
